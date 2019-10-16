@@ -1,26 +1,58 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
     "declaration": false,
-    "module": "esnext",
-    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
     "lib": [
+      "dom",
+      "es2015",
+      "es2016",
+      "es2017",
       "es2018",
       "dom"
-    ]
+    ],
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    "skipLibCheck": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": [ "app/*" ],
+      "@assets/*": [ "app/assets/*" ],
+      "@factories/*": [ "app/factories/*" ],
+      "@guards/*": [ "app/guards/*" ],
+      "@services/*": [ "app/services/*" ],
+      "@store/*": [ "app/store/*" ],
+      "@auth/*": [ "app/pages/auth/*" ],
+      "@competitions/*": [ "app/pages/competitions/*" ],
+      "@events/*": [ "app/pages/events/*" ],
+      "@news/*": [ "app/pages/news/*" ],
+      "@teams/*": [ "app/pages/teams/*" ],
+      "@users/*": [ "app/pages/users/*" ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "preserveWhitespaces": true,
+    "strictInjectionParameters": true,
+    "strictMetadataEmit": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.spec.ts",
+    "src/**/*.fixtures.ts"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
   }
 }
+

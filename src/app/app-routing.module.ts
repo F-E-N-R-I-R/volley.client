@@ -1,16 +1,49 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '@app/guards';
 
 const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+    {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full',
+    },
+    {
+        path: 'login',
+        loadChildren: './pages/auth/auth.module#AuthModule',
+    },
+    {
+        path: 'news',
+        canActivate: [AuthGuard],
+        loadChildren: './pages/news/news.module#NewsModule',
+    },
+    {
+        path: 'users',
+        canActivate: [AuthGuard],
+        loadChildren: './pages/users/users.module#UsersModule',
+    },
+    {
+        path: 'competitions',
+        canActivate: [AuthGuard],
+        loadChildren: './pages/competitions/competitions.module#CompetitionsModule',
+    },
+    {
+        path: 'events',
+        canActivate: [AuthGuard],
+        loadChildren: './pages/events/events.module#EventsModule',
+    },
+    {
+        path: 'teams',
+        canActivate: [AuthGuard],
+        loadChildren: './pages/teams/teams.module#TeamsModule',
+    }
 ];
+
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
-  exports: [RouterModule]
+    imports: [
+        RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    ],
+    exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

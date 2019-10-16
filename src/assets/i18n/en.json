@@ -1,0 +1,23 @@
+{
+    "login": {
+        "title": "Login"
+    },
+    "competitions": {
+        "title": "Competitions"
+    },
+    "events": {
+        "title": "Events"
+    },
+    "news": {
+        "title": "News",
+        "settings": {
+            "title": "Settings"
+        }
+    },
+    "teams": {
+        "title": "Teams"
+    },
+    "users": {
+        "title": "Users"
+    }
+}
