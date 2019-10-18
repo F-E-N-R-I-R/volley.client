@@ -16,6 +16,7 @@ import { TabsComponent } from '@app/components/tabs/tabs.page';
 import { AuthGuard } from '@app/guards';
 import { AuthenticationService } from '@app/services';
 import { HttpLoaderFactory } from '@app/factories/translate.factory';
+import { MockModule } from '@app/mock/mock.module';
 
 @NgModule({
     declarations: [AppComponent, TabsComponent],
@@ -34,6 +35,7 @@ import { HttpLoaderFactory } from '@app/factories/translate.factory';
                 deps: [HttpClient]
             }
         }),
+        MockModule,
     ],
     providers: [
         StatusBar,
