@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { CompetitionsListPage } from './list/competitions-list.page';
 import { CompetitionsRoutingModule } from './competitions-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { CompetitionsCoreModule } from './core/core.module';
 
 @NgModule({
     imports: [
@@ -13,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
         FormsModule,
         CompetitionsRoutingModule,
         TranslateModule,
+        CompetitionsCoreModule,
     ],
   declarations: [CompetitionsListPage]
 })

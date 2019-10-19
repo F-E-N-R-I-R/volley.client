@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { EventsProvider } from '../core/providers/events.provider';
+import { ETypes } from '../core/types/events.types';
+import { map } from 'rxjs/operators';
 
 @Component({
     selector: 'app-events',
@@ -8,8 +11,9 @@ import { Subject } from 'rxjs';
 })
 export class EventsListPage {
     private ngUnsubscribe$ = new Subject();
+    public events$: Observable<ETypes.IEvent[]> = this.eventsProvider.getList().pipe(map(({ items }) => items));
 
-    constructor() {
+    constructor(private eventsProvider: EventsProvider) {
     }
 
 

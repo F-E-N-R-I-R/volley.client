@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { NTypes } from '@app/pages/news/core/types/news.types';
 
 @Injectable()
 export class NewsMockProvider {
     constructor() {}
 
-    getAllNews(): Observable<any> {
-        return new BehaviorSubject({items: ['News1', 'News2', 'News3']});
+    getAllNews(): Observable<NTypes.INewsList> {
+        return new BehaviorSubject({
+            items: [
+                { name: 'News1' },
+                { name: 'News2' },
+                { name: 'News3' },
+            ]
+        });
     }
 }

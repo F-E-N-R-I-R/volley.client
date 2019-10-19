@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { ModalController } from '@ionic/angular';
 import { SettingsModalComponent } from '../settings/settings.modal';
+import { NewsProvider } from '../core/providers/news.provider';
+import { NTypes } from '../core/types/news.types';
+import { map } from 'rxjs/operators';
 
 @Component({
     selector: 'app-news',
@@ -10,8 +13,9 @@ import { SettingsModalComponent } from '../settings/settings.modal';
 })
 export class NewsListPage {
     private ngUnsubscribe$ = new Subject();
+    public news$: Observable<NTypes.INews[]> = this.newsProvider.getList().pipe(map(({ items }) => items));
 
-    constructor(private modalController: ModalController) {
+    constructor(private modalController: ModalController, private newsProvider: NewsProvider) {
     }
 
 

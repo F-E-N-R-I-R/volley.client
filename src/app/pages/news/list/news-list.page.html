@@ -1,15 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button (click)="showSettings()">
-        <ion-icon slot="icon-only" name="settings"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title>
-      {{ 'news.title' | translate }}
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-button (click)="showSettings()">
+				<ion-icon slot="icon-only" name="settings"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'news.title' | translate }}
+		</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
+	<ion-list>
+		<ion-item *ngFor="let newsItem of news$ | async">{{ newsItem.name }}</ion-item>
+	</ion-list>
 </ion-content>

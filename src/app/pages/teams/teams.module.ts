@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { TeamsListPage } from './list/teams-list.page';
 import { TeamsRoutingModule } from './teams-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { TeamsCoreModule } from './core/core.module';
+
 
 @NgModule({
     imports: [
@@ -13,6 +15,7 @@ import { TranslateModule } from '@ngx-translate/core';
         FormsModule,
         TeamsRoutingModule,
         TranslateModule,
+        TeamsCoreModule
     ],
   declarations: [TeamsListPage]
 })

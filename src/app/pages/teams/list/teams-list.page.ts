@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { TeamsProvider } from '../core/providers/teams.provider';
+import { TTypes } from '../core/types/teams.types';
+import { map } from 'rxjs/operators';
 
 @Component({
     selector: 'app-teams',
@@ -8,8 +11,9 @@ import { Subject } from 'rxjs';
 })
 export class TeamsListPage {
     private ngUnsubscribe$ = new Subject();
+    public teams$: Observable<TTypes.ITeam[]> = this.teamsProvider.getList().pipe(map(({ items }) => items));
 
-    constructor() {
+    constructor(private teamsProvider: TeamsProvider) {
     }
 
 

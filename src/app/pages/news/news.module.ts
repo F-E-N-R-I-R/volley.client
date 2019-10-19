@@ -6,6 +6,8 @@ import { NewsListPage } from './list/news-list.page';
 import { SettingsModalComponent } from './settings/settings.modal';
 import { NewsRoutingModule } from './news-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { NewsCoreModule } from './core/core.module';
+
 
 @NgModule({
     imports: [
@@ -14,6 +16,7 @@ import { TranslateModule } from '@ngx-translate/core';
         FormsModule,
         NewsRoutingModule,
         TranslateModule,
+        NewsCoreModule,
     ],
   declarations: [NewsListPage, SettingsModalComponent],
   entryComponents: [SettingsModalComponent],

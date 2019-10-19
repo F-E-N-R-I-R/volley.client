@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { EventsListPage } from './list/events-list.page';
 import { EventsRoutingModule } from './events-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { EventsCoreModule } from './core/core.module';
+
 
 @NgModule({
     imports: [
@@ -13,6 +15,7 @@ import { TranslateModule } from '@ngx-translate/core';
         FormsModule,
         EventsRoutingModule,
         TranslateModule,
+        EventsCoreModule,
     ],
   declarations: [EventsListPage]
 })

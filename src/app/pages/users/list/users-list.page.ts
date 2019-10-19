@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { UsersService } from '../store/services/users.service';
+import { UsersService } from '../core/services/users.service';
 import { Observable, Subject } from 'rxjs';
 
 @Component({
-    selector: 'app-tab1',
+    selector: 'users-list',
     templateUrl: 'users-list.page.html',
     styleUrls: ['users-list.page.scss']
 })
