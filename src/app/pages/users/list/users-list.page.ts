@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UsersService } from '../core/services/users.service';
 import { Observable, Subject } from 'rxjs';
+import { UTypes } from '@app/pages/users/core/types/users.types';
 
 @Component({
     selector: 'users-list',
@@ -9,7 +10,7 @@ import { Observable, Subject } from 'rxjs';
 })
 export class UsersListPage {
     private ngUnsubscribe$ = new Subject();
-    public users$: Observable<any[]> = this.usersService.users$;
+    public users$: Observable<UTypes.IUser[]> = this.usersService.users$;
 
     constructor(private usersService: UsersService) {
     }
