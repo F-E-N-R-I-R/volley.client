@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { AuthenticationService } from '../../../services';
+import { AuthenticationService } from '@app/services';
 
 @Component({
+    selector: 'settings-modal',
     templateUrl: 'settings.modal.html',
     styleUrls: ['settings.modal.scss']
 })
