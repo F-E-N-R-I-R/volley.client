@@ -6,7 +6,7 @@ import { NewsListPage } from './list/news-list.page';
 import { NewsRoutingModule } from './news-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { NewsCoreModule } from './core/core.module';
-import { SettingsModule } from '@app/pages/news/settings/settings.module';
+import { SettingsModule } from '@app/pages/settings/settings.module';
 
 
 @NgModule({
