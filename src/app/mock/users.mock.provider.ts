@@ -77,4 +77,12 @@ export class UsersMockProvider {
             },
         });
     }
+
+    getUser(): Observable<UTypes.IUser> {
+        return new BehaviorSubject({
+                fname: 'Bob',
+                lname: 'Dilan',
+            }
+        );
+    }
 }
