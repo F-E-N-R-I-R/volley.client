@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginPage } from './login/login.page';
 import { AuthRoutingModule } from './auth-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
-import {AuthCoreModule} from '@app/pages/auth/core/core.module';
+import { AuthCoreModule } from '@app/pages/auth/core/core.module';
 
 @NgModule({
     imports: [
@@ -16,6 +16,7 @@ import {AuthCoreModule} from '@app/pages/auth/core/core.module';
         TranslateModule,
         AuthCoreModule,
     ],
-  declarations: [LoginPage]
+    declarations: [LoginPage]
 })
-export class AuthModule {}
+export class AuthModule {
+}

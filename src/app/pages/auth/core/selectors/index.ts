@@ -1,1 +1,1 @@
-export * from './auth.user.selector';
+export * from './auth.selector';

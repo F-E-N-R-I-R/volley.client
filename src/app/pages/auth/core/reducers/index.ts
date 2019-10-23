@@ -1,13 +1,13 @@
 import { ActionReducerMap, createFeatureSelector } from '@ngrx/store';
 
-import { UserState, userReducer } from './auth.user.reducer';
+import { AuthState, authReducer } from './auth.reducer';
 
-export interface UState {
-    list: UserState;
+export interface AuthorizationState {
+    auth: AuthState;
 }
 
-export const reducers: ActionReducerMap<UState> = {
-    list: userReducer,
+export const reducers: ActionReducerMap<AuthorizationState> = {
+    auth: authReducer,
 };
 
-export const getUserState = createFeatureSelector<UState>('user');
+export const getUsersState = createFeatureSelector<AuthorizationState>('auth');

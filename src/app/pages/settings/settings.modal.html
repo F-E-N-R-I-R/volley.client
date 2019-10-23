@@ -17,5 +17,6 @@
 </ion-header>
 
 <ion-content>
-  <ion-button (click)="dismiss() || authService.logout()">Logout</ion-button>
+  <ion-button (click)="dismiss() || logout()">Logout</ion-button>
+  <p>{{ (user$ | async) | json }}</p>
 </ion-content>

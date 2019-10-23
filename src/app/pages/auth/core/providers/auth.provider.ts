@@ -6,11 +6,11 @@ import { UsersMockProvider } from '@app/mock/users.mock.provider';
 import { UTypes } from '@app/pages/users/core/types/users.types';
 
 @Injectable()
-export class AuthUserProvider {
+export class AuthProvider {
 
     constructor(private http: HttpClient, private usersMockProvider: UsersMockProvider) {}
 
-    getUser(): Observable<UTypes.IUser> {
+    login(): Observable<UTypes.IUser> {
         return this.usersMockProvider.getUser();
     }
 }

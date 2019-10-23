@@ -27,7 +27,7 @@ export class AuthenticationService {
 
 
     login() {
-        this.storage.set('USER_INFO', true).then((response) => {
+        return this.storage.set('USER_INFO', true).then((response) => {
             this.authState.next(true);
         });
     }

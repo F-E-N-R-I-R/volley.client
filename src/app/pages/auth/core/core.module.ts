@@ -5,20 +5,20 @@ import { StoreModule } from '@ngrx/store';
 
 import { effects } from './effects';
 import { reducers } from './reducers';
-import { AuthUserProvider } from './providers/auth.user.provider';
-import { AuthUserService } from './services/auth.user.service';
+import { AuthProvider } from './providers/auth.provider';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
     imports: [
         CommonModule,
-        StoreModule.forFeature('user', reducers),
+        StoreModule.forFeature('auth', reducers),
         EffectsModule.forFeature(effects),
     ],
     declarations: [],
     exports: [],
     providers: [
-        AuthUserProvider,
-        AuthUserService,
+        AuthProvider,
+        AuthService,
     ],
 })
 export class AuthCoreModule {

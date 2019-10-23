@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { AuthenticationService } from '@app/services';
+import { AuthService } from '@app/pages/auth/core/services/auth.service';
+import { Observable } from 'rxjs';
+import { UTypes } from '@app/pages/users/core/types/users.types';
 
 @Component({
     selector: 'settings-modal',
@@ -8,7 +10,9 @@ import { AuthenticationService } from '@app/services';
     styleUrls: ['settings.modal.scss']
 })
 export class SettingsModalComponent {
-    constructor(private modalController: ModalController, public authService: AuthenticationService) {
+    public user$: Observable<UTypes.IUser> = this.authService.user$;
+
+    constructor(private modalController: ModalController, public authService: AuthService) {
     }
 
 
@@ -19,5 +23,9 @@ export class SettingsModalComponent {
 
     public dismiss() {
         this.modalController.dismiss();
+    }
+
+    public logout() {
+        this.authService.dispatchLogout();
     }
 }
