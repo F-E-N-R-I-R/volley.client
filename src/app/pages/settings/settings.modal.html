@@ -19,4 +19,6 @@
 <ion-content>
   <ion-button (click)="dismiss() || logout()">Logout</ion-button>
   <p>{{ (user$ | async) | json }}</p>
+  <p>{{ (settings$ | async) | json }}</p>
+  <app-tabs-settings></app-tabs-settings>
 </ion-content>
