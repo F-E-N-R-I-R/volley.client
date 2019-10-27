@@ -9,15 +9,19 @@
         "title": "Events"
     },
     "news": {
-        "title": "News",
-        "settings": {
-            "title": "Settings"
-        }
+        "title": "News"
     },
     "teams": {
         "title": "Teams"
     },
     "users": {
         "title": "Users"
+    },
+    "settings": {
+        "tabs": {
+            "main": "Account",
+            "additional_info": "Additional",
+            "notifications": "Notifications"
+        }
     }
 }

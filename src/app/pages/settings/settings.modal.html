@@ -6,7 +6,7 @@
       </ion-button>
     </ion-buttons>
     <ion-title>
-      {{ 'news.settings.title' | translate }}
+      {{ 'settings.tabs.' + tab | translate }}
     </ion-title>
     <ion-buttons slot="end">
       <ion-button  (click)="success()">
@@ -19,7 +19,6 @@
 <ion-content>
   <form [formGroup]="settingsForm" [ngSwitch]="tab">
     <ng-container *ngSwitchCase="'main'">
-      Main tab
       <div formGroupName="main">
         <ion-label>
           First Name:
@@ -38,12 +37,10 @@
     </ng-container>
 
     <ng-container *ngSwitchCase="'additional_info'">
-      Additional Info Tab
       <div formGroupName="additional"></div>
     </ng-container>
 
     <ng-container *ngSwitchCase="'notifications'">
-      Notifications Tab
       <div formGroupName="notifications"></div>
     </ng-container>
   </form>
