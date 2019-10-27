@@ -1,32 +1,44 @@
-<form [formGroup]="settingsForm">
-    <div formGroupName="main">
-        <ion-label>
-            First Name:
-            <ion-input type="text" formControlName="firstName">
-<!--                {{ (user$ | async).fname }}-->
-            </ion-input>
-        </ion-label>
-        <ion-label>
-            Last Name:
-            <ion-input type="text" formControlName="lastName">
-<!--                {{ (user$ | async).lname }}-->
-            </ion-input>
-        </ion-label>
-    </div>
-    <div formGroupName="additional"></div>
-    <div formGroupName="notifications"></div>
-</form>
-<ion-segment class="tabs-settings" (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="main" checked="">
-        <ion-icon name="person"></ion-icon>
-        <ion-label>Main</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="additional_info">
-        <ion-icon name="information-circle-outline"></ion-icon>
-        <ion-label>Additional Info</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="notifications">
-        <ion-icon name="notifications"></ion-icon>
-        <ion-label>Notifications</ion-label>
-    </ion-segment-button>
-</ion-segment>
+<ion-grid>
+    <ion-row>
+        <form [formGroup]="settingsForm">
+            <div formGroupName="main">
+                <ion-label>
+                    First Name:
+                    <ion-input type="text" formControlName="firstName">
+                        <!--                {{ (user$ | async).fname }}-->
+                    </ion-input>
+                </ion-label>
+                <ion-label>
+                    Last Name:
+                    <ion-input type="text" formControlName="lastName">
+                        <!--                {{ (user$ | async).lname }}-->
+                    </ion-input>
+                </ion-label>
+            </div>
+            <div formGroupName="additional"></div>
+            <div formGroupName="notifications"></div>
+        </form>
+    </ion-row>
+    <ion-row align-items-end>
+        <ion-segment class="tabs-settings" (ionChange)="segmentChanged($event)">
+            <ion-col>
+                <ion-segment-button value="main" checked="">
+                    <ion-icon name="person"></ion-icon>
+                    <ion-label>Main</ion-label>
+                </ion-segment-button>
+            </ion-col>
+            <ion-col>
+                <ion-segment-button value="additional_info">
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                    <ion-label>Additional Info</ion-label>
+                </ion-segment-button>
+            </ion-col>
+            <ion-col>
+                <ion-segment-button value="notifications">
+                    <ion-icon name="notifications"></ion-icon>
+                    <ion-label>Notifications</ion-label>
+                </ion-segment-button>
+            </ion-col>
+        </ion-segment>
+    </ion-row>
+</ion-grid>

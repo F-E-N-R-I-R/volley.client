@@ -3,14 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { UsersMockProvider } from '@app/mock/users.mock.provider';
-import { UTypes } from '@app/pages/auth/core/types/auth.types';
+import { UTypes } from '@app/pages/settings/core/types/settings.types';
 
 @Injectable()
-export class AuthProvider {
+export class SettingsProvider {
 
     constructor(private http: HttpClient, private usersMockProvider: UsersMockProvider) {}
 
-    login(): Observable<UTypes.IUser> {
-        return this.usersMockProvider.getUser();
+    getList(): Observable<UTypes.IUsersList> {
+        return this.usersMockProvider.getAllUsers();
     }
 }

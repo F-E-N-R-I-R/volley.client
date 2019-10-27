@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
-import { Observable } from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import { UTypes } from '@app/pages/users/core/types/users.types';
 import { SettingsService } from '@app/pages/settings/core/services/settings.service';
 
@@ -11,12 +11,22 @@ import { SettingsService } from '@app/pages/settings/core/services/settings.serv
     styleUrls: ['settings.modal.scss']
 })
 export class SettingsModalComponent {
+    private ngUnsubscribe$ = new Subject();
     public user$: Observable<UTypes.IUser> = this.authService.user$;
     public settings$: Observable<UTypes.IUser[]> = this.settingsService.settings$;
 
     constructor(private modalController: ModalController, public authService: AuthService, public settingsService: SettingsService) {
     }
 
+    public ionViewWillEnter() {
+        this.settingsService.dispatchSettings();
+    }
+
+    public ionViewWillLeave() {
+        this.ngUnsubscribe$.next();
+        this.ngUnsubscribe$.complete();
+
+    }
 
     public success() {
         this.modalController.dismiss({});
@@ -25,10 +35,6 @@ export class SettingsModalComponent {
 
     public dismiss() {
         this.modalController.dismiss();
-    }
-
-    public login() {
-        this.settingsService.dispatchSettings();
     }
 
     public logout() {
