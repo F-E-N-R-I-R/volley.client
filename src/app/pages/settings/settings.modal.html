@@ -34,6 +34,7 @@
           </ion-input>
         </ion-label>
       </div>
+      <ion-button (click)="dismiss() || logout()">Logout</ion-button>
     </ng-container>
 
     <ng-container *ngSwitchCase="'additional_info'">
@@ -49,7 +50,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-segment class="tabs-settings2" (ionChange)="segmentChanged($event)" [(ngModel)]="tab">
+  <ion-segment class="tabs-settings" (ionChange)="segmentChanged($event)" [(ngModel)]="tab">
     <ion-grid>
       <ion-row>
         <ion-col size="4">
