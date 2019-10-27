@@ -17,8 +17,60 @@
 </ion-header>
 
 <ion-content>
-  <ion-button (click)="dismiss() || logout()">Logout</ion-button>
-  <p>{{ (user$ | async) | json }}</p>
-  <p>{{ (settings$ | async) | json }}</p>
-  <app-tabs-settings></app-tabs-settings>
+  <form [formGroup]="settingsForm" [ngSwitch]="tab">
+    <ng-container *ngSwitchCase="'main'">
+      Main tab
+      <div formGroupName="main">
+        <ion-label>
+          First Name:
+          <ion-input type="text" formControlName="firstName">
+            <!--                {{ (user$ | async).fname }}-->
+          </ion-input>
+        </ion-label>
+        <ion-label>
+          Last Name:
+          <ion-input type="text" formControlName="lastName">
+            <!--                {{ (user$ | async).lname }}-->
+          </ion-input>
+        </ion-label>
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'additional_info'">
+      Additional Info Tab
+      <div formGroupName="additional"></div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'notifications'">
+      Notifications Tab
+      <div formGroupName="notifications"></div>
+    </ng-container>
+  </form>
 </ion-content>
+
+<ion-footer>
+  <ion-segment class="tabs-settings2" (ionChange)="segmentChanged($event)" [(ngModel)]="tab">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-segment-button value="main">
+            <ion-icon name="person"></ion-icon>
+            <ion-label>Main</ion-label>
+          </ion-segment-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-segment-button value="additional_info">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <ion-label>Additional Info</ion-label>
+          </ion-segment-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-segment-button value="notifications">
+            <ion-icon name="notifications"></ion-icon>
+            <ion-label>Notifications</ion-label>
+          </ion-segment-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-segment>
+</ion-footer>

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
-import {Observable, Subject} from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { UTypes } from '@app/pages/users/core/types/users.types';
 import { SettingsService } from '@app/pages/settings/core/services/settings.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
     selector: 'settings-modal',
@@ -14,8 +15,22 @@ export class SettingsModalComponent {
     private ngUnsubscribe$ = new Subject();
     public user$: Observable<UTypes.IUser> = this.authService.user$;
     public settings$: Observable<UTypes.IUser[]> = this.settingsService.settings$;
+    public tab = 'main';
 
-    constructor(private modalController: ModalController, public authService: AuthService, public settingsService: SettingsService) {
+    public settingsForm = this.fb.group({
+        main: this.fb.group({
+            firstName: [''],
+            lastName: [''],
+        }),
+        additional: this.fb.group({}),
+        notifications: this.fb.group({}),
+    });
+
+    constructor(private modalController: ModalController,
+                public authService: AuthService,
+                public settingsService: SettingsService,
+                private fb: FormBuilder,
+    ) {
     }
 
     public ionViewWillEnter() {
@@ -39,5 +54,9 @@ export class SettingsModalComponent {
 
     public logout() {
         this.authService.dispatchLogout();
+    }
+
+    segmentChanged(ev: any) {
+        console.log('Segment changed', ev);
     }
 }
