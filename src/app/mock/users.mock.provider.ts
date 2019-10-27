@@ -82,6 +82,10 @@ export class UsersMockProvider {
         return new BehaviorSubject({
                 fname: 'Bob',
                 lname: 'Dilan',
+                pname: 'Valerievich',
+                notifications: {
+                    news: true,
+                }
             }
         );
     }

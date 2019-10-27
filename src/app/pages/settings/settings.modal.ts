@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
-import { Observable, Subject } from 'rxjs';
-import { UTypes } from '@app/pages/users/core/types/users.types';
+import { Subject } from 'rxjs';
 import { SettingsService } from '@app/pages/settings/core/services/settings.service';
+import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
@@ -13,23 +13,14 @@ import { FormBuilder } from '@angular/forms';
 })
 export class SettingsModalComponent {
     private ngUnsubscribe$ = new Subject();
-    public user$: Observable<UTypes.IUser> = this.authService.user$;
-    public settings$: Observable<UTypes.IUser[]> = this.settingsService.settings$;
+    public settingsForm = this.settingsFormService.form;
     public tab = 'main';
-
-    public settingsForm = this.fb.group({
-        main: this.fb.group({
-            firstName: [''],
-            lastName: [''],
-        }),
-        additional: this.fb.group({}),
-        notifications: this.fb.group({}),
-    });
 
     constructor(private modalController: ModalController,
                 public authService: AuthService,
                 public settingsService: SettingsService,
                 private fb: FormBuilder,
+                private settingsFormService: SettingsFormService,
     ) {
     }
 
@@ -57,6 +48,6 @@ export class SettingsModalComponent {
     }
 
     segmentChanged(ev: any) {
-        console.log('Segment changed', ev);
+        // console.log('Segment changed', ev);
     }
 }

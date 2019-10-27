@@ -7,6 +7,7 @@ import { effects } from './effects';
 import { reducers } from './reducers';
 import { SettingsProvider } from './providers/settings.provider';
 import { SettingsService } from './services/settings.service';
+import { SettingsFormService } from './services/settings-form.service';
 
 @NgModule({
     imports: [
@@ -19,6 +20,7 @@ import { SettingsService } from './services/settings.service';
     providers: [
         SettingsProvider,
         SettingsService,
+        SettingsFormService,
     ],
 })
 export class SettingsCoreModule {

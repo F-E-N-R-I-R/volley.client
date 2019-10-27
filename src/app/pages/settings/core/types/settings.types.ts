@@ -1,13 +1,5 @@
-import { Pager } from '@app/types';
-
-export namespace UTypes {
-    export interface IUser {
-        fname: string;
-        lname: string;
+export namespace STypes {
+    export interface INotifications {
+        news: boolean;
     }
-
-    export interface IUsersList {
-        items: IUser[];
-    }
-
 }
