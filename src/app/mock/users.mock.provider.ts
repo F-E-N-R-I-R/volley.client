@@ -14,6 +14,10 @@ export class UsersMockProvider {
                 {
                     fname: 'Bob',
                     lname: 'Dilan',
+                    pname: 'Valerievich',
+                    notifications: {
+                        news: true,
+                    }
                     // login: 'bob',
                     // phone: 805012345678,
                     // email: 'bob@user.com',
@@ -33,6 +37,10 @@ export class UsersMockProvider {
                 {
                     fname: 'Merry',
                     lname: 'Poppins',
+                    pname: 'Valerievich',
+                    notifications: {
+                        news: true,
+                    }
                     // login: 'merry',
                     // phone: 805012345678,
                     // email: 'merry@user.com',
@@ -52,6 +60,10 @@ export class UsersMockProvider {
                 {
                     fname: 'John',
                     lname: 'Travolta',
+                    pname: 'Valerievich',
+                    notifications: {
+                        news: true,
+                    }
                     // login: 'john',
                     // phone: 805012345678,
                     // email: 'john@user.com',
