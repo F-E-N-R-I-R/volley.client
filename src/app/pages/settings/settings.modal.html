@@ -19,35 +19,16 @@
 <ion-content>
   <form [formGroup]="settingsForm" [ngSwitch]="tab">
     <ng-container *ngSwitchCase="'main'">
-      <div formGroupName="main">
-        <ion-label>
-          First Name:
-          <ion-input type="text" formControlName="fname"></ion-input>
-        </ion-label>
-        <ion-label>
-          Last Name:
-          <ion-input type="text" formControlName="lname"></ion-input>
-        </ion-label>
-      </div>
+   <app-main-tab></app-main-tab>
       <ion-button (click)="dismiss() || logout()">Logout</ion-button>
     </ng-container>
 
     <ng-container *ngSwitchCase="'additional_info'">
-      <div formGroupName="additional">
-        <ion-label>
-          Patronymic Name:
-          <ion-input type="text" formControlName="pname"></ion-input>
-        </ion-label>
-      </div>
+      <app-additional-info></app-additional-info>
     </ng-container>
 
     <ng-container *ngSwitchCase="'notifications'">
-      <ion-list formGroupName="notifications">
-        <ion-item>
-          <ion-label>News</ion-label>
-          <ion-toggle formControlName="news"></ion-toggle>
-        </ion-item>
-      </ion-list>
+      <app-notifications-tab></app-notifications-tab>
     </ng-container>
   </form>
 </ion-content>

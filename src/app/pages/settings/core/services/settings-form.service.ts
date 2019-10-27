@@ -11,12 +11,17 @@ export class SettingsFormService {
         main: this.fb.group({
             fname: [''],
             lname: [''],
+            sex: [UTypes.ESex.MALE]
         }),
         additional: this.fb.group({
             pname: [''],
+            email: [''],
         }),
         notifications: this.fb.group({
-            news: [true],
+            news: this.fb.group({
+                isOn: [false],
+                fivb: [false],
+            }),
         }),
     });
 
@@ -25,16 +30,23 @@ export class SettingsFormService {
     }
 
     private patchUser(user: UTypes.IUser) {
-        this.form.patchValue(
+        this.form.setValue(
             {
                 main: {
                     fname: user.fname,
-                    lname: user.lname
+                    lname: user.lname,
+                    sex: user.sex,
                 },
                 additional: {
                     pname: user.pname,
+                    email: user.email,
                 },
-                notifications: user.notifications,
+                notifications: {
+                    news: {
+                        isOn: user.notifications.news.enabled,
+                        fivb: user.notifications.news.fivb,
+                    }
+                },
             },
         );
     }

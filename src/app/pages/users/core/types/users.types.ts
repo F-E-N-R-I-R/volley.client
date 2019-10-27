@@ -8,6 +8,8 @@ export namespace UTypes {
         fname: string;
         lname: string;
         pname: string;
+        email: string;
+        sex: ESex;
         notifications: INotifications;
     }
 
@@ -16,4 +18,8 @@ export namespace UTypes {
         pagination: Pager.IPager;
     }
 
+    export enum ESex {
+        MALE = "male",
+        FEMALE = "female",
+    }
 }

@@ -15,6 +15,9 @@ export class UsersMockProvider {
                     fname: 'Bob',
                     lname: 'Dilan',
                     pname: 'Valerievich',
+                    email:'pavel@gmail.com',
+                    sex: UTypes.ESex.MALE,
+
                     notifications: {
                         news: true,
                     }
@@ -38,6 +41,8 @@ export class UsersMockProvider {
                     fname: 'Merry',
                     lname: 'Poppins',
                     pname: 'Valerievich',
+                    email:'pavel@gmail.com',
+                    sex: UTypes.ESex.MALE,
                     notifications: {
                         news: true,
                     }
@@ -61,6 +66,8 @@ export class UsersMockProvider {
                     fname: 'John',
                     lname: 'Travolta',
                     pname: 'Valerievich',
+                    email:'pavel@gmail.com',
+                    sex: UTypes.ESex.MALE,
                     notifications: {
                         news: true,
                     }
@@ -95,8 +102,13 @@ export class UsersMockProvider {
                 fname: 'Bob',
                 lname: 'Dilan',
                 pname: 'Valerievich',
+                email:'pavel@gmail.com',
+                sex: UTypes.ESex.MALE,
                 notifications: {
-                    news: true,
+                    news: {
+                        enabled: true,
+                        fivb: false,
+                    },
                 }
             }
         );
