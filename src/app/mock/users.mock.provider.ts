@@ -102,7 +102,7 @@ export class UsersMockProvider {
                 fname: 'Bob',
                 lname: 'Dilan',
                 pname: 'Valerievich',
-                email:'pavel@gmail.com',
+                email: 'pavel@gmail.com',
                 sex: UTypes.ESex.MALE,
                 notifications: {
                     news: {

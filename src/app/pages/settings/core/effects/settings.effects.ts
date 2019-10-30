@@ -10,14 +10,14 @@ import { SettingsProvider } from '../providers/settings.provider';
 export class SettingsEffects {
     @Effect()
     settingsList$ = this.actions$.pipe(
-        ofType(SettingsActions.LOAD_SETTINGS),
-        switchMap((action: SettingsActions.SettingsLoadAction) =>
+        ofType(SettingsActions.SAVE_SETTINGS),
+        switchMap((action: SettingsActions.SettingsSaveAction) =>
             this.settingsProvider
                 .getList()
                 .pipe(
-                    map((data) => new SettingsActions.SettingsLoadSuccessAction(data)),
+                    map((data) => new SettingsActions.SettingsSaveSuccessAction(data)),
                     catchError((error: Error) =>
-                        of(new SettingsActions.SettingsLoadFailAction(error)),
+                        of(new SettingsActions.SettingsSaveFailAction(error)),
                     ),
                 ),
         ),

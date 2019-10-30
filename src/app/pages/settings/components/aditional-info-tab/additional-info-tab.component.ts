@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { FormGroup, FormGroupDirective} from "@angular/forms";
+import { Component } from '@angular/core';
+import { FormGroup, FormGroupDirective } from '@angular/forms';
 
 @Component({
     selector: 'app-additional-info',
@@ -8,6 +8,7 @@ import { FormGroup, FormGroupDirective} from "@angular/forms";
 })
 export class AdditionalInfoTabComponent {
     public form: FormGroup = this.parentGroup.form.get('additional') as FormGroup;
-    constructor(public parentGroup: FormGroupDirective){
+
+    constructor(public parentGroup: FormGroupDirective) {
     }
 }

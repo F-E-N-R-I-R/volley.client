@@ -25,7 +25,7 @@ export class SettingsModalComponent {
     }
 
     public ionViewWillEnter() {
-        this.settingsService.dispatchSettings();
+        // this.settingsService.dispatchSettings();
     }
 
     public ionViewWillLeave() {
@@ -45,6 +45,11 @@ export class SettingsModalComponent {
 
     public logout() {
         this.authService.dispatchLogout();
+    }
+
+    public save() {
+        console.log(this.settingsFormService.getFormUser());
+        this.settingsService.dispatchSettings(this.settingsFormService.getFormUser());
     }
 
     segmentChanged(ev: any) {

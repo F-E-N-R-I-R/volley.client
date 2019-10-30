@@ -19,7 +19,7 @@ export namespace UTypes {
     }
 
     export enum ESex {
-        MALE = "male",
-        FEMALE = "female",
+        MALE = 'male',
+        FEMALE = 'female',
     }
 }

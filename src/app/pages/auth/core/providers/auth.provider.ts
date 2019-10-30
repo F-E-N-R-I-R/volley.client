@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { UsersMockProvider } from '@app/mock/users.mock.provider';
-import { UTypes } from '@app/pages/auth/core/types/auth.types';
+import { UTypes } from '@app/pages/users/core/types/users.types';
 
 @Injectable()
 export class AuthProvider {

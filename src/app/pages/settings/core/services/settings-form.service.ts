@@ -50,4 +50,20 @@ export class SettingsFormService {
             },
         );
     }
+
+    public getFormUser() {
+        return {
+            fname: this.form.value.main.fname,
+            lname: this.form.value.main.lname,
+            pname: this.form.value.additional.pname,
+            email: this.form.value.additional.email,
+            sex: this.form.value.main.sex,
+            notifications: {
+                news: {
+                    enabled: this.form.value.notifications.news.isOn,
+                    fivb: this.form.value.notifications.news.fivb,
+                },
+            }
+        };
+    }
 }

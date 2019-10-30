@@ -17,24 +17,24 @@ export function settingsReducer(
     action: settingsActions.TSettingsActions,
 ): SettingsState {
     switch (action.type) {
-        case settingsActions.LOAD_SETTINGS: {
+        case settingsActions.SAVE_SETTINGS: {
             return { ...state, loading: true } as SettingsState;
         }
 
-        case settingsActions.LOAD_SETTINGS_SUCCESS: {
+        case settingsActions.SAVE_SETTINGS_SUCCESS: {
             return ({
                 ...state,
                 loading: false,
-                ...(action as settingsActions.SettingsLoadSuccessAction).payload,
+                ...(action as settingsActions.SettingsSaveSuccessAction).payload,
                 error: null,
             } as SettingsState);
         }
 
-        case settingsActions.LOAD_SETTINGS_FAIL: {
+        case settingsActions.SAVE_SETTINGS_FAIL: {
             return ({
                 ...state,
                 loading: false,
-                error: (action as settingsActions.SettingsLoadFailAction).error,
+                error: (action as settingsActions.SettingsSaveFailAction).error,
             } as SettingsState);
         }
 
