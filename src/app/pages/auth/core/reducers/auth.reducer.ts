@@ -17,6 +17,7 @@ export function authReducer(
     action: authActions.TAuthActions,
 ): AuthState {
     switch (action.type) {
+        case authActions.UPDATE_USER:
         case authActions.LOGIN:
         case authActions.LOGOUT: {
             return { ...state, loading: true } as AuthState;
@@ -31,6 +32,7 @@ export function authReducer(
             } as AuthState);
         }
 
+        case authActions.UPDATE_USER_SUCCESS:
         case authActions.LOGIN_SUCCESS: {
             return ({
                 ...state,
@@ -40,6 +42,7 @@ export function authReducer(
             } as AuthState);
         }
 
+        case authActions.UPDATE_USER_FAIL:
         case authActions.LOGOUT_FAIL:
         case authActions.LOGIN_FAIL: {
             return ({

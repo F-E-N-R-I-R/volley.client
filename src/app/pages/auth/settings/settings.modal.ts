@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
 import { Observable, Subject } from 'rxjs';
-import { SettingsService } from '@app/pages/settings/core/services/settings.service';
-import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
+import { SettingsFormService } from '@app/pages/auth/core/services/settings-form.service';
 import { FormBuilder } from '@angular/forms';
 import { UTypes } from '@app/pages/users/core/types/users.types';
 import { takeUntil } from 'rxjs/operators';
@@ -21,7 +20,6 @@ export class SettingsModalComponent {
 
     constructor(private modalController: ModalController,
                 public authService: AuthService,
-                public settingsService: SettingsService,
                 private fb: FormBuilder,
                 private settingsFormService: SettingsFormService,
     ) {
@@ -53,6 +51,6 @@ export class SettingsModalComponent {
     }
 
     public save() {
-        this.settingsService.dispatchUpdateSettings(this.settingsFormService.form.value);
+        this.authService.dispatchUpdate(this.settingsFormService.form.value);
     }
 }

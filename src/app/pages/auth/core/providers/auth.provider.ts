@@ -13,4 +13,8 @@ export class AuthProvider {
     login(): Observable<UTypes.IUser> {
         return this.usersMockProvider.getUser();
     }
+
+    public updateSettings(user: UTypes.IUser): Observable<UTypes.IUser> {
+        return this.usersMockProvider.updateUser(user);
+    }
 }

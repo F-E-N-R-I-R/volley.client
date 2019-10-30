@@ -1,5 +1,5 @@
-import { UsersListEffects } from './users.effects';
+import { AuthEffects } from './auth.effects';
 
-export const effects: any[] = [UsersListEffects];
+export const effects: any[] = [AuthEffects];
 
-export * from './users.effects';
+export * from './auth.effects';

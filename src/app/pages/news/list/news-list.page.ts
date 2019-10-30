@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { ModalController } from '@ionic/angular';
-import { SettingsModalComponent } from '@app/pages/settings/settings.modal';
+import { SettingsModalComponent } from '@app/pages/auth/settings/settings.modal';
 import { NewsProvider } from '../core/providers/news.provider';
 import { NTypes } from '../core/types/news.types';
 import { map } from 'rxjs/operators';

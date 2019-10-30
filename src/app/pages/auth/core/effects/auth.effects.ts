@@ -5,10 +5,11 @@ import { catchError, map, switchMap } from 'rxjs/operators';
 
 import * as AuthActions from '../actions';
 import { AuthProvider } from '../providers/auth.provider';
+import { UTypes } from '@app/pages/users/core/types/users.types';
 
 
 @Injectable()
-export class UsersListEffects {
+export class AuthEffects {
     @Effect()
     authLogin$ = this.actions$.pipe(
         ofType(AuthActions.LOGIN),
@@ -38,6 +39,22 @@ export class UsersListEffects {
                 ),
         ),
     );
+
+    @Effect()
+    updateUser$ = this.actions$.pipe(
+        ofType(AuthActions.UPDATE_USER),
+        switchMap((action: AuthActions.AuthUpdateUserAction) =>
+            this.authProvider
+                .updateSettings(action.payload)
+                .pipe(
+                    map((data: UTypes.IUser) => new AuthActions.AuthUpdateUserSuccessAction(data)),
+                    catchError((error: Error) =>
+                        of(new AuthActions.AuthUpdateUserFailAction(error)),
+                    ),
+                ),
+        ),
+    );
+
     constructor(
         private authProvider: AuthProvider,
         private actions$: Actions,

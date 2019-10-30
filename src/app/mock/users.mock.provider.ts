@@ -39,4 +39,9 @@ export class UsersMockProvider {
     getUser(): Observable<UTypes.IUser> {
         return new BehaviorSubject(this.users[0]);
     }
+
+    updateUser(user: UTypes.IUser): Observable<UTypes.IUser> {
+        this.users[0] = user;
+        return new BehaviorSubject(this.users[0]);
+    }
 }

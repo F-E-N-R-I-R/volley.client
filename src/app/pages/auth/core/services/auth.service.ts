@@ -4,6 +4,7 @@ import { select, Store } from '@ngrx/store';
 import * as fromActions from '../actions';
 import * as fromReducers from '../reducers';
 import * as fromSelectors from '../selectors';
+import { UTypes } from '@app/pages/users/core/types/users.types';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -21,5 +22,9 @@ export class AuthService {
 
     dispatchLogout() {
         this.store.dispatch(new fromActions.AuthLogoutAction());
+    }
+
+    dispatchUpdate(user: UTypes.IUser) {
+        this.store.dispatch(new fromActions.AuthUpdateUserAction(user));
     }
 }
