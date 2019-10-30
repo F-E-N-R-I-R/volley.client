@@ -7,7 +7,7 @@ import { FormGroup, FormGroupDirective } from '@angular/forms';
     styleUrls: ['main-tab.component.scss']
 })
 export class MainTabComponent {
-    public form: FormGroup = this.parentGroup.form.get('main') as FormGroup;
+    public form: FormGroup = this.parentGroup.form as FormGroup;
 
     constructor(public parentGroup: FormGroupDirective) {
     }

@@ -1,5 +1,6 @@
 export namespace STypes {
     export interface INotifications {
-        news: any;
+        news: boolean;
+        team: boolean;
     }
 }

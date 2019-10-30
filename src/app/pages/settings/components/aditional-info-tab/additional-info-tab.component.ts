@@ -7,7 +7,7 @@ import { FormGroup, FormGroupDirective } from '@angular/forms';
     styleUrls: ['additional-info-tab.component.scss']
 })
 export class AdditionalInfoTabComponent {
-    public form: FormGroup = this.parentGroup.form.get('additional') as FormGroup;
+    public form: FormGroup = this.parentGroup.form as FormGroup;
 
     constructor(public parentGroup: FormGroupDirective) {
     }

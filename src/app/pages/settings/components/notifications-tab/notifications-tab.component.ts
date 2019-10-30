@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormGroupDirective } from '@angular/forms';
+import { FormGroup, FormGroupDirective } from '@angular/forms';
 
 @Component({
     selector: 'app-notifications-tab',
@@ -7,7 +7,7 @@ import { FormControl, FormGroup, FormGroupDirective } from '@angular/forms';
     styleUrls: ['notifications-tab.component.scss']
 })
 export class NotificationsTabComponent {
-    public form: FormGroup = this.parentGroup.form.get('notifications.news') as FormGroup;
+    public form: FormGroup = this.parentGroup.form.get('notifications') as FormGroup;
 
     constructor(public parentGroup: FormGroupDirective) {
     }

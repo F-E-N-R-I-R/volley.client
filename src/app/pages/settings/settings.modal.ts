@@ -48,11 +48,6 @@ export class SettingsModalComponent {
     }
 
     public save() {
-        console.log(this.settingsFormService.getFormUser());
-        this.settingsService.dispatchSettings(this.settingsFormService.getFormUser());
-    }
-
-    segmentChanged(ev: any) {
-        // console.log('Segment changed', ev);
+        this.settingsService.dispatchSettings(this.settingsFormService.form.value);
     }
 }

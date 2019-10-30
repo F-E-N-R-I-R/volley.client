@@ -8,47 +8,24 @@ import { AuthService } from '@app/pages/auth/core/services/auth.service';
 export class SettingsFormService {
     public user$: Observable<UTypes.IUser> = this.authService.user$;
     public form = this.fb.group({
-        main: this.fb.group({
-            fname: [''],
-            lname: [''],
-            sex: [UTypes.ESex.MALE]
-        }),
-        additional: this.fb.group({
-            pname: [''],
-            email: [''],
-        }),
+        // Main Info
+        fname: [''],
+
+        // Additional Info
+        lname: [''],
+        sex: [UTypes.ESex.MALE],
+        pname: [''],
+        email: [''],
+
+        // Notifications
         notifications: this.fb.group({
-            news: this.fb.group({
-                isOn: [false],
-                fivb: [false],
-            }),
+            news: [false],
+            team: [false],
         }),
     });
 
     constructor(private fb: FormBuilder, public authService: AuthService) {
-        this.user$.subscribe(user => this.patchUser(user));
-    }
-
-    private patchUser(user: UTypes.IUser) {
-        this.form.setValue(
-            {
-                main: {
-                    fname: user.fname,
-                    lname: user.lname,
-                    sex: user.sex,
-                },
-                additional: {
-                    pname: user.pname,
-                    email: user.email,
-                },
-                notifications: {
-                    news: {
-                        isOn: user.notifications.news.enabled,
-                        fivb: user.notifications.news.fivb,
-                    }
-                },
-            },
-        );
+        this.user$.subscribe(user => this.form.setValue(user));
     }
 
     public getFormUser() {
