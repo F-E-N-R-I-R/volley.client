@@ -14,7 +14,7 @@ export class SettingsService {
     constructor(private store: Store<fromReducers.SettingState>) {
     }
 
-    dispatchSettings(payload) {
+    dispatchUpdateSettings(payload) {
         this.store.dispatch(new fromActions.SettingsSaveAction(payload));
     }
 }

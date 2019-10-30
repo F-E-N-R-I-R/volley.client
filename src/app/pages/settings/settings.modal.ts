@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { SettingsService } from '@app/pages/settings/core/services/settings.service';
 import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
 import { FormBuilder } from '@angular/forms';
+import { UTypes } from '@app/pages/users/core/types/users.types';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
     selector: 'settings-modal',
@@ -12,6 +14,7 @@ import { FormBuilder } from '@angular/forms';
     styleUrls: ['settings.modal.scss']
 })
 export class SettingsModalComponent {
+    public user$: Observable<UTypes.IUser> = this.authService.user$;
     private ngUnsubscribe$ = new Subject();
     public settingsForm = this.settingsFormService.form;
     public tab = 'main';
@@ -25,7 +28,9 @@ export class SettingsModalComponent {
     }
 
     public ionViewWillEnter() {
-        // this.settingsService.dispatchSettings();
+        this.user$
+            .pipe(takeUntil(this.ngUnsubscribe$))
+            .subscribe(user => this.settingsFormService.form.setValue(user));
     }
 
     public ionViewWillLeave() {
@@ -48,6 +53,6 @@ export class SettingsModalComponent {
     }
 
     public save() {
-        this.settingsService.dispatchSettings(this.settingsFormService.form.value);
+        this.settingsService.dispatchUpdateSettings(this.settingsFormService.form.value);
     }
 }
