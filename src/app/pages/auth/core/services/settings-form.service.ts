@@ -18,6 +18,8 @@ export class SettingsFormService {
         notifications: this.fb.group({
             news: [false],
             team: [false],
+            events: [false],
+            competitions: [false],
         }),
     });
 

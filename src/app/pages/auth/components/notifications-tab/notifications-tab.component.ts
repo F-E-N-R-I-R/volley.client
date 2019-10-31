@@ -11,4 +11,12 @@ export class NotificationsTabComponent {
 
     constructor(public parentGroup: FormGroupDirective) {
     }
+
+    public onAllToggle($e) {
+        const notificationGroup = this.parentGroup.form.get('notifications') as FormGroup;
+
+        Object.keys(notificationGroup.controls).forEach(controlName => {
+            notificationGroup.controls[controlName].setValue($e.detail.checked);
+        });
+    }
 }
