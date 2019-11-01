@@ -7,10 +7,16 @@ export class SettingsFormService {
     public form = this.fb.group({
         // Main Info
         fname: [''],
+        gender: [UTypes.EGender.MALE],
+        phone: [null],
+        city: [UTypes.ECity.KHARKOV],
+        date_of_birth: [new Date()],
+        language: [UTypes.ELanguage.EN],
+        theme: [UTypes.ETheme.BLACK],
+        avatar: ['path to default avatar '],
 
         // Additional Info
         lname: [''],
-        sex: [UTypes.ESex.MALE],
         pname: [''],
         email: [''],
 

@@ -14,7 +14,13 @@ export class UsersMockProvider {
         .map(user => ({
             pname: 'Valerievich',
             email: 'pavel@gmail.com',
-            sex: UTypes.ESex.MALE,
+            gender: UTypes.EGender.MALE,
+            phone: 380506785432,
+            city: UTypes.ECity.KHARKOV,
+            date_of_birth: new Date(),
+            language: UTypes.ELanguage.EN,
+            theme: UTypes.ETheme.BLACK,
+            avatar: '',
             notifications: {
                 news: true,
                 team: false,
