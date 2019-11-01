@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '@app/guards';
 
 const routes: Routes = [
@@ -36,12 +36,12 @@ const routes: Routes = [
         path: 'teams',
         canActivate: [AuthGuard],
         loadChildren: './pages/teams/teams.module#TeamsModule',
-    }
+    },
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+        RouterModule.forRoot(routes)
     ],
     exports: [RouterModule]
 })

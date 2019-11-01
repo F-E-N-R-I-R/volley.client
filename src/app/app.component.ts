@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthenticationService } from '@app/services';
 import { Router } from '@angular/router';
-import { filter, map, pairwise } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
 
 
@@ -37,19 +36,12 @@ export class AppComponent {
             this.statusBar.styleDefault();
             this.splashScreen.hide();
 
-            this.authenticationService.authState.pipe(
-                pairwise(),
-                filter(([old, newState]) => old !== newState),
-                map(([old, newState]) => newState),
-            ).subscribe(state => {
+            this.authenticationService.authState.subscribe(state => {
                 // TODO REFACTOR
                 if (state) {
-                    this.router.navigate(['/news']);
+                    this.router.navigate(['news']);
                 } else {
-                    this.router.navigate(['/login']);
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 100);
+                    this.router.navigate(['login']);
                 }
             });
         });

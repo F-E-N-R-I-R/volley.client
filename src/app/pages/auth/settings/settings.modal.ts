@@ -5,7 +5,7 @@ import { Observable, Subject } from 'rxjs';
 import { SettingsFormService } from '@app/pages/auth/core/services/settings-form.service';
 import { FormBuilder } from '@angular/forms';
 import { UTypes } from '@app/pages/users/core/types/users.types';
-import { takeUntil } from 'rxjs/operators';
+import { filter, takeUntil } from 'rxjs/operators';
 
 @Component({
     selector: 'settings-modal',
@@ -27,7 +27,10 @@ export class SettingsModalComponent {
 
     public ionViewWillEnter() {
         this.user$
-            .pipe(takeUntil(this.ngUnsubscribe$))
+            .pipe(
+                takeUntil(this.ngUnsubscribe$),
+                filter(user => !!user),
+            )
             .subscribe(user => this.settingsFormService.form.setValue(user));
     }
 
