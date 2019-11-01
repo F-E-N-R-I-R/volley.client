@@ -24,6 +24,8 @@ export class UsersMockProvider {
             notifications: {
                 news: true,
                 team: false,
+                events: false,
+                competitions: false,
             },
             ...user,
         }));
