@@ -1,11 +1,61 @@
-<div [formGroup]="form">
-	<ion-label>
-		First Name:
+<div [formGroup]="form"> 
+
+		<ion-avatar>
+  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+		</ion-avatar>
+
+	<ion-item>
+			<ion-label>First Name:</ion-label>
 		<ion-input type="text" formControlName="fname"></ion-input>
-	</ion-label>
-	<ion-label>
-		Sex:
-		<ion-input type="text" formControlName="sex" readonly></ion-input>
-	</ion-label>
+	</ion-item>
+
+	<ion-item> 
+	            <ion-label>Phone:</ion-label>
+		<ion-input type="text" formControlName="phone"></ion-input>
+	</ion-item>
+	
+		<ion-item>
+  <ion-label>Birthday</ion-label>
+  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+	</ion-item>
+
+	
+	<ion-list>
+
+	<ion-item>
+			<ion-label>Gender</ion-label>
+    <ion-select interface="popover" formControlName="gender" value="MALE" >
+      <ion-select-option value="MALE">male</ion-select-option>
+      <ion-select-option value="FEMALE">female</ion-select-option>
+      <ion-select-option value="shtykatyrka">shtykatyrka</ion-select-option>
+	</ion-select>
+		</ion-item>
+		
+	<ion-item>
+			<ion-label>City</ion-label>
+    <ion-select interface="popover" formControlName="city" value="KHARKOV">
+      <ion-select-option value="KHARKOV">Kharkov</ion-select-option>
+	</ion-select>
+		</ion-item>
+
+	
+		<ion-item>
+			<ion-label>Language</ion-label>
+    <ion-select interface="popover" formControlName="language" value="en">
+      <ion-select-option value="en">EN</ion-select-option>
+      <ion-select-option value="ru">RU</ion-select-option>
+	</ion-select>
+		</ion-item>
+   
+	<ion-item>
+		 <ion-label>Theme</ion-label>
+    <ion-select interface="popover" formControlName="theme" value="BLACK">
+      <ion-select-option value="BLACK">1</ion-select-option>
+      <ion-select-option value="WHITE">2</ion-select-option>
+	</ion-select>
+	</ion-item>
+	</ion-list>
+	
+
 </div>
 

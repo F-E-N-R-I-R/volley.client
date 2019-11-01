@@ -9,7 +9,13 @@ export namespace UTypes {
         lname: string;
         pname: string;
         email: string;
-        sex: ESex;
+        gender: EGender;
+        phone: number;
+        city: ECity;
+        date_of_birth: Date;
+        language: ELanguage;
+        theme: ETheme;
+        avatar: string;
         notifications: INotifications;
     }
 
@@ -18,8 +24,23 @@ export namespace UTypes {
         pagination: Pager.IPager;
     }
 
-    export enum ESex {
+    export enum EGender {
         MALE = 'male',
         FEMALE = 'female',
     }
+
+     export enum ECity {
+        KHARKOV = 'kharkov',
+    }
+
+     export enum ELanguage {
+        RU = 'ru',
+        EN = 'en',
+    }
+    
+     export enum ETheme {
+        WHITE = '1',
+        BLACK = '2',
+    }
+
 }
