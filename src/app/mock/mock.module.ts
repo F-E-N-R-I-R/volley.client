@@ -5,7 +5,6 @@ import { UsersMockProvider } from '@app/mock/users.mock.provider';
 import { TeamsMockProvider } from '@app/mock/teams.mock.provider';
 import { NewsMockProvider } from '@app/mock/news.mock.provider';
 import { EventsMockProvider } from '@app/mock/events.mock.provider';
-import { CompetitionsMockProvider } from '@app/mock/competitions.mock.provider';
 
 @NgModule({
     imports: [
@@ -17,7 +16,6 @@ import { CompetitionsMockProvider } from '@app/mock/competitions.mock.provider';
         TeamsMockProvider,
         NewsMockProvider,
         EventsMockProvider,
-        CompetitionsMockProvider,
     ],
     exports: []
 })

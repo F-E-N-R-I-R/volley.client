@@ -1,0 +1,80 @@
+<ion-header>
+	<ion-toolbar color="vua-gray-light">
+		<ion-title>
+			{{ 'settings.tabs.' + tab | translate }}
+		</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="logout()">
+				<ion-icon slot="icon-only" name="exit"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-gray-light">
+	<form [formGroup]="form" [ngSwitch]="tab">
+		<ion-list>
+			<ion-item lines="none">
+				<ion-avatar slot="start">
+					<img [src]="form.get('avatar').value">
+				</ion-avatar>
+				<ion-text>
+					<ion-input type="text" formControlName="fname"></ion-input>
+					<ion-input type="text" formControlName="phone"></ion-input>
+				</ion-text>
+			</ion-item>
+		</ion-list>
+
+		<ion-list>
+			<ion-item>
+				<ion-label position="stacked">Birthday</ion-label>
+				<ion-datetime displayFormat="MM DD YYYY" placeholder="Select Date"
+				              formControlName="date_of_birth"></ion-datetime>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="stacked">Gender</ion-label>
+				<ion-select interface="action-sheet" formControlName="gender">
+					<ion-select-option value="male">male</ion-select-option>
+					<ion-select-option value="female">female</ion-select-option>
+				</ion-select>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="stacked">City</ion-label>
+				<ion-select interface="action-sheet" formControlName="city">
+					<ion-select-option value="kharkov">Kharkov</ion-select-option>
+				</ion-select>
+			</ion-item>
+
+
+			<ion-item>
+				<ion-label position="stacked">Language</ion-label>
+				<ion-select interface="action-sheet" formControlName="language">
+					<ion-select-option value="en">EN</ion-select-option>
+					<ion-select-option value="ru">RU</ion-select-option>
+				</ion-select>
+			</ion-item>
+
+			<ion-item lines="none">
+				<ion-label position="stacked">Theme</ion-label>
+				<ion-select interface="action-sheet" formControlName="theme">
+					<ion-select-option value="1">black</ion-select-option>
+					<ion-select-option value="2">white</ion-select-option>
+				</ion-select>
+			</ion-item>
+		</ion-list>
+
+		<ion-list>
+			<ion-item routerLink="additional" routerDirection="forward">
+				<ion-label>Additional Info</ion-label>
+				<ion-text></ion-text>
+			</ion-item>
+			<ion-item lines="none" routerLink="notifications" routerDirection="forward">
+				<ion-label>Notifications</ion-label>
+				<ion-text></ion-text>
+			</ion-item>
+		</ion-list>
+
+	</form>
+</ion-content>

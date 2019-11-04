@@ -1,0 +1,27 @@
+<ion-header>
+	<ion-toolbar color="vua-gray-light">
+		<ion-buttons slot="start">
+			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'settings.tabs.additional_info' | translate }}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-gray-light">
+	<div [formGroup]="form">
+		<ion-label>
+			Last Name:
+			<ion-input type="text" formControlName="lname"></ion-input>
+		</ion-label>
+		<ion-label>
+			Patronymic Name:
+			<ion-input type="text" formControlName="pname"></ion-input>
+		</ion-label>
+		<ion-label>
+			Email:
+			<ion-input type="text" formControlName="email"></ion-input>
+		</ion-label>
+	</div>
+</ion-content>

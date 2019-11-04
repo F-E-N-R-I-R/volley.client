@@ -1,0 +1,17 @@
+:root {
+  --ion-color-vua-gray-light: #f7f7f7;
+  --ion-color-vua-gray-light-rgb: 247,247,247;
+  --ion-color-vua-gray-light-contrast: #000000;
+  --ion-color-vua-gray-light-contrast-rgb: 0,0,0;
+  --ion-color-vua-gray-light-shade: #d9d9d9;
+  --ion-color-vua-gray-light-tint: #f8f8f8;
+}
+
+.ion-color-vua-gray-light {
+  --ion-color-base: var(--ion-color-vua-gray-light);
+  --ion-color-base-rgb: var(--ion-color-vua-gray-light-rgb);
+  --ion-color-contrast: var(--ion-color-vua-gray-light-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-vua-gray-light-contrast-rgb);
+  --ion-color-shade: var(--ion-color-vua-gray-light-shade);
+  --ion-color-tint: var(--ion-color-vua-gray-light-tint);
+}

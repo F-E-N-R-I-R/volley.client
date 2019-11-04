@@ -12,7 +12,7 @@ export namespace UTypes {
         gender: EGender;
         phone: number;
         city: ECity;
-        date_of_birth: Date;
+        date_of_birth: string;
         language: ELanguage;
         theme: ETheme;
         avatar: string;
@@ -29,16 +29,16 @@ export namespace UTypes {
         FEMALE = 'female',
     }
 
-     export enum ECity {
+    export enum ECity {
         KHARKOV = 'kharkov',
     }
 
-     export enum ELanguage {
+    export enum ELanguage {
         RU = 'ru',
         EN = 'en',
     }
-    
-     export enum ETheme {
+
+    export enum ETheme {
         WHITE = '1',
         BLACK = '2',
     }

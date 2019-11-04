@@ -18,16 +18,6 @@ const routes: Routes = [
         loadChildren: './pages/news/news.module#NewsModule',
     },
     {
-        path: 'users',
-        canActivate: [AuthGuard],
-        loadChildren: './pages/users/users.module#UsersModule',
-    },
-    {
-        path: 'competitions',
-        canActivate: [AuthGuard],
-        loadChildren: './pages/competitions/competitions.module#CompetitionsModule',
-    },
-    {
         path: 'events',
         canActivate: [AuthGuard],
         loadChildren: './pages/events/events.module#EventsModule',
@@ -36,6 +26,11 @@ const routes: Routes = [
         path: 'teams',
         canActivate: [AuthGuard],
         loadChildren: './pages/teams/teams.module#TeamsModule',
+    },
+    {
+        path: 'settings',
+        canActivate: [AuthGuard],
+        loadChildren: './pages/settings/settings.module#SettingsModule',
     },
 ];
 
