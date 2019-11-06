@@ -14,6 +14,7 @@ import { TranslateService } from '@ngx-translate/core';
     styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+    private sb: any = (window as any).StatusBar;
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,
@@ -33,10 +34,14 @@ export class AppComponent {
 
     initializeApp() {
         this.platform.ready().then(() => {
-            this.statusBar.backgroundColorByHexString('#f7f7f7');
-            this.statusBar.overlaysWebView(false);
             this.statusBar.styleDefault();
+            this.statusBar.backgroundColorByHexString('#f7f7f7');
             this.splashScreen.hide();
+
+            if (this.sb) {
+                this.sb.backgroundColorByHexString('#f7f7f7');
+                this.sb.styleDefault();
+            }
 
             this.authenticationService.authState.subscribe(state => {
                 // TODO REFACTOR

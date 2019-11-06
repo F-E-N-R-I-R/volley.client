@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
 import { Observable, Subject } from 'rxjs';
-import { SettingsFormService } from '@app/pages/auth/core/services/settings-form.service';
+import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
 import { UTypes } from '@app/pages/users/core/types/users.types';
 import { filter, takeUntil } from 'rxjs/operators';
 

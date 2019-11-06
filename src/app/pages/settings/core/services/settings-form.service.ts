@@ -10,10 +10,10 @@ export class SettingsFormService {
         gender: [UTypes.EGender.MALE],
         phone: [null],
         city: [UTypes.ECity.KHARKOV],
-        date_of_birth: [new Date()],
+        date_of_birth: ['2019-11-20'],
         language: [UTypes.ELanguage.EN],
         theme: [UTypes.ETheme.BLACK],
-        avatar: ['path to default avatar '],
+        avatar: ['assets/icon/logo.png'],
 
         // Additional Info
         lname: [''],

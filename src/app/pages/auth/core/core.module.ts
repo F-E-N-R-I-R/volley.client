@@ -7,7 +7,6 @@ import { effects } from './effects';
 import { reducers } from './reducers';
 import { AuthProvider } from './providers/auth.provider';
 import { AuthService } from './services/auth.service';
-import { SettingsFormService } from './services/settings-form.service';
 
 @NgModule({
     imports: [
@@ -20,7 +19,6 @@ import { SettingsFormService } from './services/settings-form.service';
     providers: [
         AuthProvider,
         AuthService,
-        SettingsFormService,
     ],
 })
 export class AuthCoreModule {
