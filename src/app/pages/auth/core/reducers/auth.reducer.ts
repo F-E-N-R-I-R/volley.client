@@ -42,6 +42,14 @@ export function authReducer(
             } as AuthState);
         }
 
+        case authActions.UPDATE_USER_SILENT: {
+            return ({
+                ...state,
+                user: (action as authActions.AuthUpdateUserSilentAction).payload,
+            } as AuthState);
+        }
+
+
         case authActions.UPDATE_USER_FAIL:
         case authActions.LOGOUT_FAIL:
         case authActions.LOGIN_FAIL: {

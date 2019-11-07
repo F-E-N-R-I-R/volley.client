@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { SettingsPageComponent } from './settings.page';
 import { AdditionalInfoPage } from '@app/pages/settings/additional/additional-info.page';
 import { NotificationsPage } from '@app/pages/settings//notifications/notifications.page';
+import { LanguagePage } from '@app/pages/settings/language/language.page';
+import { ThemePage } from '@app/pages/settings/theme/theme.page';
 
 const routes: Routes = [
     {
@@ -17,6 +19,15 @@ const routes: Routes = [
     {
         path: 'notifications',
         component: NotificationsPage,
+    },
+    {
+        path: 'language',
+        component: LanguagePage,
+    },
+
+    {
+        path: 'theme',
+        component: ThemePage,
     },
 ];
 

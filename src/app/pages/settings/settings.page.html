@@ -41,27 +41,21 @@
 			</ion-item>
 
 			<ion-item>
-				<ion-label position="stacked">City</ion-label>
+				<ion-label>City</ion-label>
 				<ion-select interface="action-sheet" formControlName="city">
 					<ion-select-option value="kharkov">Kharkov</ion-select-option>
 				</ion-select>
 			</ion-item>
+		</ion-list>
 
-
-			<ion-item>
-				<ion-label position="stacked">Language</ion-label>
-				<ion-select interface="action-sheet" formControlName="language">
-					<ion-select-option value="en">EN</ion-select-option>
-					<ion-select-option value="ru">RU</ion-select-option>
-				</ion-select>
+		<ion-list>
+			<ion-item routerLink="language" routerDirection="forward">
+				<ion-label>Language</ion-label>
+				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ELanguage, form.controls.language.value) | titlecase }}</ion-text>
 			</ion-item>
-
-			<ion-item lines="none">
-				<ion-label position="stacked">Theme</ion-label>
-				<ion-select interface="action-sheet" formControlName="theme">
-					<ion-select-option value="1">black</ion-select-option>
-					<ion-select-option value="2">white</ion-select-option>
-				</ion-select>
+			<ion-item lines="none" routerLink="theme" routerDirection="forward">
+				<ion-label>Theme</ion-label>
+				<ion-text></ion-text>
 			</ion-item>
 		</ion-list>
 

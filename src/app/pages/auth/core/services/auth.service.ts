@@ -27,4 +27,8 @@ export class AuthService {
     dispatchUpdate(user: UTypes.IUser) {
         this.store.dispatch(new fromActions.AuthUpdateUserAction(user));
     }
+
+    dispatchSilentUpdate(user: UTypes.IUser) {
+        this.store.dispatch(new fromActions.AuthUpdateUserSilentAction(user));
+    }
 }

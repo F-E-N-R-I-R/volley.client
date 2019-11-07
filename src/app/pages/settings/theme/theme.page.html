@@ -1,0 +1,35 @@
+<ion-header>
+	<ion-toolbar color="vua-gray-light">
+		<ion-buttons slot="start">
+			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'settings.tabs.theme' | translate }}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-gray-light">
+	<ion-list [formGroup]="form">
+		<ion-radio-group formControlName="theme" (ionChange)="onThemeSelected($event)">
+			<ion-list-header>
+				<ion-label>Theme</ion-label>
+			</ion-list-header>
+
+			<ion-item>
+				<ion-label>White</ion-label>
+				<ion-radio slot="end" value="white" checked></ion-radio>
+			</ion-item>
+
+			<ion-item>
+				<ion-label>Black</ion-label>
+				<ion-radio slot="end" value="black"></ion-radio>
+			</ion-item>
+		</ion-radio-group>
+	</ion-list>
+</ion-content>
+
+
+
+
+

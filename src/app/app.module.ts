@@ -14,7 +14,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppStoreModule } from '@app/store/app-store.module';
 import { TabsComponent } from '@app/components/tabs/tabs.page';
 import { AuthGuard } from '@app/guards';
-import { AuthenticationService } from '@app/services';
+import { AuthenticationService, ThemeService } from '@app/services';
 import { HttpLoaderFactory } from '@app/factories/translate.factory';
 import { MockModule } from '@app/mock/mock.module';
 
@@ -42,6 +42,7 @@ import { MockModule } from '@app/mock/mock.module';
         SplashScreen,
         AuthGuard,
         AuthenticationService,
+        ThemeService,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     ],
     bootstrap: [AppComponent]

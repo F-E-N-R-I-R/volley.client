@@ -4,6 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
 import { UTypes } from '@app/pages/users/core/types/users.types';
 import { filter, takeUntil } from 'rxjs/operators';
+import { EnumValues } from 'enum-values';
 
 @Component({
     selector: 'settings-page',
@@ -15,11 +16,14 @@ export class SettingsPageComponent {
     private ngUnsubscribe$ = new Subject();
     public form = this.settingsFormService.form;
     public tab = 'main';
+    public EnumValues = EnumValues;
+    public UTypes = UTypes;
 
     constructor(private authService: AuthService, private settingsFormService: SettingsFormService) {
     }
 
     public ionViewWillEnter() {
+
         this.user$
             .pipe(
                 takeUntil(this.ngUnsubscribe$),

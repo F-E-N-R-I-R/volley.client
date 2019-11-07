@@ -21,7 +21,9 @@
         "tabs": {
             "main": "Account",
             "additional_info": "Additional",
-            "notifications": "Notifications"
+            "notifications": "Notifications",
+            "language": "Language",
+            "theme": "Theme"
         }
     }
 }

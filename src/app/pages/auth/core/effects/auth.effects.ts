@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
-import { catchError, map, switchMap } from 'rxjs/operators';
+import { catchError, map, switchMap, tap } from 'rxjs/operators';
 
 import * as AuthActions from '../actions';
 import { AuthProvider } from '../providers/auth.provider';
 import { UTypes } from '@app/pages/users/core/types/users.types';
+import { AuthenticationService, ThemeService } from '@app/services';
 
 
 @Injectable()
@@ -22,6 +23,16 @@ export class AuthEffects {
                         of(new AuthActions.AuthLoginFailAction(error)),
                     ),
                 ),
+        ),
+    );
+
+    @Effect({ dispatch: false })
+    authLoginSuccess$ = this.actions$.pipe(
+        ofType(AuthActions.LOGIN_SUCCESS),
+        tap((action: AuthActions.AuthLoginSuccessAction) => {
+                this.themeService.changeTheme(action.payload.theme || UTypes.ETheme.WHITE);
+                this.authenticationService.login();
+            }
         ),
     );
 
@@ -57,6 +68,8 @@ export class AuthEffects {
 
     constructor(
         private authProvider: AuthProvider,
+        private authenticationService: AuthenticationService,
+        private themeService: ThemeService,
         private actions$: Actions,
     ) {
     }

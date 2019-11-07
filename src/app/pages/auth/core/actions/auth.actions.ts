@@ -82,6 +82,15 @@ export class AuthUpdateUserFailAction implements Action {
     }
 }
 
+export const UPDATE_USER_SILENT = '[AUTH] User Update Silent';
+
+export class AuthUpdateUserSilentAction implements Action {
+    readonly type = UPDATE_USER_SILENT;
+
+    constructor(public payload: UTypes.IUser) {
+    }
+}
+
 export type TAuthActions =
     | AuthLoginAction
     | AuthLoginSuccessAction
@@ -91,4 +100,5 @@ export type TAuthActions =
     | AuthLogoutFailAction
     | AuthUpdateUserAction
     | AuthUpdateUserSuccessAction
-    | AuthUpdateUserFailAction;
+    | AuthUpdateUserFailAction
+    | AuthUpdateUserSilentAction;

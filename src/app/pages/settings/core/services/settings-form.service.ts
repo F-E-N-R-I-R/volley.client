@@ -11,7 +11,7 @@ export class SettingsFormService {
         phone: [null],
         city: [UTypes.ECity.KHARKOV],
         date_of_birth: ['2019-11-20'],
-        language: [UTypes.ELanguage.EN],
+        language: [UTypes.ELanguage.ENGLISH],
         theme: [UTypes.ETheme.BLACK],
         avatar: ['assets/icon/logo.png'],
 

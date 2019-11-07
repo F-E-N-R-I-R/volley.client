@@ -1,0 +1,35 @@
+<ion-header>
+	<ion-toolbar color="vua-gray-light">
+		<ion-buttons slot="start">
+			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'settings.tabs.language' | translate }}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-gray-light">
+	<ion-list [formGroup]="form">
+		<ion-radio-group formControlName="language">
+			<ion-list-header>
+				<ion-label>Language</ion-label>
+			</ion-list-header>
+
+			<ion-item>
+				<ion-label>English</ion-label>
+				<ion-radio slot="end" value="en" checked></ion-radio>
+			</ion-item>
+
+			<ion-item>
+				<ion-label>Russian</ion-label>
+				<ion-radio slot="end" value="ru"></ion-radio>
+			</ion-item>
+		</ion-radio-group>
+	</ion-list>
+</ion-content>
+
+
+
+
+

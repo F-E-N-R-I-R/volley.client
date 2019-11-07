@@ -34,13 +34,13 @@ export namespace UTypes {
     }
 
     export enum ELanguage {
-        RU = 'ru',
-        EN = 'en',
+        RUSSIAN = 'ru',
+        ENGLISH = 'en',
     }
 
     export enum ETheme {
-        WHITE = '1',
-        BLACK = '2',
+        WHITE = 'white',
+        BLACK = 'black',
     }
 
 }
