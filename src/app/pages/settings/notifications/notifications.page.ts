@@ -14,6 +14,7 @@ export class NotificationsPage {
     }
 
     public ionViewWillLeave() {
+        this.authService.dispatchSilentUpdate(this.settingsFormService.form.value);
     }
 
     public onAllToggle($e) {

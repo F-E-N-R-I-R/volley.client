@@ -51,6 +51,15 @@ export class AuthEffects {
         ),
     );
 
+    @Effect({ dispatch: false })
+    authLogoutSuccess$ = this.actions$.pipe(
+        ofType(AuthActions.LOGOUT_SUCCESS),
+        tap((action: AuthActions.AuthLogoutSuccessAction) => {
+                this.authenticationService.logout();
+            }
+        ),
+    );
+
     @Effect()
     updateUser$ = this.actions$.pipe(
         ofType(AuthActions.UPDATE_USER),

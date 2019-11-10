@@ -16,5 +16,6 @@ export class ThemePage {
 
     public onThemeSelected($event) {
         this.themeService.changeTheme($event.detail.value);
+        this.authService.dispatchSilentUpdate(this.settingsFormService.form.value);
     }
 }

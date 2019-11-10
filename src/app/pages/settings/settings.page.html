@@ -55,7 +55,7 @@
 			</ion-item>
 			<ion-item lines="none" routerLink="theme" routerDirection="forward">
 				<ion-label>Theme</ion-label>
-				<ion-text></ion-text>
+				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ETheme, form.controls.theme.value) | titlecase }}</ion-text>
 			</ion-item>
 		</ion-list>
 

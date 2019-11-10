@@ -5,6 +5,7 @@ import { SettingsFormService } from '@app/pages/settings/core/services/settings-
 import { UTypes } from '@app/pages/users/core/types/users.types';
 import { filter, takeUntil } from 'rxjs/operators';
 import { EnumValues } from 'enum-values';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'settings-page',
@@ -19,7 +20,7 @@ export class SettingsPageComponent {
     public EnumValues = EnumValues;
     public UTypes = UTypes;
 
-    constructor(private authService: AuthService, private settingsFormService: SettingsFormService) {
+    constructor(private authService: AuthService, private settingsFormService: SettingsFormService, private router: Router) {
     }
 
     public ionViewWillEnter() {
@@ -33,7 +34,9 @@ export class SettingsPageComponent {
     }
 
     public ionViewWillLeave() {
-        // this.authService.dispatchUpdate(this.settingsFormService.form.value);
+        if (!this.router.url.includes('settings') && this.form.touched) {
+            this.authService.dispatchUpdate(this.settingsFormService.form.value);
+        }
         this.ngUnsubscribe$.next();
         this.ngUnsubscribe$.complete();
 
