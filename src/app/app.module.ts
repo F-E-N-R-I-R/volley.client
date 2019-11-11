@@ -17,6 +17,7 @@ import { AuthGuard } from '@app/guards';
 import { AuthenticationService, ThemeService } from '@app/services';
 import { HttpLoaderFactory } from '@app/factories/translate.factory';
 import { MockModule } from '@app/mock/mock.module';
+import { ToastService } from '@app/services/toast.service';
 
 @NgModule({
     declarations: [AppComponent, TabsComponent],
@@ -43,6 +44,7 @@ import { MockModule } from '@app/mock/mock.module';
         AuthGuard,
         AuthenticationService,
         ThemeService,
+        ToastService,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     ],
     bootstrap: [AppComponent]

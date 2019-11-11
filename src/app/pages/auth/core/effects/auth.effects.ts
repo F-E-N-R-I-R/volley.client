@@ -6,8 +6,7 @@ import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import * as AuthActions from '../actions';
 import { AuthProvider } from '../providers/auth.provider';
 import { UTypes } from '@app/pages/users/core/types/users.types';
-import { AuthenticationService, ThemeService } from '@app/services';
-
+import { AuthenticationService, ThemeService, ToastService } from '@app/services';
 
 @Injectable()
 export class AuthEffects {
@@ -75,10 +74,20 @@ export class AuthEffects {
         ),
     );
 
+    @Effect({ dispatch: false })
+    updateUserSuccess$ = this.actions$.pipe(
+        ofType(AuthActions.UPDATE_USER_SUCCESS),
+        tap((action: AuthActions.AuthUpdateUserSuccessAction) => {
+                this.toastService.updateUserToast('User settings update successfully');
+            }
+        ),
+    );
+
     constructor(
         private authProvider: AuthProvider,
         private authenticationService: AuthenticationService,
         private themeService: ThemeService,
+        private toastService: ToastService,
         private actions$: Actions,
     ) {
     }
