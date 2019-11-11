@@ -6,6 +6,9 @@ import { AdditionalInfoPage } from '@app/pages/settings/additional/additional-in
 import { NotificationsPage } from '@app/pages/settings//notifications/notifications.page';
 import { LanguagePage } from '@app/pages/settings/language/language.page';
 import { ThemePage } from '@app/pages/settings/theme/theme.page';
+import { CityPage } from '@app/pages/settings/city/city.page';
+import { GenderPage } from '@app/pages/settings/gender/gender.page';
+import { MainInfoPage } from '@app/pages/settings/main-info/main-info.page';
 
 const routes: Routes = [
     {
@@ -24,10 +27,21 @@ const routes: Routes = [
         path: 'language',
         component: LanguagePage,
     },
-
     {
         path: 'theme',
         component: ThemePage,
+    },
+    {
+        path: 'city',
+        component: CityPage,
+    },
+    {
+        path: 'gender',
+        component: GenderPage,
+    },
+    {
+        path: 'main-info',
+        component: MainInfoPage,
     },
 ];
 

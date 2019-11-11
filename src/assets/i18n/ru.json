@@ -1,0 +1,29 @@
+{
+    "login": {
+        "title": "Войти"
+    },
+    "competitions": {
+        "title": "Соревнования"
+    },
+    "events": {
+        "title": "Активности"
+    },
+    "news": {
+        "title": "Новости"
+    },
+    "teams": {
+        "title": "Команды"
+    },
+    "users": {
+        "title": "Пользователи"
+    },
+    "settings": {
+        "tabs": {
+            "main": "Акаунт",
+            "additional_info": "Дополнительная информация",
+            "notifications": "Уведомления",
+            "language": "Язык",
+            "theme": "Тема"
+        }
+    }
+}

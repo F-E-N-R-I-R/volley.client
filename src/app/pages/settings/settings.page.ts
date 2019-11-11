@@ -6,7 +6,6 @@ import { UTypes } from '@app/pages/users/core/types/users.types';
 import { filter, takeUntil } from 'rxjs/operators';
 import { EnumValues } from 'enum-values';
 import { Router } from '@angular/router';
-import { falseIfMissing } from 'protractor/built/util';
 
 @Component({
     selector: 'settings-page',

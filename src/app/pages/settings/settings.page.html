@@ -14,37 +14,33 @@
 <ion-content color="vua-gray-light">
 	<form [formGroup]="form" [ngSwitch]="tab">
 		<ion-list>
-			<ion-item lines="none">
+			<ion-item lines="none" routerLink="main-info">
 				<ion-avatar slot="start">
 					<img [src]="form.get('avatar').value">
 				</ion-avatar>
 				<ion-text>
-					<ion-input type="text" formControlName="fname"></ion-input>
-					<ion-input type="text" formControlName="phone"></ion-input>
+					<p>
+						{{ form.controls.fname.value | titlecase }}
+						{{ form.controls.lname.value | titlecase }}
+						<small class="light-text">({{ form.controls.date_of_birth.value | date }})</small>
+					</p>
+					<p class="light-text">{{ form.controls.phone.value }}</p>
 				</ion-text>
 			</ion-item>
 		</ion-list>
 
 		<ion-list>
-			<ion-item>
-				<ion-label position="stacked">Birthday</ion-label>
-				<ion-datetime displayFormat="MM DD YYYY" placeholder="Select Date"
-				              formControlName="date_of_birth"></ion-datetime>
-			</ion-item>
-
-			<ion-item>
-				<ion-label position="stacked">Gender</ion-label>
-				<ion-select interface="action-sheet" formControlName="gender">
-					<ion-select-option value="male">male</ion-select-option>
-					<ion-select-option value="female">female</ion-select-option>
-				</ion-select>
-			</ion-item>
-
-			<ion-item>
+			<ion-item routerLink="city" routerDirection="forward" disabled>
 				<ion-label>City</ion-label>
-				<ion-select interface="action-sheet" formControlName="city">
-					<ion-select-option value="kharkov">Kharkov</ion-select-option>
-				</ion-select>
+				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ECity, form.controls.city.value) | titlecase }}</ion-text>
+			</ion-item>
+			<ion-item routerLink="gender" routerDirection="forward">
+				<ion-label>Gender</ion-label>
+				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.EGender, form.controls.gender.value) | titlecase }}</ion-text>
+			</ion-item>
+			<ion-item lines="none" routerLink="notifications" routerDirection="forward">
+				<ion-label>Notifications</ion-label>
+				<ion-text></ion-text>
 			</ion-item>
 		</ion-list>
 
@@ -60,12 +56,8 @@
 		</ion-list>
 
 		<ion-list>
-			<ion-item routerLink="additional" routerDirection="forward">
+			<ion-item lines="none" routerLink="additional" routerDirection="forward">
 				<ion-label>Additional Info</ion-label>
-				<ion-text></ion-text>
-			</ion-item>
-			<ion-item lines="none" routerLink="notifications" routerDirection="forward">
-				<ion-label>Notifications</ion-label>
 				<ion-text></ion-text>
 			</ion-item>
 		</ion-list>

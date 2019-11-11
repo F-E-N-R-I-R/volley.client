@@ -7,6 +7,7 @@ import * as AuthActions from '../actions';
 import { AuthProvider } from '../providers/auth.provider';
 import { UTypes } from '@app/pages/users/core/types/users.types';
 import { AuthenticationService, ThemeService, ToastService } from '@app/services';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable()
 export class AuthEffects {
@@ -30,6 +31,7 @@ export class AuthEffects {
         ofType(AuthActions.LOGIN_SUCCESS),
         tap((action: AuthActions.AuthLoginSuccessAction) => {
                 this.themeService.changeTheme(action.payload.theme || UTypes.ETheme.WHITE);
+                this.translateService.use(action.payload.language || UTypes.ELanguage.ENGLISH);
                 this.authenticationService.login();
             }
         ),
@@ -89,6 +91,7 @@ export class AuthEffects {
         private themeService: ThemeService,
         private toastService: ToastService,
         private actions$: Actions,
+        private translateService: TranslateService,
     ) {
     }
 }
