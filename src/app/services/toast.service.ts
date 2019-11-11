@@ -6,12 +6,10 @@ export class ToastService {
 
     constructor(private toastController: ToastController) {}
 
-    public async updateUserToast(text: string) {
+    public async show(text: string) {
         const toast = await this.toastController.create({
             message: text,
             duration: 2000,
-            showCloseButton: true,
-            closeButtonText: 'hide',
             position: 'top',
         });
         toast.present();

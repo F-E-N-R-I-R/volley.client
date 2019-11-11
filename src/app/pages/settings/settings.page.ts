@@ -6,6 +6,7 @@ import { UTypes } from '@app/pages/users/core/types/users.types';
 import { filter, takeUntil } from 'rxjs/operators';
 import { EnumValues } from 'enum-values';
 import { Router } from '@angular/router';
+import { falseIfMissing } from 'protractor/built/util';
 
 @Component({
     selector: 'settings-page',
@@ -34,12 +35,12 @@ export class SettingsPageComponent {
     }
 
     public ionViewWillLeave() {
-        if (!this.router.url.includes('settings') && this.form.touched) {
+        if (!this.router.url.includes('settings') && this.form.dirty) {
             this.authService.dispatchUpdate(this.settingsFormService.form.value);
+            this.form.markAsPristine();
         }
         this.ngUnsubscribe$.next();
         this.ngUnsubscribe$.complete();
-
     }
 
     public logout() {
