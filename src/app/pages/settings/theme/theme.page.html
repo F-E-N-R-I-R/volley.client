@@ -4,7 +4,7 @@
 			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
 		</ion-buttons>
 		<ion-title>
-			{{ 'settings.tabs.theme' | translate }}
+			{{ 'settings.tabs.theme.title' | translate }}
 		</ion-title>
 	</ion-toolbar>
 </ion-header>
@@ -13,16 +13,16 @@
 	<ion-list [formGroup]="form">
 		<ion-radio-group formControlName="theme" (ionChange)="onThemeSelected($event)">
 			<ion-list-header>
-				<ion-label>Theme</ion-label>
+				<ion-label>{{ 'settings.tabs.theme.header' | translate }}</ion-label>
 			</ion-list-header>
 
 			<ion-item>
-				<ion-label>White</ion-label>
+				<ion-label>{{ 'settings.tabs.theme.' + UTypes.ETheme.WHITE | translate }}</ion-label>
 				<ion-radio slot="end" value="white" checked></ion-radio>
 			</ion-item>
 
 			<ion-item>
-				<ion-label>Black</ion-label>
+				<ion-label>{{ 'settings.tabs.theme.' + UTypes.ETheme.BLACK | translate }}</ion-label>
 				<ion-radio slot="end" value="black"></ion-radio>
 			</ion-item>
 		</ion-radio-group>

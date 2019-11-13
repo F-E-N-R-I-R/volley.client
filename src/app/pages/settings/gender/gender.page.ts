@@ -2,22 +2,20 @@ import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
-import { ThemeService } from '@app/services';
 import { UTypes } from '@app/pages/users/core/types/users.types';
 
 @Component({
-    templateUrl: 'theme.page.html',
-    styleUrls: ['theme.page.scss'],
+    templateUrl: 'gender.page.html',
+    styleUrls: ['gender.page.scss'],
 })
-export class ThemePage {
-    public form = this.settingsFormService.form as FormGroup;
+export class GenderPage {
     public UTypes = UTypes;
+    public form = this.settingsFormService.form as FormGroup;
 
-    constructor(private authService: AuthService, private settingsFormService: SettingsFormService, private themeService: ThemeService) {
+    constructor(private authService: AuthService, private settingsFormService: SettingsFormService) {
     }
 
-    public onThemeSelected($event) {
-        this.themeService.changeTheme($event.detail.value);
+    public ionViewWillLeave() {
         this.authService.dispatchSilentUpdate(this.settingsFormService.form.value);
     }
 }

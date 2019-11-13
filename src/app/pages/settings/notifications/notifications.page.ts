@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
@@ -7,10 +7,17 @@ import { AuthService } from '@app/pages/auth/core/services/auth.service';
     templateUrl: 'notifications.page.html',
     styleUrls: ['notifications.page.scss'],
 })
-export class NotificationsPage {
+export class NotificationsPage implements OnInit {
     public form = this.settingsFormService.form.get('notifications') as FormGroup;
+    public all: boolean;
 
     constructor(private authService: AuthService, private settingsFormService: SettingsFormService) {
+    }
+
+    ngOnInit(): void {
+        this.form.valueChanges.subscribe((value) => {
+            this.all = Object.values(value).every(Boolean);
+        });
     }
 
     public ionViewWillLeave() {

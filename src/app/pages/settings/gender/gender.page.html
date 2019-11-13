@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-toolbar color="vua-gray-light">
+		<ion-buttons slot="start">
+			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'settings.tabs.gender.title' | translate }}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-gray-light">
+	<ion-list [formGroup]="form">
+		<ion-radio-group formControlName="gender">
+			<ion-item>
+				<ion-label>{{ 'settings.tabs.gender.' + UTypes.EGender.MALE | translate }}</ion-label>
+				<ion-radio slot="end" value="male" checked></ion-radio>
+			</ion-item>
+
+			<ion-item>
+				<ion-label>{{ 'settings.tabs.gender.' + UTypes.EGender.FEMALE | translate }}</ion-label>
+				<ion-radio slot="end" value="female"></ion-radio>
+			</ion-item>
+		</ion-radio-group>
+	</ion-list>
+</ion-content>
+
+
+
+
+

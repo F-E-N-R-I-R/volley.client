@@ -13,7 +13,7 @@
 	<ion-list [formGroup]="form">
 		<ion-item>
 			<ion-label>All</ion-label>
-			<ion-toggle (ionChange)="onAllToggle($event)"></ion-toggle>
+			<ion-toggle [checked]="all" (ionChange)="onAllToggle($event)"></ion-toggle>
 		</ion-item>
 		<ion-item>
 			<ion-label>News</ion-label>
