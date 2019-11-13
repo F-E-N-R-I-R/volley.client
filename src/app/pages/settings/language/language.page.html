@@ -4,7 +4,7 @@
 			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
 		</ion-buttons>
 		<ion-title>
-			{{ 'settings.tabs.language' | translate }}
+			{{ 'settings.tabs.language.title' | translate }}
 		</ion-title>
 	</ion-toolbar>
 </ion-header>
@@ -13,16 +13,16 @@
 	<ion-list [formGroup]="form">
 		<ion-radio-group formControlName="language">
 			<ion-list-header>
-				<ion-label>Language</ion-label>
+				<ion-label>{{ 'settings.tabs.language.header' | translate }}</ion-label>
 			</ion-list-header>
 
 			<ion-item>
-				<ion-label>English</ion-label>
+				<ion-label>{{ 'settings.tabs.language.' + UTypes.ELanguage.ENGLISH | translate }}</ion-label>
 				<ion-radio slot="end" value="en" checked></ion-radio>
 			</ion-item>
 
 			<ion-item>
-				<ion-label>Russian</ion-label>
+				<ion-label>{{ 'settings.tabs.language.' + UTypes.ELanguage.RUSSIAN | translate }}</ion-label>
 				<ion-radio slot="end" value="ru"></ion-radio>
 			</ion-item>
 		</ion-radio-group>

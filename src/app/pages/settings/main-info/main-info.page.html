@@ -4,7 +4,7 @@
 			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
 		</ion-buttons>
 		<ion-title>
-			{{ 'settings.tabs.notifications' | translate }}
+			{{ 'settings.tabs.main_info.title' | translate }}
 		</ion-title>
 	</ion-toolbar>
 </ion-header>
@@ -12,16 +12,16 @@
 <ion-content color="vua-gray-light">
 	<ion-list [formGroup]="form">
 		<ion-item>
-			<ion-label position="stacked">Birthday</ion-label>
+			<ion-label position="stacked">{{ 'settings.tabs.main_info.birthday' | translate }}</ion-label>
 			<ion-datetime displayFormat="MM DD YYYY" placeholder="Select Date"
 			              formControlName="date_of_birth"></ion-datetime>
 		</ion-item>
 		<ion-item>
-			<ion-label position="stacked">Name</ion-label>
+			<ion-label position="stacked">{{ 'settings.tabs.main_info.fname' | translate }}</ion-label>
 			<ion-input type="text" formControlName="fname"></ion-input>
 		</ion-item>
 		<ion-item>
-			<ion-label position="stacked">Surname</ion-label>
+			<ion-label position="stacked">{{ 'settings.tabs.main_info.phone' | translate }}</ion-label>
 			<ion-input type="text" formControlName="phone"></ion-input>
 		</ion-item>
 	</ion-list>

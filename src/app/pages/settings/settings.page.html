@@ -31,33 +31,33 @@
 
 		<ion-list>
 			<ion-item routerLink="city" routerDirection="forward" disabled>
-				<ion-label>City</ion-label>
-				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ECity, form.controls.city.value) | titlecase }}</ion-text>
+				<ion-label>{{ 'settings.tabs.city.title' | translate }}</ion-label>
+				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ECity, form.controls.city.value) | titlecase | translate }}</ion-text>
 			</ion-item>
 			<ion-item routerLink="gender" routerDirection="forward">
-				<ion-label>Gender</ion-label>
-				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.EGender, form.controls.gender.value) | titlecase }}</ion-text>
+				<ion-label>{{ 'settings.tabs.gender.title' | translate }}</ion-label>
+				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.EGender, form.controls.gender.value) | titlecase | translate }}</ion-text>
 			</ion-item>
 			<ion-item lines="none" routerLink="notifications" routerDirection="forward">
-				<ion-label>Notifications</ion-label>
+				<ion-label>{{ 'settings.tabs.notifications' | translate }}</ion-label>
 				<ion-text></ion-text>
 			</ion-item>
 		</ion-list>
 
 		<ion-list>
 			<ion-item routerLink="language" routerDirection="forward">
-				<ion-label>Language</ion-label>
-				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ELanguage, form.controls.language.value) | titlecase }}</ion-text>
+				<ion-label>{{ 'settings.tabs.language.title' | translate }}</ion-label>
+				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ELanguage, form.controls.language.value) | titlecase | translate }}</ion-text>
 			</ion-item>
 			<ion-item lines="none" routerLink="theme" routerDirection="forward">
-				<ion-label>Theme</ion-label>
-				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ETheme, form.controls.theme.value) | titlecase }}</ion-text>
+				<ion-label>{{ 'settings.tabs.theme.title' | translate }}</ion-label>
+				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ETheme, form.controls.theme.value) | titlecase | translate }}</ion-text>
 			</ion-item>
 		</ion-list>
 
 		<ion-list>
 			<ion-item lines="none" routerLink="additional" routerDirection="forward">
-				<ion-label>Additional Info</ion-label>
+				<ion-label>{{ 'settings.tabs.additional_info' | translate }}</ion-label>
 				<ion-text></ion-text>
 			</ion-item>
 		</ion-list>

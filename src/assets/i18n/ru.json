@@ -19,11 +19,39 @@
     },
     "settings": {
         "tabs": {
-            "main": "Акаунт",
+            "main": "Аккаунт",
+            "main_info": {
+                "title": "Информация о пользователе",
+                "birthday": "Дата рождения",
+                "fname": "Имя",
+                "phone": "Телефон"
+            },
+            "gender": {
+                "title": "Пол",
+                "male": "мужской",
+                "female": "женский"
+            },
+            "city": {
+                "title": "Город",
+                "kharkov": "Харьков"
+            },
             "additional_info": "Дополнительная информация",
             "notifications": "Уведомления",
-            "language": "Язык",
-            "theme": "Тема"
+            "language": {
+                "title": "Язык",
+                "header": "Язык",
+                "ru": "русский",
+                "en": "английский"
+            },
+            "theme": {
+                "title": "Тема",
+                "header": "Тема",
+                "white": "Светлая",
+                "black": "Темная"
+            }
+        },
+        "toasts": {
+            "upd_settings_success": "Настройки пользователя обновлены"
         }
     }
 }

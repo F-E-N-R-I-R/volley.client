@@ -20,10 +20,38 @@
     "settings": {
         "tabs": {
             "main": "Account",
+            "main_info": {
+                "title": "Account information",
+                "birthday": "Birthday",
+                "fname": "Name",
+                "phone": "Phone"
+            },
+            "gender": {
+                "title": "Gender",
+                "male": "male",
+                "female": "female"
+            },
+            "city": {
+                "title": "City",
+                "kharkov": "Kharkov"
+            },
             "additional_info": "Additional",
             "notifications": "Notifications",
-            "language": "Language",
-            "theme": "Theme"
+            "language": {
+                "title": "Language",
+                "header": "Language",
+                "ru": "russian",
+                "en": "english"
+            },
+            "theme": {
+                "title": "Theme",
+                "header": "Theme",
+                "white": "White",
+                "black": "Black"
+            }
+        },
+        "toasts": {
+            "upd_settings_success": "User settings update successfully"
         }
     }
 }

@@ -5,12 +5,14 @@ import { AuthService } from '@app/pages/auth/core/services/auth.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { UTypes } from '@app/pages/users/core/types/users.types';
 
 @Component({
     templateUrl: 'language.page.html',
     styleUrls: ['language.page.scss'],
 })
 export class LanguagePage {
+    public UTypes = UTypes;
     public form = this.settingsFormService.form as FormGroup;
     private ngUnsubscribe$ = new Subject();
 

@@ -80,7 +80,7 @@ export class AuthEffects {
     updateUserSuccess$ = this.actions$.pipe(
         ofType(AuthActions.UPDATE_USER_SUCCESS),
         tap((action: AuthActions.AuthUpdateUserSuccessAction) => {
-                this.toastService.show('User settings update successfully');
+                this.toastService.show('settings.toasts.upd_settings_success');
             }
         ),
     );

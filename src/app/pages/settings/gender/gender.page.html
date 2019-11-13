@@ -4,7 +4,7 @@
 			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
 		</ion-buttons>
 		<ion-title>
-			{{ 'settings.tabs.gender' | translate }}
+			{{ 'settings.tabs.gender.title' | translate }}
 		</ion-title>
 	</ion-toolbar>
 </ion-header>
@@ -13,12 +13,12 @@
 	<ion-list [formGroup]="form">
 		<ion-radio-group formControlName="gender">
 			<ion-item>
-				<ion-label>Male</ion-label>
+				<ion-label>{{ 'settings.tabs.gender.' + UTypes.EGender.MALE | translate }}</ion-label>
 				<ion-radio slot="end" value="male" checked></ion-radio>
 			</ion-item>
 
 			<ion-item>
-				<ion-label>Female</ion-label>
+				<ion-label>{{ 'settings.tabs.gender.' + UTypes.EGender.FEMALE | translate }}</ion-label>
 				<ion-radio slot="end" value="female"></ion-radio>
 			</ion-item>
 		</ion-radio-group>
