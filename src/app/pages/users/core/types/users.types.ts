@@ -17,6 +17,15 @@ export namespace UTypes {
         theme: ETheme;
         avatar: string;
         notifications: INotifications;
+        height: number;
+        weight: number;
+        chest_girt: number;
+        waist: number;
+        hip_girth: number;
+        shoe_size: number;
+        sports_category: string;
+        teams: string;
+        places: string;
     }
 
     export interface IUsersList {

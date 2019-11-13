@@ -21,6 +21,18 @@ export class UsersMockProvider {
             language: UTypes.ELanguage.ENGLISH,
             theme: UTypes.ETheme.BLACK,
             avatar: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+
+             //additional
+              height: 140,
+              weight: 86,
+              chest_girt: 62,
+              waist: 36,
+              hip_girth: 54,
+              shoe_size: 29,
+              sports_category: 'B',
+              teams: 'Shalapay',
+              places: 'Snt.Inokentiy str. 123',
+            
             notifications: {
                 news: true,
                 team: false,

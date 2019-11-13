@@ -11,17 +11,60 @@
 
 <ion-content color="vua-gray-light">
 	<div [formGroup]="form">
-		<ion-label>
-			Last Name:
+
+	<ion-list>
+	<ion-item>
+		<ion-label>Last Name:</ion-label>
 			<ion-input type="text" formControlName="lname"></ion-input>
-		</ion-label>
-		<ion-label>
-			Patronymic Name:
+	</ion-item>
+	<ion-item>
+		<ion-label>Patronymic Name:</ion-label>
 			<ion-input type="text" formControlName="pname"></ion-input>
-		</ion-label>
-		<ion-label>
-			Email:
+	</ion-item>
+	<ion-item>
+		<ion-label>Email:</ion-label>
 			<ion-input type="text" formControlName="email"></ion-input>
-		</ion-label>
+	</ion-item>
+	<ion-item>
+		<ion-label>Sports category:</ion-label>
+			<ion-input type="text" formControlName="sports_category"></ion-input>
+	</ion-item>
+	<ion-item><ion-label>Teams:</ion-label>
+			<ion-input type="text" formControlName="teams"></ion-input>
+	</ion-item>
+	<ion-item>
+			<ion-label>Places:</ion-label>
+			<ion-input type="text" formControlName="places"></ion-input></ion-item>
+	</ion-list>
+
+		<ion-text><h3>Sizes:</h3></ion-text>
+
+	<ion-list>
+		<ion-item>
+			<ion-label>Height:</ion-label>
+			<ion-input type="text" formControlName="height"></ion-input>cm
+		</ion-item>
+		<ion-item>
+			<ion-label>Weight:</ion-label>
+			<ion-input type="text" formControlName="weight"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Chest girt:</ion-label>
+			<ion-input type="text" formControlName="chest_girt"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Waist:</ion-label>
+			<ion-input type="text" formControlName="waist"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Hip girt:</ion-label>
+			<ion-input type="text" formControlName="hip_girth"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Shoe size:</ion-label>
+			<ion-input type="text" formControlName="shoe_size"></ion-input>
+		</ion-item>
+	</ion-list>
+
 	</div>
 </ion-content>

@@ -19,6 +19,15 @@ export class SettingsFormService {
         lname: [''],
         pname: [''],
         email: [''],
+        height: [null],
+        weight: [null],
+        chest_girt: [null],
+        waist: [null],
+        hip_girth: [null],
+        shoe_size: [null],
+        sports_category: [''],
+        teams: [''],
+        places: [''],
 
         // Notifications
         notifications: this.fb.group({
