@@ -6,6 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { UTypes } from '@app/pages/users/core/types/users.types';
+import { EnumValues } from 'enum-values';
 
 @Component({
     templateUrl: 'language.page.html',
@@ -13,6 +14,7 @@ import { UTypes } from '@app/pages/users/core/types/users.types';
 })
 export class LanguagePage {
     public UTypes = UTypes;
+    public EnumValues = EnumValues;
     public form = this.settingsFormService.form as FormGroup;
     private ngUnsubscribe$ = new Subject();
 

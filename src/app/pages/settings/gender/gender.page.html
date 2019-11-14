@@ -12,15 +12,12 @@
 <ion-content color="vua-gray-light">
 	<ion-list [formGroup]="form">
 		<ion-radio-group formControlName="gender">
-			<ion-item>
-				<ion-label>{{ 'settings.tabs.gender.' + UTypes.EGender.MALE | translate }}</ion-label>
-				<ion-radio slot="end" value="male" checked></ion-radio>
+
+			<ion-item *ngFor="let genderItem of EnumValues.getValues(UTypes.EGender)">
+				<ion-label>{{ 'settings.tabs.gender.' + genderItem | translate }}</ion-label>
+				<ion-radio slot="end" value="{{ genderItem }}"></ion-radio>
 			</ion-item>
 
-			<ion-item>
-				<ion-label>{{ 'settings.tabs.gender.' + UTypes.EGender.FEMALE | translate }}</ion-label>
-				<ion-radio slot="end" value="female"></ion-radio>
-			</ion-item>
 		</ion-radio-group>
 	</ion-list>
 </ion-content>

@@ -16,15 +16,11 @@
 				<ion-label>{{ 'settings.tabs.theme.header' | translate }}</ion-label>
 			</ion-list-header>
 
-			<ion-item>
-				<ion-label>{{ 'settings.tabs.theme.' + UTypes.ETheme.WHITE | translate }}</ion-label>
-				<ion-radio slot="end" value="white" checked></ion-radio>
+			<ion-item *ngFor="let themeItem of EnumValues.getValues(UTypes.ETheme)">
+				<ion-label>{{ 'settings.tabs.theme.' + themeItem | translate }}</ion-label>
+				<ion-radio slot="end" value="{{ themeItem }}"></ion-radio>
 			</ion-item>
 
-			<ion-item>
-				<ion-label>{{ 'settings.tabs.theme.' + UTypes.ETheme.BLACK | translate }}</ion-label>
-				<ion-radio slot="end" value="black"></ion-radio>
-			</ion-item>
 		</ion-radio-group>
 	</ion-list>
 </ion-content>

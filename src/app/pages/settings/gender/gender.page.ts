@@ -3,6 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
 import { UTypes } from '@app/pages/users/core/types/users.types';
+import { EnumValues } from 'enum-values';
 
 @Component({
     templateUrl: 'gender.page.html',
@@ -10,6 +11,7 @@ import { UTypes } from '@app/pages/users/core/types/users.types';
 })
 export class GenderPage {
     public UTypes = UTypes;
+    public EnumValues = EnumValues;
     public form = this.settingsFormService.form as FormGroup;
 
     constructor(private authService: AuthService, private settingsFormService: SettingsFormService) {
