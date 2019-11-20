@@ -1,0 +1,58 @@
+<ion-header>
+	<ion-toolbar color="vua-gray-light">
+		<ion-buttons slot="start">
+			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'settings.tabs.body_sizes.title' | translate }}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-gray-light">	
+	<ion-list [formGroup]="form">
+		<ion-item>
+   	 		<ion-range min="150" max="250" color="secondary" pin="true" formControlName="height"> 
+      			<ion-label slot="start" position="stacked">Height</ion-label>
+      			<ion-label slot="end">{{ form.get('height').value }}</ion-label>
+    		</ion-range>
+  		</ion-item>
+
+  		<ion-item>
+   	 		<ion-range min="64" max="90" color="secondary" pin="true" formControlName="weight"> 
+      			<ion-label slot="start" position="stacked">Weight</ion-label>
+      			<ion-label slot="end">{{ form.get('weight').value }}</ion-label>
+    		</ion-range>
+  		</ion-item>
+
+  		<ion-item>
+   	 		<ion-range min="60" max="90" color="secondary" pin="true" formControlName="chest_girt"> 
+      			<ion-label slot="start" position="stacked">Chest girt</ion-label>
+      			<ion-label slot="end">{{ form.get('chest_girt').value }}</ion-label>
+    		</ion-range>
+  		</ion-item>
+
+  		<ion-item>
+   	 		<ion-range min="36" max="90" color="secondary" pin="true" formControlName="waist"> 
+      			<ion-label slot="start" position="stacked">Waist</ion-label>
+      			<ion-label slot="end">{{ form.get('waist').value }}</ion-label>
+    		</ion-range>
+  		</ion-item>
+
+  		<ion-item>
+   	 		<ion-range min="54" max="100" color="secondary" pin="true" formControlName="hip_girth" >
+      			<ion-label slot="start" position="stacked">Hip girt</ion-label>
+      			<ion-label slot="end">{{ form.get('hip_girth').value }}</ion-label>
+    		</ion-range>
+  		</ion-item>
+
+  		<ion-item>
+   	 		<ion-range min="29" max="54" color="secondary" pin="true" formControlName="shoe_size" >
+      			<ion-label slot="start" position="stacked">Shoe size</ion-label>
+      			<ion-label slot="end">{{ form.get('shoe_size').value }}</ion-label>
+    		</ion-range>
+  		</ion-item>
+	</ion-list>
+</ion-content>
+
+

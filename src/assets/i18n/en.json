@@ -48,6 +48,9 @@
                 "header": "Theme",
                 "white": "White",
                 "black": "Black"
+            },
+            "body_sizes": {
+                "title": "Body sizes"
             }
         },
         "toasts": {
