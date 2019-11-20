@@ -1,0 +1,18 @@
+<ion-header>
+	<ion-toolbar color="vua-gray-light">
+		<ion-buttons slot="start">
+			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'settings.tabs.teams.title' | translate }}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-gray-light">
+	<ion-list [formGroup]="form">
+		<ion-item *ngFor="let item of form.get('teams').controls">
+			<ion-input type="text">hhh</ion-input>
+		</ion-item>
+	</ion-list>
+</ion-content>

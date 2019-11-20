@@ -15,6 +15,7 @@ import { CityPage } from '@app/pages/settings/city/city.page';
 import { GenderPage } from '@app/pages/settings/gender/gender.page';
 import { MainInfoPage } from '@app/pages/settings/main-info/main-info.page';
 import { BodySizesPage } from '@app/pages/settings/body-sizes/body-sizes.page';
+import { TeamsPage} from '@app/pages/settings/teams/teams.page';
 
 
 
@@ -40,6 +41,7 @@ import { BodySizesPage } from '@app/pages/settings/body-sizes/body-sizes.page';
         GenderPage,
         MainInfoPage,
         BodySizesPage,
+        TeamsPage,
     ],
     entryComponents: [],
     providers: []

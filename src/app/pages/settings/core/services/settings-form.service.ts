@@ -26,7 +26,7 @@ export class SettingsFormService {
         hip_girth: [null],
         shoe_size: [null],
         sports_category: [''],
-        teams: [''],
+        teams: this.fb.array([]),
         places: [''],
 
         // Notifications

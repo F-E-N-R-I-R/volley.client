@@ -9,7 +9,8 @@ import { ThemePage } from '@app/pages/settings/theme/theme.page';
 import { CityPage } from '@app/pages/settings/city/city.page';
 import { GenderPage } from '@app/pages/settings/gender/gender.page';
 import { MainInfoPage } from '@app/pages/settings/main-info/main-info.page';
-import { BodySizesPage } from '@app/pages/settings/body-sizes/body-sizes.page';
+import { BodySizesPage } from '@app/pages/settings/body-sizes/body-sizes.page'
+import { TeamsPage} from '@app/pages/settings/teams/teams.page'
 
 
 const routes: Routes = [
@@ -48,6 +49,10 @@ const routes: Routes = [
     {
         path: 'body-sizes',
         component: BodySizesPage,
+    },
+    {
+        path: 'teams',
+        component: TeamsPage,
     },
 ];
 

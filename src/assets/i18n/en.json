@@ -51,6 +51,9 @@
             },
             "body_sizes": {
                 "title": "Body sizes"
+            },
+            "teams": {
+                "title": "Teams"
             }
         },
         "toasts": {

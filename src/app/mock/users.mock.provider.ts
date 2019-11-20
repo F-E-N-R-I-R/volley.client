@@ -30,7 +30,17 @@ export class UsersMockProvider {
               hip_girth: 54,
               shoe_size: 29,
               sports_category: 'B',
-              teams: 'Shalapay',
+              teams: [
+                  {
+                      name: 'Vseya mira vzlet',
+                      icon: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+
+                  },
+                  {
+                      name: 'Liga zolotogo dojdya',
+                      icon: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                  },
+              ],
               places: 'Snt.Inokentiy str. 123',
             
             notifications: {
