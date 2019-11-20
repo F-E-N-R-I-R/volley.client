@@ -14,8 +14,9 @@ import { SettingsPageComponent } from '@app/pages/settings/settings.page';
 import { CityPage } from '@app/pages/settings/city/city.page';
 import { GenderPage } from '@app/pages/settings/gender/gender.page';
 import { MainInfoPage } from '@app/pages/settings/main-info/main-info.page';
-import { BodySizesPage } from '@app/pages/settings/body-sizes/body-sizes.page';
+import { PersonalPage } from '@app/pages/settings/personal/personal.page';
 import { TeamsPage} from '@app/pages/settings/teams/teams.page';
+import { PlacesPage} from '@app/pages/settings/places/places.page';
 
 
 
@@ -40,8 +41,9 @@ import { TeamsPage} from '@app/pages/settings/teams/teams.page';
         CityPage,
         GenderPage,
         MainInfoPage,
-        BodySizesPage,
+        PersonalPage,
         TeamsPage,
+        PlacesPage,
     ],
     entryComponents: [],
     providers: []

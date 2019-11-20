@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormArray, FormBuilder } from '@angular/forms';
 import { UTypes } from '@app/pages/users/core/types/users.types';
 
 @Injectable()
@@ -27,7 +27,7 @@ export class SettingsFormService {
         shoe_size: [null],
         sports_category: [''],
         teams: this.fb.array([]),
-        places: [''],
+        places: this.fb.array([]),
 
         // Notifications
         notifications: this.fb.group({
@@ -39,5 +39,45 @@ export class SettingsFormService {
     });
 
     constructor(private fb: FormBuilder) {
+    }
+
+    public setValue(user) {
+        this.fillTeams(user.teams);
+        this.fillPlaces(user.places);
+        this.form.setValue(user);
+    }
+
+    private fillTeams(teams) {
+        const teamsArray = this.form.get('teams') as FormArray;
+
+        while (teamsArray.length > 0) {
+            teamsArray.removeAt(0);
+        }
+
+        teams.forEach(
+            team => teamsArray.push(
+                this.fb.group({
+                    name: [team.name],
+                    image: [team.image],
+                })
+            )
+        );
+    }
+
+    private fillPlaces(places) {
+        const placesArray = this.form.get('places') as FormArray;
+
+        while (placesArray.length > 0) {
+            placesArray.removeAt(0);
+        }
+
+        places.forEach(
+            place => placesArray.push(
+                this.fb.group({
+                    name: [place.name],
+                    image: [place.image],
+                })
+            )
+        );
     }
 }

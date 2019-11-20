@@ -21,8 +21,20 @@
 			<ion-input type="text" formControlName="fname"></ion-input>
 		</ion-item>
 		<ion-item>
+			<ion-label position="stacked">{{ 'settings.tabs.main_info.lname' | translate }}</ion-label>
+			<ion-input type="text" formControlName="lname"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">{{ 'settings.tabs.main_info.pname' | translate }}</ion-label>
+			<ion-input type="text" formControlName="pname"></ion-input>
+		</ion-item>
+		<ion-item>
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.phone' | translate }}</ion-label>
-			<ion-input type="text" formControlName="phone"></ion-input>
+			<ion-input type="text" formControlName="phone" readonly></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">{{ 'settings.tabs.main_info.email' | translate }}</ion-label>
+			<ion-input type="text" formControlName="email" readonly></ion-input>
 		</ion-item>
 	</ion-list>
 </ion-content>

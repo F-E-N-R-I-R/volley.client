@@ -6,4 +6,9 @@ export namespace ETypes {
     export interface IEventsList {
         items: IEvent[];
     }
+
+    export interface IPlace {
+        name: string;
+        image: string;
+    }
 }

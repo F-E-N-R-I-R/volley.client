@@ -32,11 +32,38 @@
 		<ion-list>
 			<ion-item routerLink="city" routerDirection="forward" disabled>
 				<ion-label>{{ 'settings.tabs.city.title' | translate }}</ion-label>
-				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ECity, form.controls.city.value) | titlecase | translate }}</ion-text>
+				<ion-text class="light-text">
+					{{ EnumValues.getNameFromValue(UTypes.ECity, form.controls.city.value) | titlecase | translate }}
+				</ion-text>
 			</ion-item>
 			<ion-item routerLink="gender" routerDirection="forward">
 				<ion-label>{{ 'settings.tabs.gender.title' | translate }}</ion-label>
-				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.EGender, form.controls.gender.value) | titlecase | translate }}</ion-text>
+				<ion-text class="light-text">
+					{{ EnumValues.getNameFromValue(UTypes.EGender, form.controls.gender.value) | titlecase | translate }}
+				</ion-text>
+			</ion-item>
+			<ion-item routerLink="additional" routerDirection="forward">
+				<ion-label>{{ 'settings.tabs.additional_info' | translate }}</ion-label>
+				<ion-text></ion-text>
+			</ion-item>
+			<ion-item lines="none" routerLink="personal" routerDirection="forward">
+				<ion-label>{{ 'settings.tabs.personal.title' | translate }}</ion-label>
+				<ion-text></ion-text>
+			</ion-item>
+		</ion-list>
+
+		<ion-list>
+			<ion-item routerLink="language" routerDirection="forward">
+				<ion-label>{{ 'settings.tabs.language.title' | translate }}</ion-label>
+				<ion-text class="light-text">
+					{{ EnumValues.getNameFromValue(UTypes.ELanguage, form.controls.language.value) | titlecase | translate }}
+				</ion-text>
+			</ion-item>
+			<ion-item routerLink="theme" routerDirection="forward">
+				<ion-label>{{ 'settings.tabs.theme.title' | translate }}</ion-label>
+				<ion-text class="light-text">
+					{{ EnumValues.getNameFromValue(UTypes.ETheme, form.controls.theme.value) | titlecase | translate }}
+				</ion-text>
 			</ion-item>
 			<ion-item lines="none" routerLink="notifications" routerDirection="forward">
 				<ion-label>{{ 'settings.tabs.notifications' | translate }}</ion-label>
@@ -45,28 +72,17 @@
 		</ion-list>
 
 		<ion-list>
-			<ion-item routerLink="language" routerDirection="forward">
-				<ion-label>{{ 'settings.tabs.language.title' | translate }}</ion-label>
-				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ELanguage, form.controls.language.value) | titlecase | translate }}</ion-text>
-			</ion-item>
-			<ion-item lines="none" routerLink="theme" routerDirection="forward">
-				<ion-label>{{ 'settings.tabs.theme.title' | translate }}</ion-label>
-				<ion-text class="light-text">{{ EnumValues.getNameFromValue(UTypes.ETheme, form.controls.theme.value) | titlecase | translate }}</ion-text>
-			</ion-item>
-		</ion-list>
-
-		<ion-list>
-			<ion-item lines="none" routerLink="additional" routerDirection="forward">
-				<ion-label>{{ 'settings.tabs.additional_info' | translate }}</ion-label>
-				<ion-text></ion-text>
-			</ion-item>
-			<ion-item lines="none" routerLink="body-sizes" routerDirection="forward">
-				<ion-label>{{ 'settings.tabs.body_sizes.title' | translate }}</ion-label>
-				<ion-text></ion-text>
-			</ion-item>
-			<ion-item lines="none" routerLink="teams" routerDirection="forward">
+			<ion-item routerLink="teams" routerDirection="forward">
 				<ion-label>{{ 'settings.tabs.teams.title' | translate }}</ion-label>
-				<ion-text></ion-text>
+				<ion-text class="light-text">
+					{{ form.controls.teams.value.length }}
+				</ion-text>
+			</ion-item>
+			<ion-item lines="none" routerLink="places" routerDirection="forward">
+				<ion-label>{{ 'settings.tabs.places.title' | translate }}</ion-label>
+				<ion-text class="light-text">
+					{{ form.controls.places.value.length }}
+				</ion-text>
 			</ion-item>
 		</ion-list>
 

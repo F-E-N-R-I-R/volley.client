@@ -4,10 +4,10 @@ import { SettingsFormService } from '@app/pages/settings/core/services/settings-
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
 
 @Component({
-    templateUrl: 'body-sizes.page.html',
-    styleUrls: ['body-sizes.page.scss'],
+    templateUrl: 'places.page.html',
+    styleUrls: ['places.page.scss'],
 })
-export class BodySizesPage {
+export class PlacesPage {
     public form = this.settingsFormService.form as FormGroup;
 
     constructor(private authService: AuthService, private settingsFormService: SettingsFormService) {

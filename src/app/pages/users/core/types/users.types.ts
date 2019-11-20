@@ -1,5 +1,7 @@
 import { Pager } from '@app/types';
 import { STypes } from '@app/pages/auth/core/types/settings.types';
+import { TTypes } from '@app/pages/teams/core/types/teams.types';
+import { ETypes } from '@app/pages/events/core/types/events.types';
 
 export namespace UTypes {
     import INotifications = STypes.INotifications;
@@ -24,8 +26,8 @@ export namespace UTypes {
         hip_girth: number;
         shoe_size: number;
         sports_category: string;
-        teams: string;
-        places: string;
+        teams: TTypes.ITeam[];
+        places: ETypes.IPlace[];
     }
 
     export interface IUsersList {

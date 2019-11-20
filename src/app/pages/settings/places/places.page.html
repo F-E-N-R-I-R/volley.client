@@ -4,20 +4,20 @@
 			<ion-back-button  defaultHref="settings" [text]="'Settings'"></ion-back-button>
 		</ion-buttons>
 		<ion-title>
-			{{ 'settings.tabs.teams.title' | translate }}
+			{{ 'settings.tabs.places.title' | translate }}
 		</ion-title>
 	</ion-toolbar>
 </ion-header>
 
 <ion-content color="vua-gray-light">
-	<ion-card *ngFor="let team of form.get('teams').value">
+	<ion-card *ngFor="let place of form.get('places').value">
 		<ion-item>
-			<ion-img [src]="team.image" slot="start"></ion-img>
-			<ion-label>{{ team.name }}</ion-label>
+			<ion-img [src]="place.image" slot="start"></ion-img>
+			<ion-label>{{ place.name }}</ion-label>
 		</ion-item>
 
 		<ion-card-content>
-			About team
+			About place
 		</ion-card-content>
 	</ion-card>
 </ion-content>

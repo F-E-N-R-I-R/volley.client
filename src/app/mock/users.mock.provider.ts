@@ -22,27 +22,37 @@ export class UsersMockProvider {
             theme: UTypes.ETheme.BLACK,
             avatar: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
 
-             //additional
-              height: 150,
-              weight: 60,
-              chest_girt: 40,
-              waist: 36,
-              hip_girth: 54,
-              shoe_size: 29,
-              sports_category: 'B',
-              teams: [
-                  {
-                      name: 'Vseya mira vzlet',
-                      icon: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+            // additional
+            height: 170,
+            weight: 80,
+            chest_girt: 90,
+            waist: 60,
+            hip_girth: 90,
+            shoe_size: 42,
+            sports_category: 'B',
+            teams: [
+                {
+                    name: 'Vseya mira vzlet',
+                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
 
-                  },
-                  {
-                      name: 'Liga zolotogo dojdya',
-                      icon: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
-                  },
-              ],
-              places: 'Snt.Inokentiy str. 123',
-            
+                },
+                {
+                    name: 'Liga zolotogo dojdya',
+                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                },
+            ],
+            places: [
+                {
+                    name: 'HTT',
+                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+
+                },
+                {
+                    name: 'PTU 30',
+                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                },
+            ],
+
             notifications: {
                 news: true,
                 team: false,

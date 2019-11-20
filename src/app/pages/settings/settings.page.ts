@@ -30,7 +30,7 @@ export class SettingsPageComponent {
                 takeUntil(this.ngUnsubscribe$),
                 filter(user => !!user),
             )
-            .subscribe(user => this.settingsFormService.form.setValue(user));
+            .subscribe(user => this.settingsFormService.setValue(user));
     }
 
     public ionViewWillLeave() {

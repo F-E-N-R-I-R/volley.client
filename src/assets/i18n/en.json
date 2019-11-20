@@ -24,6 +24,9 @@
                 "title": "Account information",
                 "birthday": "Birthday",
                 "fname": "Name",
+                "lname": "Last Name",
+                "pname": "Patronymic",
+                "email": "Email",
                 "phone": "Phone"
             },
             "gender": {
@@ -49,11 +52,14 @@
                 "white": "White",
                 "black": "Black"
             },
-            "body_sizes": {
-                "title": "Body sizes"
+            "personal": {
+                "title": "Personal"
             },
             "teams": {
                 "title": "Teams"
+            },
+            "places": {
+                "title": "Places"
             }
         },
         "toasts": {
