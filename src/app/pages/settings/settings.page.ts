@@ -16,7 +16,6 @@ export class SettingsPageComponent {
     public user$: Observable<UTypes.IUser> = this.authService.user$;
     private ngUnsubscribe$ = new Subject();
     public form = this.settingsFormService.form;
-    public tab = 'main';
     public EnumValues = EnumValues;
     public UTypes = UTypes;
 

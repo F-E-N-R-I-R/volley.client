@@ -18,8 +18,9 @@
         "title": "Users"
     },
     "settings": {
+        "title": "Settings",
         "tabs": {
-            "main": "Account",
+            "title": "Account",
             "main_info": {
                 "title": "Account information",
                 "birthday": "Birthday",
@@ -42,19 +43,24 @@
             },
             "city": {
                 "title": "City",
-                "kharkov": "Kharkov"
+                "KHARKOV": "Kharkov"
             },
-            "additional_info": "Additional",
-            "notifications": "Notifications",
+            "notifications": {
+                "title": "Notifications"
+            },
             "language": {
                 "title": "Language",
                 "header": "Language",
                 "ru": "russian",
-                "en": "english"
+                "en": "english",
+                "RUSSIAN": "Russian",
+                "ENGLISH": "English"
             },
             "theme": {
                 "title": "Theme",
                 "header": "Theme",
+                "WHITE": "White",
+                "BLACK": "Black",
                 "white": "White",
                 "black": "Black"
             },

@@ -1,7 +1,7 @@
 <ion-header>
 	<ion-toolbar color="vua-gray-light">
 		<ion-title>
-			{{ 'settings.tabs.' + tab | translate }}
+			{{ 'settings.title' | translate }}
 		</ion-title>
 		<ion-buttons slot="end">
 			<ion-button (click)="logout()">
@@ -12,7 +12,7 @@
 </ion-header>
 
 <ion-content color="vua-gray-light">
-	<form [formGroup]="form" [ngSwitch]="tab">
+	<form [formGroup]="form">
 		<ion-list>
 			<ion-item lines="none" routerLink="main-info">
 				<ion-avatar slot="start">
@@ -37,7 +37,7 @@
 			<ion-item routerLink="city" routerDirection="forward" disabled>
 				<ion-label>{{ 'settings.tabs.city.title' | translate }}</ion-label>
 				<ion-text class="light-text">
-					{{ EnumValues.getNameFromValue(UTypes.ECity, form.controls.city.value) | titlecase | translate }}
+					{{ 'settings.tabs.city.' + EnumValues.getNameFromValue(UTypes.ECity, form.controls.city.value) | translate }}
 				</ion-text>
 			</ion-item>
 			<ion-item routerLink="category" routerDirection="forward">
@@ -46,7 +46,7 @@
 					{{ 'settings.tabs.category.title' | translate }}
 				</ion-label>
 				<ion-text class="light-text">
-					{{ 'settings.tabs.category.' + EnumValues.getNameFromValue(UTypes.ECategory, form.controls.sports_category.value) | translate | titlecase }}
+					{{ 'settings.tabs.category.' + EnumValues.getNameFromValue(UTypes.ECategory, form.controls.sports_category.value) | translate }}
 				</ion-text>
 			</ion-item>
 			<ion-item lines="none" routerLink="personal" routerDirection="forward">
@@ -65,7 +65,7 @@
 				{{ 'settings.tabs.language.title' | translate }}
 				</ion-label>
 				<ion-text class="light-text">
-					{{ EnumValues.getNameFromValue(UTypes.ELanguage, form.controls.language.value) | titlecase | translate }}
+					{{ 'settings.tabs.language.' + EnumValues.getNameFromValue(UTypes.ELanguage, form.controls.language.value) | translate }}
 				</ion-text>
 			</ion-item>
 			<ion-item routerLink="theme" routerDirection="forward">
@@ -74,14 +74,18 @@
 					{{ 'settings.tabs.theme.title' | translate }}
 			</ion-label>
 				<ion-text class="light-text">
-					{{ EnumValues.getNameFromValue(UTypes.ETheme, form.controls.theme.value) | titlecase | translate }}
+					{{ 'settings.tabs.theme.' + EnumValues.getNameFromValue(UTypes.ETheme, form.controls.theme.value) | translate }}
 				</ion-text>
 			</ion-item>
 			<ion-item lines="none" routerLink="notifications" routerDirection="forward">
+<<<<<<< HEAD
 				<ion-label>
 					<ion-icon name="notifications"></ion-icon>
 					{{ 'settings.tabs.notifications' | translate }}
 				</ion-label>
+=======
+				<ion-label>{{ 'settings.tabs.notifications.title' | translate }}</ion-label>
+>>>>>>> 14a2f8f2e60810c57058b06eca2e54380f7c01ba
 				<ion-text></ion-text>
 			</ion-item>
 		</ion-list>
