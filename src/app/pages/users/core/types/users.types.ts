@@ -25,7 +25,7 @@ export namespace UTypes {
         waist: number;
         hip_girth: number;
         shoe_size: number;
-        sports_category: string;
+        sports_category: ECategory;
         teams: TTypes.ITeam[];
         places: ETypes.IPlace[];
     }
@@ -52,6 +52,14 @@ export namespace UTypes {
     export enum ETheme {
         WHITE = 'white',
         BLACK = 'black',
+    }
+
+    export enum ECategory {
+        FIRST = 'FIRST',
+        SECOND = 'SECOND',
+        CMS = 'CMS',
+        MS = 'MS',
+        MSWC = 'MSWC',
     }
 
 }

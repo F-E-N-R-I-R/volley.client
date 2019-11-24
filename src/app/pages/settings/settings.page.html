@@ -36,15 +36,11 @@
 					{{ EnumValues.getNameFromValue(UTypes.ECity, form.controls.city.value) | titlecase | translate }}
 				</ion-text>
 			</ion-item>
-			<ion-item routerLink="gender" routerDirection="forward">
-				<ion-label>{{ 'settings.tabs.gender.title' | translate }}</ion-label>
+			<ion-item routerLink="category" routerDirection="forward">
+				<ion-label>{{ 'settings.tabs.category.title' | translate }}</ion-label>
 				<ion-text class="light-text">
-					{{ EnumValues.getNameFromValue(UTypes.EGender, form.controls.gender.value) | titlecase | translate }}
+					{{ 'settings.tabs.category.' + EnumValues.getNameFromValue(UTypes.ECategory, form.controls.sports_category.value) | translate | titlecase }}
 				</ion-text>
-			</ion-item>
-			<ion-item routerLink="additional" routerDirection="forward">
-				<ion-label>{{ 'settings.tabs.additional_info' | translate }}</ion-label>
-				<ion-text></ion-text>
 			</ion-item>
 			<ion-item lines="none" routerLink="personal" routerDirection="forward">
 				<ion-label>{{ 'settings.tabs.personal.title' | translate }}</ion-label>

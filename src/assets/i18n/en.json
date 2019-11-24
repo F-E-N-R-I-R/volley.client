@@ -27,12 +27,18 @@
                 "lname": "Last Name",
                 "pname": "Patronymic",
                 "email": "Email",
-                "phone": "Phone"
-            },
-            "gender": {
-                "title": "Gender",
+                "phone": "Phone",
+                "gender": "Gender",
                 "male": "male",
                 "female": "female"
+            },
+            "category": {
+                "title": "Sport Category",
+                "FIRST": "First",
+                "SECOND": "Second",
+                "CMS": "Candidate Master of Sport",
+                "MS": "Master of Sport",
+                "MSWC": "World Class Master of Sport"
             },
             "city": {
                 "title": "City",

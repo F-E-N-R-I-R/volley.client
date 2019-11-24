@@ -29,7 +29,7 @@ export class UsersMockProvider {
             waist: 60,
             hip_girth: 90,
             shoe_size: 42,
-            sports_category: 'B',
+            sports_category: UTypes.ECategory.MSWC,
             teams: [
                 {
                     name: 'Vseya mira vzlet',

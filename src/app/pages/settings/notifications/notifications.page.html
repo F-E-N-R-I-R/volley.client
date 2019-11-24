@@ -10,11 +10,13 @@
 </ion-header>
 
 <ion-content color="vua-gray-light">
-	<ion-list [formGroup]="form">
+	<ion-list>
 		<ion-item>
 			<ion-label>All</ion-label>
 			<ion-toggle [checked]="all" (ionChange)="onAllToggle($event)"></ion-toggle>
 		</ion-item>
+	</ion-list>
+	<ion-list [formGroup]="form">
 		<ion-item>
 			<ion-label>News</ion-label>
 			<ion-toggle formControlName="news"></ion-toggle>

@@ -36,6 +36,12 @@
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.email' | translate }}</ion-label>
 			<ion-input type="text" formControlName="email" readonly></ion-input>
 		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">{{ 'settings.tabs.main_info.gender' | translate }}</ion-label>
+			<ion-select interface="action-sheet" formControlName="gender">
+				<ion-select-option *ngFor="let gender of genders" [value]="gender">{{ 'settings.tabs.main_info.' + gender | translate }}</ion-select-option>
+			</ion-select>
+		</ion-item>
 	</ion-list>
 </ion-content>
 
