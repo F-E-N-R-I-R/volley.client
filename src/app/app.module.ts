@@ -18,6 +18,7 @@ import { AuthenticationService, ThemeService } from '@app/services';
 import { HttpLoaderFactory } from '@app/factories/translate.factory';
 import { MockModule } from '@app/mock/mock.module';
 import { ToastService } from '@app/services/toast.service';
+import { AppCoreModule } from '@app/core/app.core.module';
 
 @NgModule({
     declarations: [AppComponent, TabsComponent],
@@ -37,6 +38,7 @@ import { ToastService } from '@app/services/toast.service';
             }
         }),
         MockModule,
+        AppCoreModule,
     ],
     providers: [
         StatusBar,
@@ -45,7 +47,7 @@ import { ToastService } from '@app/services/toast.service';
         AuthenticationService,
         ThemeService,
         ToastService,
-        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ],
     bootstrap: [AppComponent]
 })
