@@ -93,7 +93,7 @@
 				{{ 'settings.tabs.teams.title' | translate }}
 				</ion-label>
 				<ion-text class="light-text">
-					{{ form.controls.teams.value.length }}
+					{{ form.controls.teams.value | multiplayPreview }}
 				</ion-text>
 			</ion-item>
 			<ion-item lines="none" routerLink="places" routerDirection="forward">

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { ExponentialStrengthPipe } from '@app/core/pipes/test.pipe';
+import { MultiplayPreviewPipe } from '@app/core/pipes/multiplay-preview.pipe';
 
 @NgModule({
-    declarations: [ExponentialStrengthPipe],
-    exports: [ExponentialStrengthPipe],
+    declarations: [MultiplayPreviewPipe],
+    exports: [MultiplayPreviewPipe],
 })
 export class AppCoreModule {
 }
