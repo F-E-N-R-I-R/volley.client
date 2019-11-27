@@ -19,8 +19,8 @@
 					<img [src]="form.get('avatar').value">
 				</ion-avatar>
 				<ion-text>
-					<p>	
-						<ion-icon [name]="form.controls.gender.value === 'male' ? 'man' : 'woman'"></ion-icon>
+					<p>
+						<ion-icon class="light-text" [name]="form.controls.gender.value === 'male' ? 'man' : 'woman'"></ion-icon>
 						{{ form.controls.fname.value | titlecase }}
 						{{ form.controls.lname.value | titlecase }}
 						<small class="light-text">({{ form.controls.date_of_birth.value | date }})</small>
@@ -33,7 +33,7 @@
 			</ion-item>
 		</ion-list>
 
-		<ion-list>
+		<ion-list class="inline-settings">
 			<ion-item routerLink="city" routerDirection="forward" disabled>
 				<ion-label>{{ 'settings.tabs.city.title' | translate }}</ion-label>
 				<ion-text class="light-text">
@@ -41,8 +41,8 @@
 				</ion-text>
 			</ion-item>
 			<ion-item routerLink="category" routerDirection="forward">
+				<ion-icon name="ribbon"></ion-icon>
 				<ion-label>
-					<ion-icon name="ribbon"></ion-icon>
 					{{ 'settings.tabs.category.title' | translate }}
 				</ion-label>
 				<ion-text class="light-text">
@@ -50,18 +50,18 @@
 				</ion-text>
 			</ion-item>
 			<ion-item lines="none" routerLink="personal" routerDirection="forward">
+				<ion-icon name="body"></ion-icon>
 				<ion-label>
-					<ion-icon name="body"></ion-icon>
 					{{ 'settings.tabs.personal.title' | translate }}
 				</ion-label>
 				<ion-text></ion-text>
 			</ion-item>
 		</ion-list>
 
-		<ion-list>
+		<ion-list class="inline-settings">
 			<ion-item routerLink="language" routerDirection="forward">
+				<ion-icon name="globe"></ion-icon>
 				<ion-label>
-					<ion-icon name="globe"></ion-icon>
 				{{ 'settings.tabs.language.title' | translate }}
 				</ion-label>
 				<ion-text class="light-text">
@@ -69,8 +69,8 @@
 				</ion-text>
 			</ion-item>
 			<ion-item routerLink="theme" routerDirection="forward">
+				<ion-icon name="color-palette"></ion-icon>
 				<ion-label>
-					<ion-icon name="color-palette"></ion-icon>
 					{{ 'settings.tabs.theme.title' | translate }}
 			</ion-label>
 				<ion-text class="light-text">
@@ -78,18 +78,18 @@
 				</ion-text>
 			</ion-item>
 			<ion-item lines="none" routerLink="notifications" routerDirection="forward">
+				<ion-icon name="notifications"></ion-icon>
 				<ion-label>
-					<ion-icon name="notifications"></ion-icon>
 					{{ 'settings.tabs.notifications.title' | translate }}
 				</ion-label>
 				<ion-text></ion-text>
 			</ion-item>
 		</ion-list>
 
-		<ion-list>
+		<ion-list class="inline-settings">
 			<ion-item routerLink="teams" routerDirection="forward">
-				<ion-label>
 				<ion-icon name="people"></ion-icon>
+				<ion-label>
 				{{ 'settings.tabs.teams.title' | translate }}
 				</ion-label>
 				<ion-text class="light-text">
@@ -97,8 +97,8 @@
 				</ion-text>
 			</ion-item>
 			<ion-item lines="none" routerLink="places" routerDirection="forward">
+				<ion-icon name="locate"></ion-icon>
 				<ion-label>
-					<ion-icon name="locate"></ion-icon>
 					{{ 'settings.tabs.places.title' | translate }}
 				</ion-label>
 				<ion-text class="light-text">
@@ -106,6 +106,5 @@
 				</ion-text>
 			</ion-item>
 		</ion-list>
-
 	</form>
 </ion-content>
