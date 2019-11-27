@@ -23,7 +23,7 @@
 						<ion-icon class="light-text" [name]="form.controls.gender.value === 'male' ? 'man' : 'woman'"></ion-icon>
 						{{ form.controls.fname.value | titlecase }}
 						{{ form.controls.lname.value | titlecase }}
-						<small class="light-text">({{ form.controls.date_of_birth.value | date }})</small>
+						<small class="light-text">({{ form.controls.date_of_birth.value | dateToAge }})</small>
 					</p>
 					<p class="light-text">
 						<ion-icon name="phone-portrait"></ion-icon>

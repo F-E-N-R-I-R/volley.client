@@ -17,7 +17,7 @@ export class UsersMockProvider {
             gender: UTypes.EGender.MALE,
             phone: 380506785432,
             city: UTypes.ECity.KHARKOV,
-            date_of_birth: '2019-11-03',
+            date_of_birth: '1998-06-03',
             language: UTypes.ELanguage.RUSSIAN,
             theme: UTypes.ETheme.BLACK,
             avatar: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
