@@ -15,7 +15,7 @@ export class UsersMockProvider {
             pname: 'Valerievich',
             email: 'pavel@gmail.com',
             gender: UTypes.EGender.MALE,
-            phone: 380506785432,
+            phone: 506785432,
             city: UTypes.ECity.KHARKOV,
             date_of_birth: '1998-06-03',
             language: UTypes.ELanguage.RUSSIAN,

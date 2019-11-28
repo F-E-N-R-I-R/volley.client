@@ -30,7 +30,7 @@
 		</ion-item>
 		<ion-item>
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.phone' | translate }}</ion-label>
-			<ion-input type="text" formControlName="phone" readonly></ion-input>
+			<ion-input type="text" [innerHTML]="form.controls.phone.value | phone" readonly></ion-input>
 		</ion-item>
 		<ion-item>
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.email' | translate }}</ion-label>
@@ -45,7 +45,6 @@
 	</ion-list>
 	{{ form.valid }}
 </ion-content>
-
 
 
 

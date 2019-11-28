@@ -47,7 +47,7 @@ import { AppCoreModule } from '@app/core/app.core.module';
         AuthenticationService,
         ThemeService,
         ToastService,
-        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     ],
     bootstrap: [AppComponent]
 })

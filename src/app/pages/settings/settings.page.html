@@ -32,15 +32,13 @@
 					</ion-row>
 
 					<ion-row>
-						<ion-text color="medium" >
+						<ion-text color="medium">
 							<small>
-								<ion-icon name="phone-portrait"></ion-icon>
-								{{ form.controls.phone.value }}
+								<ion-text [innerHTML]="form.controls.phone.value | phone"></ion-text>
 							</small>
 						</ion-text>
 					</ion-row>
 				</ion-grid>
-
 			</ion-item>
 		</ion-list>
 
