@@ -4,11 +4,15 @@ ion-avatar {
 }
 
 ion-list {
-  border-bottom: 1px solid #dcdcdc;
-  border-top: 1px solid #dcdcdc;
-
   &.inline-settings {
-    .light-text {
+    ion-icon {
+      border-radius: 6px;
+      padding: 2px;
+      background-color: #3880ff;
+      color: #fff;
+    }
+
+    ion-text {
       white-space: nowrap;
       max-width: 110px;
       text-overflow: ellipsis;

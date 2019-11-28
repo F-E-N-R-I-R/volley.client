@@ -5,6 +5,27 @@
   --ion-color-vua-gray-light-contrast-rgb: 0,0,0;
   --ion-color-vua-gray-light-shade: #d9d9d9;
   --ion-color-vua-gray-light-tint: #f8f8f8;
+
+  --ion-color-vua-primary: #ebebf0;
+  --ion-color-vua-primary-rgb: 235,235,240;
+  --ion-color-vua-primary-contrast: #000000;
+  --ion-color-vua-primary-contrast-rgb: 0,0,0;
+  --ion-color-vua-primary-shade: #cfcfd3;
+  --ion-color-vua-primary-tint: #ededf2;
+
+  --ion-color-vua-secondary: #f7f7f7;
+  --ion-color-vua-secondary-rgb: 247,247,247;
+  --ion-color-vua-secondary-contrast: #000000;
+  --ion-color-vua-secondary-contrast-rgb: 0,0,0;
+  --ion-color-vua-secondary-shade: #d9d9d9;
+  --ion-color-vua-secondary-tint: #f8f8f8;
+
+  --ion-color-vua-primary-i: #ebebf0;
+  --ion-color-vua-primary-i-rgb: 235,235,240;
+  --ion-color-vua-primary-i-contrast: #3880ff;
+  --ion-color-vua-primary-i-contrast-rgb: 0,0,0;
+  --ion-color-vua-primary-i-shade: #cfcfd3;
+  --ion-color-vua-primary-i-tint: #ededf2;
 }
 
 .ion-color-vua-gray-light {
@@ -14,4 +35,31 @@
   --ion-color-contrast-rgb: var(--ion-color-vua-gray-light-contrast-rgb);
   --ion-color-shade: var(--ion-color-vua-gray-light-shade);
   --ion-color-tint: var(--ion-color-vua-gray-light-tint);
+}
+
+.ion-color-vua-primary {
+  --ion-color-base: var(--ion-color-vua-primary);
+  --ion-color-base-rgb: var(--ion-color-vua-primary-rgb);
+  --ion-color-contrast: var(--ion-color-vua-primary-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-vua-primary-contrast-rgb);
+  --ion-color-shade: var(--ion-color-vua-primary-shade);
+  --ion-color-tint: var(--ion-color-vua-primary-tint);
+}
+
+.ion-color-vua-secondary {
+  --ion-color-base: var(--ion-color-vua-secondary);
+  --ion-color-base-rgb: var(--ion-color-vua-secondary-rgb);
+  --ion-color-contrast: var(--ion-color-vua-secondary-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-vua-secondary-contrast-rgb);
+  --ion-color-shade: var(--ion-color-vua-secondary-shade);
+  --ion-color-tint: var(--ion-color-vua-secondary-tint);
+}
+
+.ion-color-vua-primary-i {
+  --ion-color-base: var(--ion-color-vua-primary-i);
+  --ion-color-base-rgb: var(--ion-color-vua-primary-i-rgb);
+  --ion-color-contrast: var(--ion-color-vua-primary-i-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-vua-primary-i-contrast-rgb);
+  --ion-color-shade: var(--ion-color-vua-primary-i-shade);
+  --ion-color-tint: var(--ion-color-vua-primary-i-tint);
 }
