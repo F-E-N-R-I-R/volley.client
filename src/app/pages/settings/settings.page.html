@@ -33,9 +33,7 @@
 
 					<ion-row>
 						<ion-text color="medium">
-							<small>
-								<ion-text [innerHTML]="form.controls.phone.value | phone"></ion-text>
-							</small>
+							<small [innerHTML]="form.controls.phone.value | phone: true"></small>
 						</ion-text>
 					</ion-row>
 				</ion-grid>
