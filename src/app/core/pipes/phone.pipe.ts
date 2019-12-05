@@ -1,14 +1,20 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Pipe({
     name: 'phone'
 })
 export class PhonePipe implements PipeTransform {
+    constructor(private sanitizer: DomSanitizer) {
+    }
 
     transform(phone: number, collable?: boolean): SafeHtml {
-            return `<a href="tel:+380501234567">
-                        ${String(phone).replace(/(\d{2})(\d{3})(\d{4})/, '+380 $1 $2 $3')}
-                    </a>`;
+        return this.sanitizer.bypassSecurityTrustHtml(
+            collable ?
+                `<a href="tel:+380${String(phone)}">
+                    ${String(phone).replace(/(\d{2})(\d{3})(\d{4})/, '+380 $1 $2 $3')}
+                 </a>`
+                : `<span>${String(phone).replace(/(\d{2})(\d{3})(\d{4})/, '+380 $1 $2 $3')}</span>`,
+        );
     }
 }
