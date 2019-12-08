@@ -11,7 +11,7 @@ export class PhonePipe implements PipeTransform {
     transform(phone: number, collable?: boolean): SafeHtml {
         return this.sanitizer.bypassSecurityTrustHtml(
             collable ?
-                `<a href="tel:+380${String(phone)}">
+                `<a class="link" href="tel:+380${String(phone)}">
                     ${String(phone).replace(/(\d{2})(\d{3})(\d{4})/, '+380 $1 $2 $3')}
                  </a>`
                 : `<span>${String(phone).replace(/(\d{2})(\d{3})(\d{4})/, '+380 $1 $2 $3')}</span>`,
