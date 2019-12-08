@@ -1,5 +1,5 @@
 <ion-header>
-	<ion-toolbar color="vua-gray-light">
+	<ion-toolbar color="vua-primary">
 		<ion-buttons slot="start">
 			<ion-back-button  defaultHref="settings" [text]="'settings.title' | translate"></ion-back-button>
 		</ion-buttons>
@@ -9,14 +9,10 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content color="vua-gray-light">
+<ion-content color="vua-primary">
 	<ion-list [formGroup]="form">
 		<ion-radio-group formControlName="language">
-			<ion-list-header>
-				<ion-label>{{ 'settings.tabs.language.header' | translate }}</ion-label>
-			</ion-list-header>
-
-			<ion-item *ngFor="let langItem of EnumValues.getValues(UTypes.ELanguage)">
+			<ion-item *ngFor="let langItem of EnumValues.getValues(UTypes.ELanguage)" color="vua-secondary">
 				<ion-label>{{ 'settings.tabs.language.' + langItem | translate }}</ion-label>
 				<ion-radio slot="end" value="{{ langItem }}"></ion-radio>
 			</ion-item>

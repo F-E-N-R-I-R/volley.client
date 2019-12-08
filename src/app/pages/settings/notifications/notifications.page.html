@@ -1,5 +1,5 @@
 <ion-header>
-	<ion-toolbar color="vua-gray-light">
+	<ion-toolbar color="vua-primary">
 		<ion-buttons slot="start">
 			<ion-back-button  defaultHref="settings" [text]="'settings.title' | translate"></ion-back-button>
 		</ion-buttons>
@@ -9,27 +9,27 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content color="vua-gray-light">
+<ion-content color="vua-primary">
 	<ion-list>
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label>All</ion-label>
-			<ion-toggle [checked]="all" (ionChange)="onAllToggle($event)"></ion-toggle>
+			<ion-toggle [formControl]="allToggleControl"></ion-toggle>
 		</ion-item>
 	</ion-list>
 	<ion-list [formGroup]="form">
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label>News</ion-label>
 			<ion-toggle formControlName="news"></ion-toggle>
 		</ion-item>
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label>Team</ion-label>
 			<ion-toggle formControlName="team"></ion-toggle>
 		</ion-item>
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label>Events</ion-label>
 			<ion-toggle formControlName="events"></ion-toggle>
 		</ion-item>
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label>Competitions</ion-label>
 			<ion-toggle formControlName="competitions"></ion-toggle>
 		</ion-item>
