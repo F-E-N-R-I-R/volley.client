@@ -46,7 +46,11 @@
                 "KHARKOV": "Kharkov"
             },
             "notifications": {
-                "title": "Notifications"
+                "title": "Notifications",
+                "news":"ews",
+                "team":"Team",
+                "events": "Events",
+                "competitions":"Competitions"
             },
             "language": {
                 "title": "Language",

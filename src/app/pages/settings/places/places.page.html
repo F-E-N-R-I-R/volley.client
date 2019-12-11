@@ -1,5 +1,5 @@
 <ion-header>
-	<ion-toolbar color="vua-gray-light">
+	<ion-toolbar color="vua-primary">
 		<ion-buttons slot="start">
 			<ion-back-button  defaultHref="settings" [text]="'settings.title' | translate"></ion-back-button>
 		</ion-buttons>
@@ -9,9 +9,9 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content color="vua-gray-light">
+<ion-content color="vua-primary">
 	<ion-card *ngFor="let place of form.get('places').value">
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-img [src]="place.image" slot="start"></ion-img>
 			<ion-label>{{ place.name }}</ion-label>
 		</ion-item>

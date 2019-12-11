@@ -1,5 +1,5 @@
 <ion-header>
-	<ion-toolbar color="vua-gray-light">
+	<ion-toolbar color="vua-primary">
 		<ion-buttons slot="start">
 			<ion-back-button  defaultHref="settings" [text]="'settings.title' | translate"></ion-back-button>
 		</ion-buttons>
@@ -9,34 +9,34 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content color="vua-gray-light">
+<ion-content color="vua-primary">
 	<ion-list [formGroup]="form">
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.birthday' | translate }}</ion-label>
 			<ion-datetime displayFormat="MM DD YYYY" placeholder="Select Date"
 			              formControlName="date_of_birth"></ion-datetime>
 		</ion-item>
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.fname' | translate }}</ion-label>
 			<ion-input type="text" formControlName="fname"></ion-input>
 		</ion-item>
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.lname' | translate }}</ion-label>
 			<ion-input type="text" formControlName="lname"></ion-input>
 		</ion-item>
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.pname' | translate }}</ion-label>
 			<ion-input type="text" formControlName="pname"></ion-input>
 		</ion-item>
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.phone' | translate }}</ion-label>
 			<ion-input type="text" [innerHTML]="form.controls.phone.value | phone: true" readonly></ion-input>
 		</ion-item>
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.email' | translate }}</ion-label>
 			<ion-input type="text" formControlName="email" readonly></ion-input>
 		</ion-item>
-		<ion-item>
+		<ion-item color="vua-secondary">
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.gender' | translate }}</ion-label>
 			<ion-select interface="action-sheet" formControlName="gender">
 				<ion-select-option *ngFor="let gender of genders" [value]="gender">{{ 'settings.tabs.main_info.' + gender | translate }}</ion-select-option>
