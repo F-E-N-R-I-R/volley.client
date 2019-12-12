@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -19,6 +20,7 @@ import { HttpLoaderFactory } from '@app/factories/translate.factory';
 import { MockModule } from '@app/mock/mock.module';
 import { ToastService } from '@app/services/toast.service';
 import { AppCoreModule } from '@app/core/app.core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [AppComponent, TabsComponent],
@@ -39,6 +41,9 @@ import { AppCoreModule } from '@app/core/app.core.module';
         }),
         MockModule,
         AppCoreModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
     ],
     providers: [
         StatusBar,

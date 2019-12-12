@@ -1,0 +1,12 @@
+<ng-container *ngIf='!control.valid' [ngSwitch]='true'>
+        <small *ngSwitchCase='!!control.errors.required'
+                class="d-block invalid-feedback">
+                {{ 'errors.required' | translate }}
+        </small>
+
+        <small *ngSwitchCase='!!control.errors.maxlength'
+               class="d-block invalid-feedback">
+                {{ 'errors.maxlength' | translate:{ max: control.errors.maxlength.requiredLength } }}
+        </small>
+</ng-container>
+

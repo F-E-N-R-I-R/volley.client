@@ -81,5 +81,10 @@
         "toasts": {
             "upd_settings_success": "User settings update successfully"
         }
+    },
+
+    "errors": {
+        "required": "This field is required",
+        "maxlength": "Max length is {{max}}"
     }
 }
