@@ -43,7 +43,8 @@
             },
             "city": {
                 "title": "City",
-                "KHARKOV": "Kharkov"
+                "KHARKOV": "Kharkov",
+                "Kh": "Kharkov"
             },
             "notifications": {
                 "title": "Notifications",
@@ -60,7 +61,8 @@
                 "en": "English",
                 "ua":"Ukranian",
                 "RUSSIAN": "Russian",
-                "ENGLISH": "English"
+                "ENGLISH": "English",
+                "UKRANIAN": "Ukranian"
             },
             "theme": {
                 "title": "Theme",
@@ -92,7 +94,7 @@
     },
 
     "errors": {
-        "required": "This field is required",
-        "maxlength": "Max length is {{max}}"
+        "required": "* This field is required",
+        "maxlength": "* Max length is {{max}}"
     }
 }

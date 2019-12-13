@@ -41,7 +41,7 @@ export namespace UTypes {
     }
 
     export enum ECity {
-        KHARKOV = 'Kharkov',
+        KHARKOV = 'Kh',
     }
 
     export enum ELanguage {
