@@ -45,6 +45,7 @@
             },
             "notifications": {
                 "title": "Уведомления",
+                "all":"Все",
                 "news":"Новости",
                 "team":"Команда",
                 "events": "Турниры",
@@ -53,14 +54,30 @@
             "language": {
                 "title": "Язык",
                 "header": "Язык",
-                "ru": "русский",
-                "en": "английский"
+                "ru": "Русский",
+                "en": "Английский",
+                "ua": "Украинский"
             },
             "theme": {
                 "title": "Тема",
                 "header": "Тема",
                 "white": "Светлая",
                 "black": "Темная"
+            },
+            "personal": {
+                 "title": "Конституция",
+                "height":"Рост",
+                "weight": "Вес",
+                "chest_girt": "Грудь",
+                "waist": "Талия",
+                "hip_girth": "Бёдра",
+                "shoe_size":"Размер обуви" 
+            },
+             "teams": {
+                "title": "Команды"
+            },
+            "places": {
+                "title": "Местa"
             }
         },
         "toasts": {

@@ -47,6 +47,7 @@ export namespace UTypes {
     export enum ELanguage {
         RUSSIAN = 'ru',
         ENGLISH = 'en',
+        UKRANIAN ='ua',
     }
 
     export enum ETheme {

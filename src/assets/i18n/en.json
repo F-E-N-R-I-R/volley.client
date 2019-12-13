@@ -47,7 +47,8 @@
             },
             "notifications": {
                 "title": "Notifications",
-                "news":"ews",
+                "all":"All",
+                "news":"News",
                 "team":"Team",
                 "events": "Events",
                 "competitions":"Competitions"
@@ -55,8 +56,9 @@
             "language": {
                 "title": "Language",
                 "header": "Language",
-                "ru": "russian",
-                "en": "english",
+                "ru": "Russian",
+                "en": "English",
+                "ua":"Ukranian",
                 "RUSSIAN": "Russian",
                 "ENGLISH": "English"
             },
@@ -69,7 +71,13 @@
                 "black": "Black"
             },
             "personal": {
-                "title": "Personal"
+                "title": "Personal",
+                 "height":"Height",
+                "weight": "Weight",
+                "chest_girt": "Chest girt",
+                "waist": "Waist",
+                "hip_girth": "Hip girth",
+                "shoe_size":"Shoe size" 
             },
             "teams": {
                 "title": "Teams"

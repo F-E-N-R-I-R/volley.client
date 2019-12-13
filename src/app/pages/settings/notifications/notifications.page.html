@@ -12,25 +12,35 @@
 <ion-content color="vua-primary">
 	<ion-list>
 		<ion-item color="vua-secondary">
-			<ion-label>All</ion-label>
+			<ion-label>
+				{{ 'settings.tabs.notifications.all' | translate }}
+			</ion-label>
 			<ion-toggle [formControl]="allToggleControl"></ion-toggle>
 		</ion-item>
 	</ion-list>
 	<ion-list [formGroup]="form">
 		<ion-item color="vua-secondary">
-			<ion-label>News</ion-label>
+			<ion-label>
+				<{{ 'settings.tabs.notifications.news' | translate }}
+			</ion-label>
 			<ion-toggle formControlName="news"></ion-toggle>
 		</ion-item>
 		<ion-item color="vua-secondary">
-			<ion-label>Team</ion-label>
+			<ion-label>
+				{{ 'settings.tabs.notifications.team' | translate }}
+			</ion-label>
 			<ion-toggle formControlName="team"></ion-toggle>
 		</ion-item>
 		<ion-item color="vua-secondary">
-			<ion-label>Events</ion-label>
+			<ion-label>
+				{{ 'settings.tabs.notifications.events' | translate }}
+			</ion-label>
 			<ion-toggle formControlName="events"></ion-toggle>
 		</ion-item>
 		<ion-item color="vua-secondary">
-			<ion-label>Competitions</ion-label>
+			<ion-label>
+				{{ 'settings.tabs.notifications.competitions' | translate }}
+			</ion-label>
 			<ion-toggle formControlName="competitions"></ion-toggle>
 		</ion-item>
 	</ion-list>
