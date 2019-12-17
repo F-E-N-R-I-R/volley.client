@@ -10,6 +10,14 @@
 </ion-header>
 
 <ion-content color="vua-primary">
+	<ion-list [formGroup]="form">
+		<ion-radio-group formControlName="city">
+			<ion-item  color="vua-secondary" >
+				<ion-label>{{ 'settings.tabs.city.KHARKOV' | translate }}</ion-label>
+				<ion-radio slot="end" value="{{ cityItem }}"></ion-radio>
+			</ion-item>
+		</ion-radio-group>
+	</ion-list>
 
 </ion-content>
 

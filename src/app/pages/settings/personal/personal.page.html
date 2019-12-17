@@ -9,46 +9,58 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content color="vua-primary">	
+<ion-content color="vua-primary" overflow-scroll = "false" >	
 	<ion-list [formGroup]="form">
 		<ion-item color="vua-secondary">
    	 		<ion-range min="120" max="220" color="secondary" pin="true" formControlName="height">
-      			<ion-label slot="start" position="stacked">Height</ion-label>
+      			<ion-label slot="start" position="stacked">
+                {{ 'settings.tabs.personal.height' | translate }}   
+            </ion-label>
       			<ion-label slot="end">{{ form.get('height').value }}</ion-label>
     		</ion-range>
   		</ion-item>
 
   		<ion-item color="vua-secondary">
    	 		<ion-range min="40" max="140" color="secondary" pin="true" formControlName="weight">
-      			<ion-label slot="start" position="stacked">Weight</ion-label>
+      			<ion-label slot="start" position="stacked">
+              {{ 'settings.tabs.personal.weight' | translate }}   
+            </ion-label>
       			<ion-label slot="end">{{ form.get('weight').value }}</ion-label>
     		</ion-range>
   		</ion-item>
 
   		<ion-item color="vua-secondary">
    	 		<ion-range min="40" max="150" color="secondary" pin="true" formControlName="chest_girt">
-      			<ion-label slot="start" position="stacked">Chest girt</ion-label>
+      			<ion-label slot="start" position="stacked" >
+              {{ 'settings.tabs.personal.chest_girt' | translate }}   
+            </ion-label>
       			<ion-label slot="end">{{ form.get('chest_girt').value }}</ion-label>
     		</ion-range>
   		</ion-item>
 
   		<ion-item color="vua-secondary">
    	 		<ion-range min="40" max="150" color="secondary" pin="true" formControlName="waist">
-      			<ion-label slot="start" position="stacked">Waist</ion-label>
+      			<ion-label slot="start" position="stacked">
+                 {{ 'settings.tabs.personal.waist' | translate }}
+            </ion-label>
       			<ion-label slot="end">{{ form.get('waist').value }}</ion-label>
     		</ion-range>
   		</ion-item>
 
   		<ion-item color="vua-secondary">
    	 		<ion-range min="40" max="150" color="secondary" pin="true" formControlName="hip_girth" >
-      			<ion-label slot="start" position="stacked">Hip girt</ion-label>
+      			<ion-label slot="start" position="stacked">
+              {{ 'settings.tabs.personal.hip_girth' | translate }}   
+            </ion-label>
       			<ion-label slot="end">{{ form.get('hip_girth').value }}</ion-label>
     		</ion-range>
   		</ion-item>
 
   		<ion-item color="vua-secondary">
    	 		<ion-range min="30" max="60" color="secondary" pin="true" formControlName="shoe_size" >
-      			<ion-label slot="start" position="stacked">Shoe size</ion-label>
+      			<ion-label slot="start" position="stacked">
+           {{ 'settings.tabs.personal.shoe_size' | translate }}   
+            </ion-label>
       			<ion-label slot="end">{{ form.get('shoe_size').value }}</ion-label>
     		</ion-range>
   		</ion-item>
