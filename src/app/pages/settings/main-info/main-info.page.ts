@@ -18,5 +18,6 @@ export class MainInfoPage {
 
     public ionViewWillLeave() {
         this.authService.dispatchSilentUpdate(this.settingsFormService.form.value);
+        this.form.markAsPristine();
     }
 }
