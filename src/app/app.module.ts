@@ -14,7 +14,7 @@ import { AppComponent } from '@app/app.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppStoreModule } from '@app/store/app-store.module';
 import { TabsComponent } from '@app/components/tabs/tabs.page';
-import { AuthGuard } from '@app/guards';
+import { AuthGuard, DataChangesGuard } from '@app/guards';
 import { AuthenticationService, ThemeService } from '@app/services';
 import { HttpLoaderFactory } from '@app/factories/translate.factory';
 import { MockModule } from '@app/mock/mock.module';
@@ -52,7 +52,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         AuthenticationService,
         ThemeService,
         ToastService,
-        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+        DataChangesGuard,
     ],
     bootstrap: [AppComponent]
 })
