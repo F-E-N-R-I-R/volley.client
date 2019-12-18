@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { SettingsFormService } from './services/settings-form.service';
+import { PersonalService } from './services/personal.service';
 
 @NgModule({
     imports: [
@@ -11,6 +12,7 @@ import { SettingsFormService } from './services/settings-form.service';
     exports: [],
     providers: [
         SettingsFormService,
+        PersonalService,
     ],
 })
 export class SettingsCoreModule {

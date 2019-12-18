@@ -58,9 +58,19 @@ export namespace UTypes {
     export enum ECategory {
         FIRST = 'FIRST',
         SECOND = 'SECOND',
-        CMS = 'CMS',
-        MS = 'MS',
+        THIRD = 'THIRD',
+        FYR = "FYR",
+        SYR = "SYR",
+        TYR = "TYR",
+        CMSU = 'CMSU',
+        MSU = 'MSU',
         MSWC = 'MSWC',
     }
 
+    export interface IBodyParam {
+        name: string;
+        min: number;
+        max: number;
+        color: string;
+    }
 }

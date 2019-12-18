@@ -34,12 +34,16 @@
                 "female": "female"
             },
             "category": {
-                "title": "Sport Category",
-                "FIRST": "First",
-                "SECOND": "Second",
-                "CMS": "Candidate Master of Sport",
-                "MS": "Master of Sport",
-                "MSWC": "World Class Master of Sport"
+                "title": "Sports Category",
+                "FIRST": "I",
+                "SECOND": "II",
+                "THIRD": "III",
+                "FYR": "I-Y",
+                "SYR": "II-Y",
+                "TYR": "III-Y",
+                "CMSU": "CMSU",
+                "MSU": "MSU",
+                "MSWC": "WSWC"
             },
             "city": {
                 "title": "City",
