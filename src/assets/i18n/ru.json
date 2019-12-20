@@ -56,7 +56,7 @@
                 "news":"Новости",
                 "team":"Команда",
                 "events": "Турниры",
-                "competitions":"Хня какая то я хз"
+                "competitions":"Соревнования"
             },
             "language": {
                 "title": "Язык",
@@ -66,7 +66,7 @@
                 "ua": "Украинский",
                 "RUSSIAN": "Русский",
                 "ENGLISH": "Английский",
-                "UKRANIAN": "Украинский"
+                "UKRAINIAN": "Украинский"
             },
             "theme": {
                 "title": "Тема",

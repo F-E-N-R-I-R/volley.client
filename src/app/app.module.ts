@@ -3,16 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IonicStorageModule } from '@ionic/storage';
-
 import { AppRoutingModule } from '@app/app-routing.module';
 import { AppComponent } from '@app/app.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { AppStoreModule } from '@app/store/app-store.module';
+import { localStorageSyncReducer } from '@app/store/app-store.module';
 import { TabsComponent } from '@app/components/tabs/tabs.page';
 import { AuthGuard, DataChangesGuard } from '@app/guards';
 import { AuthenticationService, ThemeService } from '@app/services';
@@ -21,6 +19,11 @@ import { MockModule } from '@app/mock/mock.module';
 import { ToastService } from '@app/services/toast.service';
 import { AppCoreModule } from '@app/core/app.core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MetaReducer, StoreModule } from '@ngrx/store';
+import { clearStorageReducer, reducers } from '@app/store/reducers';
+import { EffectsModule } from '@ngrx/effects';
+
+const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer, clearStorageReducer];
 
 @NgModule({
     declarations: [AppComponent, TabsComponent],
@@ -30,7 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         IonicModule.forRoot(),
         AppRoutingModule,
         HttpClientModule,
-        AppStoreModule,
+        StoreModule.forRoot(reducers, { metaReducers }),
+        EffectsModule.forRoot([]),
         IonicStorageModule.forRoot(),
         TranslateModule.forRoot({
             loader: {

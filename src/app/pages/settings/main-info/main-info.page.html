@@ -38,7 +38,7 @@
 		</ion-item>
 		<ion-item color="vua-secondary">
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.gender' | translate }}</ion-label>
-			<ion-select interface="action-sheet" formControlName="gender">
+			<ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" formControlName="gender">
 				<ion-select-option *ngFor="let gender of genders" [value]="gender">{{ 'settings.tabs.main_info.' + gender | translate }}</ion-select-option>
 			</ion-select>
 		</ion-item>
