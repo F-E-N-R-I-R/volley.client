@@ -4,10 +4,13 @@ ion-avatar {
 }
 
 ion-list {
+  .text-holder {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   &.inline-settings {
-    ion-label {
-      margin-left: 10px;
-    }
 
     ion-text {
       white-space: nowrap;

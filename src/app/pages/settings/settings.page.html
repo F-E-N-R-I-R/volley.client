@@ -23,21 +23,24 @@
 				<ion-avatar slot="start">
 					<img [src]="form.get('avatar').value">
 				</ion-avatar>
-				<ion-grid>
-					<ion-row>
-						<ion-text>
-							{{ form.controls.fname.value | titlecase }}
-							{{ form.controls.lname.value | titlecase }}
-						</ion-text>
-					</ion-row>
+				<ion-label>
+					<ion-grid>
+						<ion-row>
+							<ion-text class="text-holder">
+								{{ form.controls.fname.value | titlecase }}
+								{{ form.controls.lname.value | titlecase }}
+							</ion-text>
+						</ion-row>
 
-					<ion-row>
-						<ion-text color="medium">
-							<small [innerHTML]="form.controls.phone.value | phone: true"
-							       (click)="$event.stopPropagation()"></small>
-						</ion-text>
-					</ion-row>
-				</ion-grid>
+						<ion-row>
+							<ion-text color="medium" class="text-holder">
+								<small [innerHTML]="form.controls.phone.value | phone: true"
+								       (click)="$event.stopPropagation()"></small>
+							</ion-text>
+						</ion-row>
+					</ion-grid>
+				</ion-label>
+
 			</ion-item>
 		</ion-list>
 
