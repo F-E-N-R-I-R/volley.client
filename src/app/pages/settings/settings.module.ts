@@ -17,6 +17,7 @@ import { PersonalPage } from '@app/pages/settings/personal/personal.page';
 import { TeamsPage} from '@app/pages/settings/teams/teams.page';
 import { PlacesPage} from '@app/pages/settings/places/places.page';
 import { AppCoreModule } from '@app/core/app.core.module';
+import { SqIconComponent } from '@app/pages/settings/components/sq-icon/sq-icon.component';
 
 @NgModule({
     imports: [
@@ -41,6 +42,7 @@ import { AppCoreModule } from '@app/core/app.core.module';
         PersonalPage,
         TeamsPage,
         PlacesPage,
+        SqIconComponent,
     ],
     entryComponents: [],
     providers: []

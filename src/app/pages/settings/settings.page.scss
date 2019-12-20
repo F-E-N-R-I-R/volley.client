@@ -5,31 +5,8 @@ ion-avatar {
 
 ion-list {
   &.inline-settings {
-    ion-icon {
-      border-radius: 6px;
-      padding: 2px;
-      background-color: #3880ff;
-      color: #fff;
-
-      &.red {
-        background-color: red;
-      }
-
-      &.grey {
-        background-color: grey;
-      }
-
-      &.orange {
-        background-color: orange;
-      }
-
-      &.green {
-        background-color: green;
-      }
-
-      &.purple {
-        background-color: mediumpurple;
-      }
+    ion-label {
+      margin-left: 10px;
     }
 
     ion-text {
