@@ -11,7 +11,6 @@ import { MainInfoPage } from '@app/pages/settings/main-info/main-info.page';
 import { PersonalPage } from '@app/pages/settings/personal/personal.page';
 import { TeamsPage } from '@app/pages/settings/teams/teams.page';
 import { PlacesPage } from '@app/pages/settings/places/places.page';
-import { DataChangesGuard } from '@app/guards/data-changes.guard';
 
 
 const routes: Routes = [
@@ -42,7 +41,6 @@ const routes: Routes = [
     {
         path: 'main-info',
         component: MainInfoPage,
-        canDeactivate: [DataChangesGuard],
     },
     {
         path: 'personal',
