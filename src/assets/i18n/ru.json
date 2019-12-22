@@ -18,6 +18,7 @@
         "title": "Пользователи"
     },
     "settings": {
+        "title":"Настройки",
         "tabs": {
             "main": "Аккаунт",
             "main_info": {
@@ -95,6 +96,20 @@
         "toasts": {
             "upd_settings_success": "Настройки пользователя обновлены"
         }
+    },
+    "months": {
+        "January": "Января",
+        "February": "Февраля",
+        "March": "Марта",
+        "April": "Апреля",
+        "May": "Мая",
+        "June": "Июня",
+        "July": "Июля",
+        "August": "Августа",
+        "September": "Сентября",
+        "October": "Октября",
+        "November": "Ноября",
+        "December": "Декабря"
     },
      "errors": {
         "required": "* Это поле обязательна для заполнения",

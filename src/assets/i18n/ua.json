@@ -18,6 +18,7 @@
         "title": "Користувачі"
     },
     "settings": {
+            "title": "Налаштування",
         "tabs": {
             "main": "Аккаунт",
             "main_info": {
@@ -94,6 +95,20 @@
         "toasts": {
             "upd_settings_success": "Налаштування користувача оновлені"
         }
+    },
+    "months": {
+        "January": "Січня",
+        "February": "Лютого",
+        "March": "Березня",
+        "April": "Квітня",
+        "May": "Травня",
+        "June": "Червня",
+        "July": "Липня",
+        "August": "Серпня",
+        "September": "Вересня",
+        "October": "Жовтня",
+        "November": "Листопада",
+        "December": "Грудня"
     },
      "errors": {
         "required": "* Обов'язкове для заповнення",

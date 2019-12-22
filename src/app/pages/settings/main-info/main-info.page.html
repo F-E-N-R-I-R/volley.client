@@ -18,7 +18,7 @@
 	<ion-list [formGroup]="form">
 		<ion-item color="vua-secondary">
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.birthday' | translate }}</ion-label>
-			<ion-datetime displayFormat="DD MM YYYY"  placeholder="Select Date"
+			<ion-datetime displayFormat="D MMMM YYYY" [monthNames]="months$ | async"  placeholder="Select Date"
 			              formControlName="date_of_birth"></ion-datetime>
 		</ion-item>
 		<ion-item color="vua-secondary">
@@ -43,7 +43,7 @@
 		</ion-item>
 		<ion-item color="vua-secondary">
 			<ion-label position="stacked">{{ 'settings.tabs.main_info.gender' | translate }}</ion-label>
-			<ion-select interface="action-sheet" formControlName="gender">
+			<ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" formControlName="gender">
 				<ion-select-option *ngFor="let gender of genders" [value]="gender">{{ 'settings.tabs.main_info.' + gender | translate }}</ion-select-option>
 			</ion-select>
 		</ion-item>
