@@ -6,11 +6,12 @@ import { UTypes } from '@app/pages/users/core/types/users.types';
 import { filter, takeUntil } from 'rxjs/operators';
 import { EnumValues } from 'enum-values';
 import { Router } from '@angular/router';
+import { ImageService } from '@app/services/image.service';
 
 @Component({
     selector: 'settings-page',
     templateUrl: 'settings.page.html',
-    styleUrls: ['settings.page.scss']
+    styleUrls: ['settings.page.scss'],
 })
 export class SettingsPageComponent {
     public user$: Observable<UTypes.IUser> = this.authService.user$;
@@ -19,7 +20,11 @@ export class SettingsPageComponent {
     public EnumValues = EnumValues;
     public UTypes = UTypes;
 
-    constructor(private authService: AuthService, private settingsFormService: SettingsFormService, private router: Router) {
+    constructor(private authService: AuthService,
+                private settingsFormService: SettingsFormService,
+                private router: Router,
+                private imageService: ImageService,
+    ) {
     }
 
     public ionViewWillEnter() {
@@ -43,5 +48,14 @@ export class SettingsPageComponent {
 
     public logout() {
         this.authService.dispatchLogout();
+    }
+
+    public selectImage($event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+
+        const img = this.imageService.selectImage();
+
+        this.form.controls.avatar.setValue(img);
     }
 }

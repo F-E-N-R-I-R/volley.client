@@ -20,7 +20,7 @@
 	<form [formGroup]="form">
 		<ion-list>
 			<ion-item lines="none" routerLink="main-info" color="vua-secondary">
-				<ion-avatar slot="start">
+				<ion-avatar slot="start" (click)="selectImage($event)">
 					<img [src]="form.get('avatar').value">
 				</ion-avatar>
 				<ion-label>
@@ -40,7 +40,6 @@
 						</ion-row>
 					</ion-grid>
 				</ion-label>
-
 			</ion-item>
 		</ion-list>
 

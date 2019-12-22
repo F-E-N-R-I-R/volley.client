@@ -22,6 +22,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MetaReducer, StoreModule } from '@ngrx/store';
 import { clearStorageReducer, reducers } from '@app/store/reducers';
 import { EffectsModule } from '@ngrx/effects';
+import { File } from '@ionic-native/file/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { Crop } from '@ionic-native/crop/ngx';
+import { ImageService } from '@app/services/image.service';
 
 const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer, clearStorageReducer];
 
@@ -50,12 +55,17 @@ const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer, cle
         ReactiveFormsModule,
     ],
     providers: [
+        Camera,
+        File,
+        WebView,
+        Crop,
         StatusBar,
         SplashScreen,
         AuthGuard,
         AuthenticationService,
         ThemeService,
         ToastService,
+        ImageService,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
         DataChangesGuard,
     ],
