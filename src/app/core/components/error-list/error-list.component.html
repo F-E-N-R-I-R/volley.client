@@ -8,5 +8,11 @@
                class="d-block invalid-feedback">
                 {{ 'errors.maxlength' | translate:{ max: control.errors.maxlength.requiredLength } }}
         </small>
+
+        <small *ngSwitchCase='!!control.errors.pattern'
+               class="d-block invalid-feedback">
+                {{ 'errors.pattern' | translate }}
+        </small>
+
 </ng-container>
 

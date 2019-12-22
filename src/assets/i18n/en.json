@@ -99,6 +99,7 @@
 
     "errors": {
         "required": "* This field is required",
-        "maxlength": "* Max length is {{max}}"
+        "maxlength": "* Max length is {{max}}",
+        "pattern": "* Only latters"
     }
 }

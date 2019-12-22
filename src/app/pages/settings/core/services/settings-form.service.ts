@@ -6,7 +6,7 @@ import { UTypes } from '@app/pages/users/core/types/users.types';
 export class SettingsFormService {
     public form = this.fb.group({
         // Main Info
-        fname: ['', [Validators.required, Validators.maxLength(32)]],
+        fname: ['', [Validators.required, Validators.maxLength(32), Validators.pattern(/^[a-zA-Z\u0430-\u044fЄєІіґҐЇї\']+$/)]],
         gender: [UTypes.EGender.MALE],
         phone: [null],
         city: [UTypes.ECity.KHARKOV],
@@ -16,8 +16,8 @@ export class SettingsFormService {
         avatar: ['assets/icon/logo.png'],
 
         // Additional Info
-        lname: ['', [Validators.required,  Validators.maxLength(32)]],
-        pname: [''],
+        lname: ['', [Validators.required,  Validators.maxLength(32), Validators.pattern(/^[a-zA-Z\u0430-\u044fЄєІіґҐЇї\']+$/)]],
+        pname: ['', [Validators.pattern(/^[a-zA-Z\u0430-\u044fЄєІіґҐЇї\']+$/)]],
         email: [''],
         height: [null],
         weight: [null],
