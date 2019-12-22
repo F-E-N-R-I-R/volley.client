@@ -1,9 +1,9 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
-import { AuthService } from '@app/pages/auth/core/services/auth.service';
+import { SettingsFormService } from '@settings/core/services';
+import { AuthService } from '@auth/core/services';
 import { EnumValues } from 'enum-values';
-import { UTypes } from '@app/pages/users/core/types/users.types';
+import { UTypes } from '@core/types';
 import { NavController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { map, takeUntil } from 'rxjs/operators';

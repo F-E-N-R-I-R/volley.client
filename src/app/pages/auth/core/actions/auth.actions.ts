@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { UTypes } from '@app/pages/users/core/types/users.types';
+import { UTypes } from '@core/types';
 
 export const LOGIN = '[AUTH] Login';
 

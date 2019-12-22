@@ -1,4 +1,4 @@
-import { APP_CLEAR_STORAGE } from '@app/store/actions';
+import { APP_CLEAR_STORAGE } from '@store/actions';
 import { ActionReducer } from '@ngrx/store';
 
 export function clearStorageReducer(reducer: ActionReducer<any>) {

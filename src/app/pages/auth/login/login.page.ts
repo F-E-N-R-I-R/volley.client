@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from '@app/pages/auth/core/services/auth.service';
+import { AuthService } from '@auth/core/services';
 
 @Component({
     selector: 'app-events',

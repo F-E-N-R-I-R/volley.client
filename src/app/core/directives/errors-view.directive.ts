@@ -7,8 +7,8 @@ import {
     Self,
     ViewContainerRef
 } from '@angular/core';
-import { ErrorListComponent } from '@app/core/components/error-list/error-list.component';
 import { NgControl } from '@angular/forms';
+import { ErrorListComponent } from '@core/components';
 
 
 @Directive({

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { UTypes } from '@app/pages/users/core/types/users.types'
+import { UTypes } from '@core/types';
 
 @Injectable()
 export class PersonalService {

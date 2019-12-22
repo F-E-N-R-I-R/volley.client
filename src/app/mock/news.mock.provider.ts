@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { NTypes } from '@app/pages/news/core/types/news.types';
+import { NTypes } from '@core/types';
 
 @Injectable()
 export class NewsMockProvider {

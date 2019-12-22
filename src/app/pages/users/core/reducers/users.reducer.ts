@@ -1,4 +1,4 @@
-import * as usersActions from '../actions/users.actions';
+import * as usersActions from '@users/core/actions/users.actions';
 
 export interface UsersState {
     error: any | null;

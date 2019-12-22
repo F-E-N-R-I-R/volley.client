@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { EventsProvider } from '../core/providers/events.provider';
-import { ETypes } from '../core/types/events.types';
+import { EventsProvider } from '@events/core/providers';
+import { ETypes } from '@core/types';
 import { map } from 'rxjs/operators';
 
 @Component({

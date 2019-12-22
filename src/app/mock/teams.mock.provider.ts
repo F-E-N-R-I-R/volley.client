@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { TTypes } from '@app/pages/teams/core/types/teams.types';
+import { TTypes } from '@core/types';
 
 @Injectable()
 export class TeamsMockProvider {

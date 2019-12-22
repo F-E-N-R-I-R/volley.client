@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SettingsPageComponent } from './settings.page';
-import { NotificationsPage } from '@app/pages/settings//notifications/notifications.page';
-import { LanguagePage } from '@app/pages/settings/language/language.page';
-import { ThemePage } from '@app/pages/settings/theme/theme.page';
-import { CityPage } from '@app/pages/settings/city/city.page';
-import { CategoryPage } from '@app/pages/settings/category/category.page';
-import { MainInfoPage } from '@app/pages/settings/main-info/main-info.page';
-import { PersonalPage } from '@app/pages/settings/personal/personal.page';
-import { TeamsPage } from '@app/pages/settings/teams/teams.page';
-import { PlacesPage } from '@app/pages/settings/places/places.page';
+import { SettingsPageComponent } from '@settings/settings.page';
+import { NotificationsPage } from '@settings//notifications/notifications.page';
+import { LanguagePage } from '@settings/language/language.page';
+import { ThemePage } from '@settings/theme/theme.page';
+import { CityPage } from '@settings/city/city.page';
+import { CategoryPage } from '@settings/category/category.page';
+import { MainInfoPage } from '@settings/main-info/main-info.page';
+import { PersonalPage } from '@settings/personal/personal.page';
+import { TeamsPage } from '@settings/teams/teams.page';
+import { PlacesPage } from '@settings/places/places.page';
 
 
 const routes: Routes = [

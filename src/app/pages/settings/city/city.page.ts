@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
-import { AuthService } from '@app/pages/auth/core/services/auth.service';
-import { UTypes } from '@app/pages/users/core/types/users.types';
+import { SettingsFormService } from '@settings/core/services';
+import { AuthService } from '@auth/core/services';
+import { UTypes } from '@core/types';
 import { EnumValues } from 'enum-values';
 
 @Component({

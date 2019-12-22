@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { AuthService } from '@app/pages/auth/core/services/auth.service';
+import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
-import { UTypes } from '@app/pages/users/core/types/users.types';
 import { filter, takeUntil } from 'rxjs/operators';
 import { EnumValues } from 'enum-values';
-import { Router } from '@angular/router';
-import { ImageService } from '@app/services/image.service';
+
+import { AuthService } from '@auth/core/services/auth.service';
+import { SettingsFormService } from '@settings/core/services/settings-form.service';
+import { UTypes } from '@core/types';
+import { ImageService } from '@core/services';
 
 @Component({
     selector: 'settings-page',

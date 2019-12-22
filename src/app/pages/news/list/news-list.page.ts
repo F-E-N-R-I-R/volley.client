@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { ModalController } from '@ionic/angular';
-import { NewsProvider } from '../core/providers/news.provider';
-import { NTypes } from '../core/types/news.types';
+import { NewsProvider } from '@news/core/providers';
+import { NTypes } from '@core/types';
 import { map } from 'rxjs/operators';
 
 @Component({

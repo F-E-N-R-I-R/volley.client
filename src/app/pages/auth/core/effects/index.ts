@@ -1,5 +1,5 @@
-import { AuthEffects } from './auth.effects';
+import { AuthEffects } from '@auth/core/effects';
 
 export const effects: any[] = [AuthEffects];
 
-export * from './auth.effects';
+export * from '@auth/core/effects/auth.effects';

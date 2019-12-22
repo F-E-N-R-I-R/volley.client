@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
-import { AuthService } from '@app/pages/auth/core/services/auth.service';
+import { SettingsFormService } from '@settings/core/services';
+import { AuthService } from '@auth/core/services';
 
 @Component({
     templateUrl: 'places.page.html',

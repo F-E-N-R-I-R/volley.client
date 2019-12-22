@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
-import { AuthService } from '@app/pages/auth/core/services/auth.service';
+import { SettingsFormService } from '@settings/core/services';
+import { AuthService } from '@auth/core/services';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 

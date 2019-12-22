@@ -1,6 +1,6 @@
 import { Injectable, RendererFactory2 } from '@angular/core';
 import { EnumValues } from 'enum-values';
-import { UTypes } from '@app/pages/users/core/types/users.types';
+import { UTypes } from '@core/types';
 
 @Injectable()
 export class ThemeService {

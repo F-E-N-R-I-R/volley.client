@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormArray, FormBuilder, Validators } from '@angular/forms';
-import { UTypes } from '@app/pages/users/core/types/users.types';
+import { UTypes } from '@core/types';
 
 @Injectable()
 export class SettingsFormService {

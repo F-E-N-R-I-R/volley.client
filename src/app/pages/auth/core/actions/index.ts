@@ -1,1 +1,1 @@
-export * from './auth.actions';
+export * from '@auth/core/actions/auth.actions';

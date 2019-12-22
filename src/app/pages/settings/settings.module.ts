@@ -3,21 +3,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import { AuthCoreModule } from '@app/pages/auth/core/core.module';
-import { SettingsRoutingModule } from '@app/pages/settings/settings-routing.module';
-import { SettingsCoreModule } from '@app/pages/settings/core/core.module';
-import { NotificationsPage } from '@app/pages/settings/notifications/notifications.page';
-import { ThemePage } from '@app/pages/settings/theme/theme.page';
-import { LanguagePage } from '@app/pages/settings/language/language.page';
-import { SettingsPageComponent } from '@app/pages/settings/settings.page';
-import { CityPage } from '@app/pages/settings/city/city.page';
-import { CategoryPage } from '@app/pages/settings/category/category.page';
-import { MainInfoPage } from '@app/pages/settings/main-info/main-info.page';
-import { PersonalPage } from '@app/pages/settings/personal/personal.page';
-import { TeamsPage } from '@app/pages/settings/teams/teams.page';
-import { PlacesPage } from '@app/pages/settings/places/places.page';
-import { AppCoreModule } from '@app/core/app.core.module';
-import { SqIconComponent } from '@app/pages/settings/components/sq-icon/sq-icon.component';
+import { AuthCoreModule } from '@auth/core/core.module';
+import { SettingsRoutingModule } from '@settings/settings-routing.module';
+import { SettingsCoreModule } from '@settings/core/core.module';
+import { NotificationsPage } from '@settings/notifications/notifications.page';
+import { ThemePage } from '@settings/theme/theme.page';
+import { LanguagePage } from '@settings/language/language.page';
+import { SettingsPageComponent } from '@settings/settings.page';
+import { CityPage } from '@settings/city/city.page';
+import { CategoryPage } from '@settings/category/category.page';
+import { MainInfoPage } from '@settings/main-info/main-info.page';
+import { PersonalPage } from '@settings/personal/personal.page';
+import { TeamsPage } from '@settings/teams/teams.page';
+import { PlacesPage } from '@settings/places/places.page';
+import { AppCoreModule } from '@core/app.core.module';
+import { SqIconComponent } from '@settings/components/sq-icon/sq-icon.component';
 
 @NgModule({
     imports: [

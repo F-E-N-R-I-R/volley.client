@@ -1,1 +1,1 @@
-export * from './auth.selector';
+export * from '@auth/core/selectors/auth.selector';

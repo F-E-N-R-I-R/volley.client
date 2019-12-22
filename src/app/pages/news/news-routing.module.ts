@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { NewsListPage } from './list/news-list.page';
+import { NewsListPage } from '@news/list/news-list.page';
 
 const routes: Routes = [
     { path: '', component: NewsListPage },

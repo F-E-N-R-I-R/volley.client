@@ -1,4 +1,4 @@
-import * as authActions from '../actions/auth.actions';
+import * as authActions from '@auth/core/actions/auth.actions';
 
 export interface AuthState {
     error: any | null;

@@ -45,7 +45,4 @@ export class AuthenticationService {
     isAuthenticated() {
         return this.authState.value;
     }
-
-
-
 }

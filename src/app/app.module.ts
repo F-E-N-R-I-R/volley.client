@@ -7,26 +7,25 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IonicStorageModule } from '@ionic/storage';
-import { AppRoutingModule } from '@app/app-routing.module';
-import { AppComponent } from '@app/app.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { localStorageSyncReducer } from '@app/store/app-store.module';
-import { TabsComponent } from '@app/components/tabs/tabs.page';
-import { AuthGuard, DataChangesGuard } from '@app/guards';
-import { AuthenticationService, ThemeService } from '@app/services';
-import { HttpLoaderFactory } from '@app/factories/translate.factory';
-import { MockModule } from '@app/mock/mock.module';
-import { ToastService } from '@app/services/toast.service';
-import { AppCoreModule } from '@app/core/app.core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MetaReducer, StoreModule } from '@ngrx/store';
-import { clearStorageReducer, reducers } from '@app/store/reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { File } from '@ionic-native/file/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { Crop } from '@ionic-native/crop/ngx';
-import { ImageService } from '@app/services/image.service';
+
+import { AppComponent } from '@app/app.component';
+import { AppRoutingModule } from '@app/app-routing.module';
+import { AppCoreModule } from '@core/app.core.module';
+import { MockModule } from '@app/mock/mock.module';
+import { clearStorageReducer, reducers } from '@store/reducers';
+import { localStorageSyncReducer } from '@store/app-store.module';
+import { TabsComponent } from '@core/components';
+import { AuthGuard } from '@core/guards';
+import { AuthenticationService, ThemeService, ToastService, ImageService } from '@core/services';
+import { HttpLoaderFactory } from '@core/factories';
 
 const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer, clearStorageReducer];
 
@@ -67,7 +66,6 @@ const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer, cle
         ToastService,
         ImageService,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-        DataChangesGuard,
     ],
     bootstrap: [AppComponent]
 })

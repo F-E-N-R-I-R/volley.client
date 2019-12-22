@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
-import { effects } from './effects';
-import { reducers } from './reducers';
-import { UsersProvider } from './providers/users.provider';
-import { UsersService } from './services/users.service';
+import { effects } from '@users/core/effects';
+import { reducers } from '@users/core/reducers';
+import { UsersProvider } from '@users/core/providers';
+import { UsersService } from '@users/core/services';
 
 @NgModule({
     imports: [

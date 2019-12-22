@@ -3,10 +3,10 @@ import { Actions, Effect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, map, switchMap, tap } from 'rxjs/operators';
 
-import * as AuthActions from '../actions';
-import { AuthProvider } from '../providers/auth.provider';
-import { UTypes } from '@app/pages/users/core/types/users.types';
-import { AuthenticationService, ThemeService, ToastService } from '@app/services';
+import * as AuthActions from '@auth/core/actions';
+import { AuthProvider } from '@auth/core/providers/auth.provider';
+import { UTypes } from '@core/types';
+import { AuthenticationService, ThemeService, ToastService } from '@app/core/services';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable()

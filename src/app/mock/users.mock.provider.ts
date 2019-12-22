@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { UTypes } from '@app/pages/users/core/types/users.types';
+import { UTypes } from '@core/types';
 
 @Injectable()
 export class UsersMockProvider {

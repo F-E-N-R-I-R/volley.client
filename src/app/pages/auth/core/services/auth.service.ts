@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 
-import * as fromActions from '../actions';
-import * as fromReducers from '../reducers';
-import * as fromSelectors from '../selectors';
-import { UTypes } from '@app/pages/users/core/types/users.types';
+import * as fromActions from '@auth/core/actions';
+import * as fromReducers from '@auth/core/reducers';
+import * as fromSelectors from '@auth/core/selectors';
+import { UTypes } from '@core/types';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {

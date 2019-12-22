@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthenticationService } from '@app/services';
+import { AuthenticationService } from '@core/services';
 
 @Component({
     selector: 'app-tabs',

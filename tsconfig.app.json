@@ -4,7 +4,16 @@
     "outDir": "./out-tsc/app",
     "types": [],
     "paths": {
-      "@app/*": [ "app/*" ]
+      "@app/*": [ "app/*" ],
+      "@core/*": [ "app/core/*" ],
+      "@assets/*": [ "app/assets/*" ],
+      "@store/*": [ "app/core/store/*" ],
+      "@auth/*": [ "app/pages/auth/*" ],
+      "@events/*": [ "app/pages/events/*" ],
+      "@news/*": [ "app/pages/news/*" ],
+      "@teams/*": [ "app/pages/teams/*" ],
+      "@settings/*": [ "app/pages/settings/*" ],
+      "@users/*": [ "app/pages/users/*" ]
     }
   },
   "include": [

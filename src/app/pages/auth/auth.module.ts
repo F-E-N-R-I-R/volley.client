@@ -2,10 +2,10 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoginPage } from './login/login.page';
-import { AuthRoutingModule } from './auth-routing.module';
+import { LoginPage } from '@auth/login/login.page';
+import { AuthRoutingModule } from '@auth/auth-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
-import { AuthCoreModule } from '@app/pages/auth/core/core.module';
+import { AuthCoreModule } from '@auth/core/core.module';
 
 @NgModule({
     imports: [

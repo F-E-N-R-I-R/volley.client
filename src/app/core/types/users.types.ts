@@ -1,7 +1,4 @@
-import { Pager } from '@app/types';
-import { STypes } from '@app/pages/auth/core/types/settings.types';
-import { TTypes } from '@app/pages/teams/core/types/teams.types';
-import { ETypes } from '@app/pages/events/core/types/events.types';
+import { Pager, STypes, TTypes, ETypes } from '@core/types';
 
 export namespace UTypes {
     import INotifications = STypes.INotifications;
