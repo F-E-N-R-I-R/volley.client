@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';

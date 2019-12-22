@@ -16,7 +16,7 @@ export class SettingsFormService {
         avatar: ['assets/icon/logo.png'],
 
         // Additional Info
-        lname: ['', [Validators.required,  Validators.maxLength(32), Validators.pattern(/^[a-zA-Z\u0430-\u044fЄєІіґҐЇї\']+$/)]],
+        lname: ['', [Validators.required, Validators.maxLength(32), Validators.pattern(/^[a-zA-Z\u0430-\u044fЄєІіґҐЇї\']+$/)]],
         pname: ['', [Validators.pattern(/^[a-zA-Z\u0430-\u044fЄєІіґҐЇї\']+$/)]],
         email: [''],
         height: [null],

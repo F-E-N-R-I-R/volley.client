@@ -46,7 +46,7 @@ export class NotificationsPage implements OnInit, OnDestroy {
     ngOnDestroy() {
         this.ngUnsubscribe$.next();
         this.ngUnsubscribe$.complete();
-    } 
+    }
 
     public ionViewWillLeave() {
         this.authService.dispatchSilentUpdate(this.settingsFormService.form.value);

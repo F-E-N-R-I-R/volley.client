@@ -48,7 +48,7 @@ export namespace UTypes {
     export enum ELanguage {
         RUSSIAN = 'ru',
         ENGLISH = 'en',
-        UKRAINIAN ='ua',
+        UKRAINIAN = 'ua',
     }
 
     export enum ETheme {
@@ -75,13 +75,13 @@ export namespace UTypes {
         color: string;
     }
 
-    export type TCategory = ECategory.CMSU 
-                           | ECategory.MSU
-                           | ECategory.MSWC
-                           | ECategory.TYR 
-                           | ECategory.SYR 
-                           | ECategory.FYR 
-                           | ECategory.THIRD
-                           | ECategory.SECOND
-                           | ECategory.FIRST
+    export type TCategory = ECategory.CMSU
+        | ECategory.MSU
+        | ECategory.MSWC
+        | ECategory.TYR
+        | ECategory.SYR
+        | ECategory.FYR
+        | ECategory.THIRD
+        | ECategory.SECOND
+        | ECategory.FIRST;
 }

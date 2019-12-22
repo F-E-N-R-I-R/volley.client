@@ -12,12 +12,12 @@ import { UTypes } from '@app/pages/users/core/types/users.types';
 })
 
 export class PersonalPage {
-	public bodyParams: UTypes.IBodyParam[] = this.personalService.bodyParams;
+    public bodyParams: UTypes.IBodyParam[] = this.personalService.bodyParams;
     public form = this.settingsFormService.form as FormGroup;
 
     constructor(private authService: AuthService,
-    	private settingsFormService: SettingsFormService,
-    	private personalService: PersonalService) {
+                private settingsFormService: SettingsFormService,
+                private personalService: PersonalService) {
     }
 
     public ionViewWillLeave() {
