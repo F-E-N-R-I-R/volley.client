@@ -46,7 +46,7 @@
             },
             "city": {
                 "title": "Місто",
-                "kh": "Харків",
+                "POLTAVA": "Полтава",
                 "KHARKOV": "Харків"
             },
             "notifications": {

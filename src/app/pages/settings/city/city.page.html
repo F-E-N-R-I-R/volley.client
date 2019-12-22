@@ -12,16 +12,10 @@
 <ion-content color="vua-primary">
 	<ion-list [formGroup]="form">
 		<ion-radio-group formControlName="city">
-			<ion-item  color="vua-secondary" >
-				<ion-label>{{ 'settings.tabs.city.KHARKOV' | translate }}</ion-label>
-				<ion-radio slot="end" value="{{ 'Kh' }}"></ion-radio>
+			<ion-item  color="vua-secondary" *ngFor="let city of cities" >
+				<ion-label>{{ ('settings.tabs.city.' + city) | translate }}</ion-label>
+				<ion-radio slot="end" value="{{ city }}"></ion-radio>
 			</ion-item>
 		</ion-radio-group>
 	</ion-list>
-
 </ion-content>
-
-
-
-
-

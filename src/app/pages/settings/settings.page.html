@@ -48,7 +48,8 @@
 				<sq-icon name="pin" color="vua-grey"></sq-icon>
 				<ion-label>{{ 'settings.tabs.city.title' | translate }}</ion-label>
 				<ion-text color="medium">
-					{{ 'settings.tabs.city.KHARKOV' | translate }}
+					{{ 'settings.tabs.city.' + EnumValues.getNameFromValue(UTypes.ECity,
+					form.controls.city.value) | translate }}
 				</ion-text>
 			</ion-item>
 			<ion-item routerLink="category" routerDirection="forward" color="vua-secondary">
