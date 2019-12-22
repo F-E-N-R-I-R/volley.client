@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { SettingsFormService } from './services/settings-form.service';
 import { PersonalService } from './services/personal.service';
+import { CategoryService } from	'./services/category.service';
+
 
 @NgModule({
     imports: [
@@ -13,6 +15,7 @@ import { PersonalService } from './services/personal.service';
     providers: [
         SettingsFormService,
         PersonalService,
+        CategoryService,
     ],
 })
 export class SettingsCoreModule {

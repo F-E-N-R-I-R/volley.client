@@ -59,9 +59,9 @@ export namespace UTypes {
         FIRST = 'FIRST',
         SECOND = 'SECOND',
         THIRD = 'THIRD',
-        FYR = "FYR",
-        SYR = "SYR",
-        TYR = "TYR",
+        FYR = 'FYR',
+        SYR = 'SYR',
+        TYR = 'TYR',
         CMSU = 'CMSU',
         MSU = 'MSU',
         MSWC = 'MSWC',
@@ -73,4 +73,14 @@ export namespace UTypes {
         max: number;
         color: string;
     }
+
+    export type TCategory = ECategory.CMSU 
+                           | ECategory.MSU
+                           | ECategory.MSWC
+                           | ECategory.TYR 
+                           | ECategory.SYR 
+                           | ECategory.FYR 
+                           | ECategory.THIRD
+                           | ECategory.SECOND
+                           | ECategory.FIRST
 }

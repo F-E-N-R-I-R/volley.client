@@ -12,11 +12,10 @@
 <ion-content color="vua-primary">
 	<ion-list [formGroup]="form">
 		<ion-radio-group formControlName="sports_category">
-			<ion-item *ngFor="let category of categories" color="vua-secondary">
-				<ion-label>{{ 'settings.tabs.category.' + category | translate }}</ion-label>
+			<ion-item *ngFor="let category of categories" color="vua-primary">
+				<ion-label>{{ ('settings.tabs.category.' + category) | translate }}</ion-label>
 				<ion-radio slot="end" value="{{ category }}"></ion-radio>
 			</ion-item>
-
 		</ion-radio-group>
 	</ion-list>
 </ion-content>

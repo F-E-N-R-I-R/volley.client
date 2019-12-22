@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { SettingsFormService } from '@app/pages/settings/core/services/settings-form.service';
 import { AuthService } from '@app/pages/auth/core/services/auth.service';
-import { EnumValues } from 'enum-values';
+import { CategoryService } from '@app/pages/settings/core/services/category.service';
 import { UTypes } from '@app/pages/users/core/types/users.types';
 
 @Component({
@@ -11,9 +11,11 @@ import { UTypes } from '@app/pages/users/core/types/users.types';
 })
 export class CategoryPage {
     public form = this.settingsFormService.form as FormGroup;
-    public categories = EnumValues.getValues(UTypes.ECategory);
+    public categories : UTypes.ICategory[] = this.categoryService.categories;
 
-    constructor(private authService: AuthService, private settingsFormService: SettingsFormService) {
+    constructor(private authService: AuthService,
+     private settingsFormService: SettingsFormService,
+     private categoryService: CategoryService) {
     }
 
     public ionViewWillLeave() {
