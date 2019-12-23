@@ -24,7 +24,8 @@ export class MainInfoPage implements OnDestroy {
     public genders = EnumValues.getValues(UTypes.EGender);
     public customActionSheetOptions = {
         color: 'vua-secondary',
-        translucent: true
+        translucent: true,
+        background: 'red',
     };
 
     constructor(private authService: AuthService,
