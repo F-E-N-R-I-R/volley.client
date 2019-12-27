@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { EventsMockProvider } from '@app/mock/events.mock.provider';
-import { ETypes } from '@app/pages/events/core/types/events.types';
+import { ETypes } from '@core/types';
 
 @Injectable()
 export class EventsProvider {

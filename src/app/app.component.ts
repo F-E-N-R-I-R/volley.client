@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { AuthenticationService } from '@app/services';
 import { Router } from '@angular/router';
-import { filter, map, pairwise } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
+import { filter } from 'rxjs/operators';
+import { UTypes } from '@core/types';
+import { AuthService } from '@auth/core/services';
+import { AuthenticationService, ThemeService } from '@core/services';
 
 
 @Component({
@@ -15,6 +17,9 @@ import { TranslateService } from '@ngx-translate/core';
     styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+    public user$: Observable<UTypes.IUser> = this.authService.user$.pipe(filter(Boolean));
+    private sb: any = (window as any).StatusBar;
+
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,
@@ -22,6 +27,9 @@ export class AppComponent {
         private authenticationService: AuthenticationService,
         private router: Router,
         private translate: TranslateService,
+        private authService: AuthService,
+        private themeService: ThemeService,
+        private translateService: TranslateService,
     ) {
         this.initializeApp();
 
@@ -35,22 +43,26 @@ export class AppComponent {
     initializeApp() {
         this.platform.ready().then(() => {
             this.statusBar.styleDefault();
+            this.statusBar.backgroundColorByHexString('#f7f7f7');
             this.splashScreen.hide();
 
-            this.authenticationService.authState.pipe(
-                pairwise(),
-                filter(([old, newState]) => old !== newState),
-                map(([old, newState]) => newState),
-            ).subscribe(state => {
+            if (this.sb) {
+                this.sb.backgroundColorByHexString('#f7f7f7');
+                this.sb.styleDefault();
+            }
+
+            this.authenticationService.authState.subscribe(state => {
                 // TODO REFACTOR
                 if (state) {
-                    this.router.navigate(['/news']);
+                    this.router.navigate(['news']);
                 } else {
-                    this.router.navigate(['/login']);
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 100);
+                    this.router.navigate(['login']);
                 }
+            });
+
+            this.user$.subscribe(user => {
+                this.themeService.changeTheme(user.theme || UTypes.ETheme.WHITE);
+                this.translateService.use(user.language || UTypes.ELanguage.ENGLISH);
             });
         });
     }

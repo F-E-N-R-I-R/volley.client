@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { ModalController } from '@ionic/angular';
-import { SettingsModalComponent } from '../settings/settings.modal';
-import { NewsProvider } from '../core/providers/news.provider';
-import { NTypes } from '../core/types/news.types';
+import { NewsProvider } from '@news/core/providers';
+import { NTypes } from '@core/types';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -28,11 +27,4 @@ export class NewsListPage {
         this.ngUnsubscribe$.complete();
 
     }
-
-    public async showSettings() {
-        const modal = await this.modalController.create({ component: SettingsModalComponent });
-
-        return await modal.present();
-    }
-
 }

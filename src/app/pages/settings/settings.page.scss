@@ -1,0 +1,22 @@
+ion-list {
+  ion-avatar {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .text-holder {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &.inline-settings {
+
+    ion-text {
+      white-space: nowrap;
+      max-width: 110px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}

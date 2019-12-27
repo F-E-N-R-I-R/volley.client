@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { TeamsProvider } from '../core/providers/teams.provider';
-import { TTypes } from '../core/types/teams.types';
+import { TeamsProvider } from '@teams/core/providers';
+import { TTypes } from '@core/types';
 import { map } from 'rxjs/operators';
 
 @Component({

@@ -1,0 +1,118 @@
+{
+    "login": {
+        "title": "Увійти"
+    },
+    "competitions": {
+        "title": "Змагання"
+    },
+    "events": {
+        "title": "Активності"
+    },
+    "news": {
+        "title": "Новини"
+    },
+    "teams": {
+        "title": "Команди"
+    },
+    "users": {
+        "title": "Користувачі"
+    },
+    "settings": {
+            "title": "Налаштування",
+        "tabs": {
+            "main": "Аккаунт",
+            "main_info": {
+                "title": "Інформація користувача",
+                "birthday": "Дата народження",
+                "fname": "Ім'я",
+                "lname": "Прізвище",
+                "pname": "По батькові",
+                "email": "Пошта",
+                "phone": "Номер телефону",
+                "gender": "Стать",
+                "male": "чоловіча",
+                "female": "жіноча"
+            },
+            "category": {
+                "title": "Спортивне Звання",
+                "FIRST": "I",
+                "SECOND": "II",
+                "THIRD": "III",
+                "FYR": "I-Ю",
+                "SYR": "II-Ю",
+                "TYR": "III-Ю",
+                "CMSU": "КМСУ",
+                "MSU": "МСУ",
+                "MSWC": "МССР"
+            },
+            "city": {
+                "title": "Місто",
+                "POLTAVA": "Полтава",
+                "KHARKOV": "Харків"
+            },
+            "notifications": {
+                "title": "Повідомлення",
+                "all":"Усі",
+                "news":"Новини",
+                "team":"Команди",
+                "events": "Активності",
+                "competitions":"Змагання"
+            },
+            "language": {
+                "title": "Мова",
+                "header": "Мова",
+                "ru": "Російска",
+                "en": "Англійська",
+                "ua": "Українська",
+                "RUSSIAN": "Російска",
+                "ENGLISH": "Англійська",
+                "UKRAINIAN": "Українська"
+            },
+            "theme": {
+                "title": "Фон",
+                "header": "Фон",
+                "white": "Світла",
+                "black": "Темна",
+                "WHITE": "Світла",
+                "BLACK": "Темна"
+            },
+            "personal": {
+                 "title": "Конституція",
+                "height":"Зріст",
+                "weight": "Вага",
+                "chest_girt": "Обхват грудей",
+                "waist": "Обхват талії",
+                "hip_girth": "Обхват стегон",
+                "shoe_size":"Розмір взуття" 
+            },
+             "teams": {
+                "title": "Команди"
+            },
+            "places": {
+                "title": "Місця"
+            }
+        },
+        "toasts": {
+            "upd_settings_success": "Налаштування користувача оновлені"
+        }
+    },
+    "months": {
+        "January": "Січня",
+        "February": "Лютого",
+        "March": "Березня",
+        "April": "Квітня",
+        "May": "Травня",
+        "June": "Червня",
+        "July": "Липня",
+        "August": "Серпня",
+        "September": "Вересня",
+        "October": "Жовтня",
+        "November": "Листопада",
+        "December": "Грудня"
+    },
+     "errors": {
+        "required": "* Обов'язкове для заповнення",
+        "maxlength": "* Символів має бути не більше ніж {{max}}",
+        "pattern": "* Тількі літери"
+    }
+}

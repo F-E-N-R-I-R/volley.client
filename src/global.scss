@@ -24,3 +24,48 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import "./theme/vua-white.scss";
+@import "./theme/vua-black.scss";
+
+.light-text {
+  opacity: 0.4;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.invalid-feedback {
+  color: darkred;
+}
+
+.select-action-sheet {
+  .action-sheet-group {
+    .action-sheet-button {
+      background-color: var(--ion-color-vua-primary)!important;
+      background-image: none!important;
+      margin-bottom: 1px;
+
+      &:first-child, &:last-child {
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+ion-action-sheet {
+  --background: var(--ion-color-vua-primary)!important;
+  --background-activated: var(--ion-color-vua-secondary)!important;
+  --background-selected: var(--ion-color-vua-secondary)!important;
+}
+
+ion-picker {
+  --background: linear-gradient(180deg,  var(--ion-color-vua-primary-tint) 0%,  var(--ion-color-vua-primary) 50%, var(--ion-color-vua-primary-tint) 100%)!important;
+  --border-color: var(--ion-color-vua-primary-tint)!important;
+
+  .picker-opt {
+    color: var(--ion-color-vua-secondary-contrast);
+  }
+}

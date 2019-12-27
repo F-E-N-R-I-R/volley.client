@@ -1,10 +1,11 @@
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { LoginPage } from './login/login.page';
-import { AuthRoutingModule } from './auth-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginPage } from '@auth/login/login.page';
+import { AuthRoutingModule } from '@auth/auth-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { AuthCoreModule } from '@auth/core/core.module';
 
 @NgModule({
     imports: [
@@ -13,7 +14,11 @@ import { TranslateModule } from '@ngx-translate/core';
         FormsModule,
         AuthRoutingModule,
         TranslateModule,
+        ReactiveFormsModule,
+        AuthCoreModule,
     ],
-  declarations: [LoginPage]
+    declarations: [LoginPage],
+    entryComponents: [],
 })
-export class AuthModule {}
+export class AuthModule {
+}

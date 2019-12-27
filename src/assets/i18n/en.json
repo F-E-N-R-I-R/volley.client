@@ -9,15 +9,110 @@
         "title": "Events"
     },
     "news": {
-        "title": "News",
-        "settings": {
-            "title": "Settings"
-        }
+        "title": "News"
     },
     "teams": {
         "title": "Teams"
     },
     "users": {
         "title": "Users"
+    },
+    "settings": {
+        "title": "Settings",
+        "tabs": {
+            "title": "Account",
+            "main_info": {
+                "title": "Account information",
+                "birthday": "Birthday",
+                "fname": "Name",
+                "lname": "Last Name",
+                "pname": "Patronymic",
+                "email": "Email",
+                "phone": "Phone",
+                "gender": "Gender",
+                "male": "male",
+                "female": "female"
+            },
+            "category": {
+                "title": "Sports Category",
+                "FIRST": "I",
+                "SECOND": "II",
+                "THIRD": "III",
+                "FYR": "I-Y",
+                "SYR": "II-Y",
+                "TYR": "III-Y",
+                "CMSU": "CMSU",
+                "MSU": "MSU",
+                "MSWC": "WSWC"
+            },
+            "city": {
+                "title": "City",
+                "KHARKOV": "Kharkov",
+                "POLTAVA": "Poltava"
+            },
+            "notifications": {
+                "title": "Notifications",
+                "all":"All",
+                "news":"News",
+                "team":"Team",
+                "events": "Events",
+                "competitions":"Competitions"
+            },
+            "language": {
+                "title": "Language",
+                "header": "Language",
+                "ru": "Russian",
+                "en": "English",
+                "ua":"Ukranian",
+                "RUSSIAN": "Russian",
+                "ENGLISH": "English",
+                "UKRAINIAN": "Ukranian"
+            },
+            "theme": {
+                "title": "Theme",
+                "header": "Theme",
+                "WHITE": "White",
+                "BLACK": "Black",
+                "white": "White",
+                "black": "Black"
+            },
+            "personal": {
+                "title": "Personal",
+                 "height":"Height",
+                "weight": "Weight",
+                "chest_girt": "Chest girt",
+                "waist": "Waist",
+                "hip_girth": "Hip girth",
+                "shoe_size":"Shoe size" 
+            },
+            "teams": {
+                "title": "Teams"
+            },
+            "places": {
+                "title": "Places"
+            }
+        },
+        "toasts": {
+            "upd_settings_success": "User settings update successfully"
+        }
+    },
+    "months": {
+        "January": "January",
+        "February": "February",
+        "March": "March",
+        "April": "April",
+        "May": "May",
+        "June": "June",
+        "July": "July",
+        "August": "August",
+        "September": "September",
+        "October": "October",
+        "November": "November",
+        "December": "December"
+    },
+    "errors": {
+        "required": "* This field is required",
+        "maxlength": "* Max length is {{max}}",
+        "pattern": "* Only latters"
     }
 }

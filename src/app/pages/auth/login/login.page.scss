@@ -1,0 +1,14 @@
+ion-content {
+  --overflow: hidden;
+
+  ion-img {
+    height: 250px;
+    padding: 20px;
+  }
+}
+
+ion-footer {
+  border-top: 1px solid #dcdcdc;
+  background-color: var(--ion-color-vua-gray-light);
+  padding-bottom: 50px;
+}

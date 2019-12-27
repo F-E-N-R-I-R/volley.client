@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { UsersService } from '../core/services/users.service';
+import { UsersService } from '@users/core/services/users.service';
 import { Observable, Subject } from 'rxjs';
-import { UTypes } from '@app/pages/users/core/types/users.types';
+import { UTypes } from '@core/types';
 
 @Component({
     selector: 'users-list',

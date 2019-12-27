@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-toolbar color="vua-primary">
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="settings" [text]="'settings.title' | translate"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'settings.tabs.personal.title' | translate }}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-primary" overflow-scroll="false">
+	<ion-list [formGroup]="form">
+		<ion-item color="vua-secondary" *ngFor="let item of bodyParams">
+        <span class="range-title">
+          {{ ('settings.tabs.personal.' + item.name) | translate }} 
+        </span>
+			<ion-range [min]="item.min"
+			           [max]="item.max"
+			           [color]="item.color"
+			           [formControlName]="item.name">
+				<ion-label slot="end">{{ form.get(item.name).value }}</ion-label>
+			</ion-range>
+		</ion-item>
+	</ion-list>
+</ion-content>

@@ -1,7 +1,7 @@
 import { createSelector } from '@ngrx/store';
 
-import * as fromFeature from '../reducers';
-import * as fromUser from '../reducers/users.reducer';
+import * as fromFeature from '@users/core/reducers';
+import * as fromUser from '@users/core/reducers/users.reducer';
 
 export const getCompleteCoreState = createSelector(
     fromFeature.getUsersState,

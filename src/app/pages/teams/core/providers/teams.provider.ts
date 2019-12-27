@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { TeamsMockProvider } from '@app/mock/teams.mock.provider';
-import { TTypes } from '@app/pages/teams/core/types/teams.types';
+import { TTypes } from '@core/types';
 
 @Injectable()
 export class TeamsProvider {

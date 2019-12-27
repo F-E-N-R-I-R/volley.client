@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { NewsProvider } from './providers/news.provider';
+import { NewsProvider } from '@news/core/providers';
 
 @NgModule({
     imports: [

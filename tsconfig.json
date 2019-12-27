@@ -23,16 +23,14 @@
     "baseUrl": "./src",
     "paths": {
       "@app/*": [ "app/*" ],
+      "@core/*": [ "app/core/*" ],
       "@assets/*": [ "app/assets/*" ],
-      "@factories/*": [ "app/factories/*" ],
-      "@guards/*": [ "app/guards/*" ],
-      "@services/*": [ "app/services/*" ],
-      "@store/*": [ "app/store/*" ],
+      "@store/*": [ "app/core/store/*" ],
       "@auth/*": [ "app/pages/auth/*" ],
-      "@competitions/*": [ "app/pages/competitions/*" ],
       "@events/*": [ "app/pages/events/*" ],
       "@news/*": [ "app/pages/news/*" ],
       "@teams/*": [ "app/pages/teams/*" ],
+      "@settings/*": [ "app/pages/settings/*" ],
       "@users/*": [ "app/pages/users/*" ]
     }
   },

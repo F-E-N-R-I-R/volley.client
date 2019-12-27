@@ -1,6 +1,6 @@
 import { ActionReducerMap, createFeatureSelector } from '@ngrx/store';
 
-import { UsersState, usersListReducer } from './users.reducer';
+import { UsersState, usersListReducer } from '@users/core/reducers/users.reducer';
 
 export interface UserState {
     list: UsersState;

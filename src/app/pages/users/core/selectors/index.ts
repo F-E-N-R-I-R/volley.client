@@ -1,1 +1,1 @@
-export * from './users.selector';
+export * from '@users/core/selectors/users.selector';

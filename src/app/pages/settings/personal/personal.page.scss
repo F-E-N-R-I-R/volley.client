@@ -1,0 +1,13 @@
+ion-list {
+  background: transparent;
+  padding-top: 8px;
+
+  .range-title {
+    position: absolute;
+    top: 5px;
+  }
+
+  ion-range {
+    padding-top: 18px;
+  }
+}

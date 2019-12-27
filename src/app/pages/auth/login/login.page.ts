@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Subject } from 'rxjs';
-import { AuthenticationService } from '../../../services';
+import { AuthService } from '@auth/core/services';
 
 @Component({
     selector: 'app-events',
@@ -8,9 +7,7 @@ import { AuthenticationService } from '../../../services';
     styleUrls: ['login.page.scss']
 })
 export class LoginPage {
-    private ngUnsubscribe$ = new Subject();
-
-    constructor(public authService: AuthenticationService) {
+    constructor(public authService: AuthService) {
     }
 
 
@@ -19,9 +16,10 @@ export class LoginPage {
 
 
     public ionViewWillLeave() {
-        this.ngUnsubscribe$.next();
-        this.ngUnsubscribe$.complete();
 
     }
 
+    public login() {
+        this.authService.dispatchLogin();
+    }
 }

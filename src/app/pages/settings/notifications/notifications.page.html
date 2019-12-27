@@ -1,0 +1,52 @@
+<ion-header>
+	<ion-toolbar color="vua-primary">
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="settings" [text]="'settings.title' | translate"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'settings.tabs.notifications.title' | translate }}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-primary">
+	<ion-list>
+		<ion-item color="vua-secondary">
+			<ion-label>
+				{{ 'settings.tabs.notifications.all' | translate }}
+			</ion-label>
+			<ion-toggle [formControl]="allToggleControl"></ion-toggle>
+		</ion-item>
+	</ion-list>
+	<ion-list [formGroup]="form">
+		<ion-item color="vua-secondary">
+			<ion-label>
+				{{ 'settings.tabs.notifications.news' | translate }}
+			</ion-label>
+			<ion-toggle formControlName="news"></ion-toggle>
+		</ion-item>
+		<ion-item color="vua-secondary">
+			<ion-label>
+				{{ 'settings.tabs.notifications.team' | translate }}
+			</ion-label>
+			<ion-toggle formControlName="team"></ion-toggle>
+		</ion-item>
+		<ion-item color="vua-secondary">
+			<ion-label>
+				{{ 'settings.tabs.notifications.events' | translate }}
+			</ion-label>
+			<ion-toggle formControlName="events"></ion-toggle>
+		</ion-item>
+		<ion-item color="vua-secondary">
+			<ion-label>
+				{{ 'settings.tabs.notifications.competitions' | translate }}
+			</ion-label>
+			<ion-toggle formControlName="competitions"></ion-toggle>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+
+
+
+

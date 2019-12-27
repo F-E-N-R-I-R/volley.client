@@ -1,0 +1,120 @@
+{
+    "login": {
+        "title": "Войти"
+    },
+    "competitions": {
+        "title": "Соревнования"
+    },
+    "events": {
+        "title": "Активности"
+    },
+    "news": {
+        "title": "Новости"
+    },
+    "teams": {
+        "title": "Команды"
+    },
+    "users": {
+        "title": "Пользователи"
+    },
+    "settings": {
+        "title":"Настройки",
+        "tabs": {
+            "main": "Аккаунт",
+            "main_info": {
+                "title": "Информация пользователя",
+                "birthday": "Дата рождения",
+                "fname": "Имя",
+                "lname": "Фамилия",
+                "pname": "Отчество",
+                "email": "Почта",
+                "phone": "Номер телефона",
+                "gender": "Пол",
+                "male": "мужской",
+                "female": "женский"
+            },
+            "category": {
+                "title": "Спортивное Звание",
+                "FIRST": "I",
+                "SECOND": "II",
+                "THIRD": "III",
+                "FYR": "I-Ю",
+                "SYR": "II-Ю",
+                "TYR": "III-Ю",
+                "CMSU": "КМСУ",
+                "MSU": "МСУ",
+                "MSWC": "МСМК"
+            },
+                
+            "city": {
+                "title": "Город",
+                "POLTAVA": "Полтава",
+                "KHARKOV": "Харьков"
+            },
+            "notifications": {
+                "title": "Уведомления",
+                "all":"Все",
+                "news":"Новости",
+                "team":"Команда",
+                "events": "Турниры",
+                "competitions":"Соревнования"
+            },
+            "language": {
+                "title": "Язык",
+                "header": "Язык",
+                "ru": "Русский",
+                "en": "Английский",
+                "ua": "Украинский",
+                "RUSSIAN": "Русский",
+                "ENGLISH": "Английский",
+                "UKRAINIAN": "Украинский"
+            },
+            "theme": {
+                "title": "Тема",
+                "header": "Тема",
+                "white": "Светлая",
+                "black": "Темная",
+                "WHITE": "Светлая",
+                "BLACK": "Темная"
+            },
+            "personal": {
+                 "title": "Конституция",
+                "height":"Рост",
+                "weight": "Вес",
+                "chest_girt": "Обхват груди",
+                "waist": "Обхват талии",
+                "hip_girth": "Обхват бёдер",
+                "shoe_size":"Размер обуви" 
+            },
+             "teams": {
+                "title": "Команды"
+            },
+            "places": {
+                "title": "Местa"
+            }
+        },
+        "toasts": {
+            "upd_settings_success": "Настройки пользователя обновлены"
+        }
+    },
+    "months": {
+        "January": "Января",
+        "February": "Февраля",
+        "March": "Марта",
+        "April": "Апреля",
+        "May": "Мая",
+        "June": "Июня",
+        "July": "Июля",
+        "August": "Августа",
+        "September": "Сентября",
+        "October": "Октября",
+        "November": "Ноября",
+        "December": "Декабря"
+    },
+     "errors": {
+        "required": "* Это поле обязательна для заполнения",
+        "maxlength": "* Символов должно быть не больше чем {{max}}",
+        "pattern": "* Только буквы "
+    }
+
+}
