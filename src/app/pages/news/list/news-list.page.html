@@ -8,7 +8,7 @@
 
 <ion-content>
 	<ion-list>
-<ion-card *ngFor="let newsItem of news$ | async">{{ newsItem.name }}>
+<ion-card *ngFor="let newsItem of news$ | async">{{ newsItem.name }}
   <ion-item>
     <ion-icon name="pin" slot="start"></ion-icon>
     <ion-label>ion-item in a card, icon left, button right</ion-label>
@@ -21,4 +21,9 @@
   </ion-card-content>
 	</ion-card>
 	</ion-list>
+	 <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+	</ion-fab>
 </ion-content>
