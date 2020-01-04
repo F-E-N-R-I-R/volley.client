@@ -6,24 +6,44 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content>
-	<ion-list>
-<ion-card *ngFor="let newsItem of news$ | async">{{ newsItem.name }}
-  <ion-item>
-    <ion-icon name="pin" slot="start"></ion-icon>
-    <ion-label>ion-item in a card, icon left, button right</ion-label>
-    <ion-button fill="outline" slot="end">View</ion-button>
-  </ion-item>
-
-  <ion-card-content>
-    This is content, without any paragraph or header tags,
-    within an ion-card-content element.
-  </ion-card-content>
-	</ion-card>
-	</ion-list>
+<ion-content color="vua-primary" >
 	 <ion-fab vertical="bottom" horizontal="start" slot="fixed">
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
 	</ion-fab>
+
+	<ion-list *ngFor="let newsItem of news$ | async" color="vua-primary" >
+		 <ion-item-sliding color="vua-primary">
+	    <ion-item-options side="end">
+	      <ion-item-option color="danger" expandable>
+	        Delete
+	      </ion-item-option>
+	    </ion-item-options>
+	    	<ion-item color="vua-primary" >
+				<ion-card color="vua-secondary">
+	  			<ion-icon name="people" slot="start" color="danger"></ion-icon>
+	  			<ion-item color="vua-secondary">
+	  			<ion-avatar slot="start">
+    			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  				</ion-avatar>
+	    		<ion-label>{{ newsItem.name }}</ion-label>
+	  			</ion-item>
+	  
+
+	  				<ion-card-content color="vua-secondary">
+	   					 <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+	    				This is content, without any paragraph or header tags,
+	    				within an ion-card-content element.
+	  				</ion-card-content >
+	  				<ion-button color="dark">Dark</ion-button>
+					</ion-card> 
+				</ion-item>
+	    <ion-item-options side="start" >
+	      <ion-item-option color="tertiary" expandable>
+	       Mute
+	      </ion-item-option>
+	    </ion-item-options>
+	  </ion-item-sliding>
+	</ion-list>
 </ion-content>
