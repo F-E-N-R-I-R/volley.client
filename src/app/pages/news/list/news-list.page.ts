@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { ModalController } from '@ionic/angular';
 import { NewsProvider } from '@news/core/providers';
-import { NTypes } from '@core/types';
+import { NTypes, } from '@core/types';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -27,4 +27,14 @@ export class NewsListPage {
         this.ngUnsubscribe$.complete();
 
     }
+     public delete() {
+          console.log('Y menya ne poly4ilos')
+    }
+    doRefresh(event) {
+    console.log('Begin async operation');
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 2000);
+}
 }

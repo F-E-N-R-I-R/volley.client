@@ -1,4 +1,3 @@
-
 img {
 	float: left;
 	heigth: 40px;
@@ -6,18 +5,18 @@ img {
 	 margin: auto;
 	 margin-right: 2px;
 }
-ion-button {
-	float: right;
-	width: 43px;
-    height: auto;
-    margin: inherit;
-
-}
 ion-card {
 	width: 100%;
 	margin: auto;
 	padding: none;
 }
-ion-list {
-	
+
+ion-item-sliding {
+	padditng-bottom: 4px;
+}
+ion-button {
+	float: right;
+	width: 43px;
+    height: auto;
+    margin: inherit;
 }

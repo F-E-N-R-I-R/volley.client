@@ -7,43 +7,61 @@
 </ion-header>
 
 <ion-content color="vua-primary" >
-	 <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+
+    			
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
 	</ion-fab>
 
-	<ion-list *ngFor="let newsItem of news$ | async" color="vua-primary" >
-		 <ion-item-sliding color="vua-primary">
-	    <ion-item-options side="end">
-	      <ion-item-option color="danger" expandable>
-	        Delete
-	      </ion-item-option>
-	    </ion-item-options>
-	    	<ion-item color="vua-primary" >
-				<ion-card color="vua-secondary">
-	  			<ion-icon name="people" slot="start" color="danger"></ion-icon>
-	  			<ion-item color="vua-secondary">
-	  			<ion-avatar slot="start">
-    			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-  				</ion-avatar>
-	    		<ion-label>{{ newsItem.name }}</ion-label>
-	  			</ion-item>
+	<ion-list  color="vua-primary" >
+	 	<ion-item-sliding *ngFor="let newsItem of news$ | async; let i = index">
+   		   <ion-item color="vua-primary" >
+			 <ion-card color="vua-secondary">
+	  	   	  <ion-item color="vua-secondary">
+	  		   <ion-avatar slot="start">
+    		    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  			   </ion-avatar>
+	    	  <ion-label>
+	    				{{ newsItem.name }}
+	    				<ion-icon name="bookmark" slot="start" color="danger"></ion-icon>
+	    	  </ion-label>
+	  		 </ion-item>
 	  
 
-	  				<ion-card-content color="vua-secondary">
-	   					 <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+	  		 <ion-card-content color="vua-secondary">
+	   			<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
 	    				This is content, without any paragraph or header tags,
 	    				within an ion-card-content element.
-	  				</ion-card-content >
-	  				<ion-button color="dark">Dark</ion-button>
-					</ion-card> 
-				</ion-item>
-	    <ion-item-options side="start" >
-	      <ion-item-option color="tertiary" expandable>
-	       Mute
-	      </ion-item-option>
-	    </ion-item-options>
-	  </ion-item-sliding>
+	  		 </ion-card-content >
+	  		 <ion-button>
+	  		 	<ion-icon name="share"></ion-icon>
+	  		 	<ion-select  interface="action-sheet" f>
+				<ion-select-option>
+					<ion-icon name="logo-facebook"></ion-icon>
+				</ion-select-option>
+			</ion-select>
+	  		 </ion-button>
+	  			
+			</ion-card> 
+		   </ion-item>
+      	  <ion-item-options side="end" (ionSwipe)="delete(i, newsItem)">
+      		<ion-item-option color="danger" expandable >
+        	<ion-icon slot="top" name="trash"></ion-icon>
+        	Delete
+      		</ion-item-option>
+    	  </ion-item-options>
+  		</ion-item-sliding>
 	</ion-list>
+	<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+      <p> Нюю привеnbrb</p>
+    </ion-refresher-content>
+  </ion-refresher>
 </ion-content>
+
