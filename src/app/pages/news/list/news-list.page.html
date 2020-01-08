@@ -13,7 +13,7 @@
 
 <ion-content>
 	<ion-list>
-		<ion-item routerLink="new-item" routerDirection="forward" *ngFor="let newsItem of news$ | async">
+		<ion-item routerLink="new" routerDirection="forward" *ngFor="let newsItem of news$ | async">
 			{{ newsItem.name }}
 		</ion-item>
 	</ion-list>

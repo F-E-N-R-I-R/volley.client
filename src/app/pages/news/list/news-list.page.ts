@@ -4,6 +4,7 @@ import { ModalController } from '@ionic/angular';
 import { NewsProvider } from '@news/core/providers';
 import { NTypes } from '@core/types';
 import { map } from 'rxjs/operators';
+import { NewsService } from '@news/core/services';
 
 @Component({
     selector: 'app-news',
@@ -12,13 +13,15 @@ import { map } from 'rxjs/operators';
 })
 export class NewsListPage {
     private ngUnsubscribe$ = new Subject();
-    public news$: Observable<NTypes.INews[]> = this.newsProvider.getList().pipe(map(({ items }) => items));
+    // public news$: Observable<NTypes.INews[]> = this.newsProvider.getList().pipe(map(({ items }) => items));
+    public news$: Observable<NTypes.INews[]> = this.newsService.news$;
 
-    constructor(private modalController: ModalController, private newsProvider: NewsProvider) {
+    constructor(private modalController: ModalController, private newsProvider: NewsProvider, private newsService: NewsService) {
     }
 
 
     public ionViewWillEnter() {
+        this.newsService.dispatchList();
     }
 
 
@@ -26,9 +29,5 @@ export class NewsListPage {
         this.ngUnsubscribe$.next();
         this.ngUnsubscribe$.complete();
 
-    }
-
-    public filters() {
-        console.log('filterPage');
     }
 }

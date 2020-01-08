@@ -15,7 +15,7 @@ const routes: Routes = [
         component: FiltersPage,
     },
     {
-        path: 'new-item',
+        path: 'new',
         component: NewItemPage,
     },
 ];
