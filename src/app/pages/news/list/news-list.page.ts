@@ -27,4 +27,8 @@ export class NewsListPage {
         this.ngUnsubscribe$.complete();
 
     }
+
+    public filters() {
+        console.log('filterPage');
+    }
 }
