@@ -8,10 +8,10 @@ export const getCompleteCoreState = createSelector(
     (state: fromFeature.NewState) => state.list,
 );
 
-// export const getListPagination = createSelector(
-//     getCompleteCoreState,
-//     fromUser.getPagination,
-// );
+export const getListPagination = createSelector(
+    getCompleteCoreState,
+    fromUser.getPagination,
+);
 
 export const getListItems = createSelector(
     getCompleteCoreState,

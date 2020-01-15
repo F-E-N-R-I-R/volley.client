@@ -9,9 +9,24 @@ export class NewsMockProvider {
     getAllNews(): Observable<NTypes.INewsList> {
         return new BehaviorSubject({
             items: [
-                { name: 'News1' },
-                { name: 'News2' },
-                { name: 'News3' },
+                {   title: 'New1',
+                    picture: 'string',
+                    description: 'string',
+                    category: NTypes.ECategory.FVU,
+                    date: 'string',
+                    created_by: 'string', },
+                {   title: 'New2',
+                    picture: 'string',
+                    description: 'string',
+                    category: NTypes.ECategory.FVHO,
+                    date: 'string',
+                    created_by: 'string', },
+                {   title: 'New3',
+                    picture: 'string',
+                    description: 'string',
+                    category: NTypes.ECategory.FIVB,
+                    date: 'string',
+                    created_by: 'string', },
             ]
         });
     }
