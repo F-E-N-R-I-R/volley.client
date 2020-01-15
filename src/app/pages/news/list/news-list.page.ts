@@ -4,6 +4,7 @@ import { ModalController } from '@ionic/angular';
 import { NewsProvider } from '@news/core/providers';
 import { NTypes, } from '@core/types';
 import { map } from 'rxjs/operators';
+import { NewsService } from '@news/core/services';
 
 @Component({
     selector: 'app-news',
@@ -14,11 +15,12 @@ export class NewsListPage {
     private ngUnsubscribe$ = new Subject();
     public news$: Observable<NTypes.INews[]> = this.newsProvider.getList().pipe(map(({ items }) => items));
 
-    constructor(private modalController: ModalController, private newsProvider: NewsProvider) {
+    constructor(private modalController: ModalController, private newsProvider: NewsProvider, private newsService: NewsService) {
     }
 
 
     public ionViewWillEnter() {
+        this.newsService.dispatchList();
     }
 
 
@@ -27,14 +29,15 @@ export class NewsListPage {
         this.ngUnsubscribe$.complete();
 
     }
-     public delete() {
-          console.log('Y menya ne poly4ilos')
+     public delete(i) {
+          this.news$.pipe(map(data => data.slice(i, 1)));
     }
     doRefresh(event) {
-    console.log('Begin async operation');
-    setTimeout(() => {
-      console.log('Async operation has ended');
-      event.target.complete();
-    }, 2000);
+        console.log('Begin async operation');
+        setTimeout(() => {
+              console.log('Async operation has ended');
+              event.target.complete();
+            },2000);
+}    
 }
-}
+
