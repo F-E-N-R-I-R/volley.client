@@ -13,6 +13,7 @@
 
 <ion-content color="vua-primary">
 	<ion-list>
+<<<<<<< HEAD
 		<ion-item-sliding *ngFor="let newsItem of news$ | async; let i = index">
 			<ion-item color="vua-primary" routerDirection="forward" [routerLink]="newsItem.id">
 				<ion-card color="vua-secondary">
@@ -40,6 +41,11 @@
 				</ion-item-option>
 			</ion-item-options>
 		</ion-item-sliding>
+=======
+		<ion-item routerLink="new" routerDirection="forward" *ngFor="let newsItem of news$ | async">
+			{{ newsItem.title }}
+		</ion-item>
+>>>>>>> add types and mock news
 	</ion-list>
 
 	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
