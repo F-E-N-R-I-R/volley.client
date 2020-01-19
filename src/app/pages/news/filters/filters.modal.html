@@ -1,0 +1,47 @@
+<ion-header>
+	<ion-toolbar color="vua-primary">
+		<ion-buttons slot="start">
+			<ion-button (click)="close()">
+				<ion-icon color="primary" name="close" slot="icon-only"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-title>
+			Filters
+		</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="save()">
+				<ion-icon color="primary" name="checkmark" slot="icon-only"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-primary">
+	<ion-list>
+		<ion-item color="vua-secondary">
+			<ion-label>FIVB</ion-label>
+			<ion-toggle name="FIVB" color="secondary" checked></ion-toggle>
+		</ion-item>
+		<ion-item color="vua-secondary">
+			<ion-label>FVU</ion-label>
+			<ion-toggle name="FVU" color="secondary" checked></ion-toggle>
+		</ion-item>
+		<ion-item color="vua-secondary">
+			<ion-label>FVHO</ion-label>
+			<ion-toggle name="FVHO" color="secondary" checked></ion-toggle>
+		</ion-item>
+		<ion-item color="vua-secondary">
+			<ion-label>Teams</ion-label>
+			<ion-toggle name="Teams" color="secondary" checked></ion-toggle>
+		</ion-item>
+		<ion-item color="vua-secondary">
+			<ion-label>Places</ion-label>
+			<ion-toggle name="Places" color="secondary" checked></ion-toggle>
+		</ion-item>
+		<ion-item color="vua-secondary">
+			<ion-label>Events</ion-label>
+			<ion-toggle name="Events" color="secondary" checked></ion-toggle>
+		</ion-item>
+	</ion-list>
+	{{ form.value | json }}
+</ion-content>
