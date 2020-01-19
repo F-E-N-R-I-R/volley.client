@@ -3,8 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { NewsListPage } from '@news/list/news-list.page';
 import { FiltersPage } from '@news/filters/filters.page';
-import { NewItemPage } from '@news/new-item/new-item.page';
-import { FullNewsPage} from '@news/full-news/full-news.page';
+import { NewsItemPageComponent} from '@news/item/news-item-page.component';
 
 const routes: Routes = [
     {
@@ -16,12 +15,8 @@ const routes: Routes = [
         component: FiltersPage,
     },
     {
-        path: 'new',
-        component: NewItemPage,
-    },
-    {
-        path: 'full',
-        component: FullNewsPage,
+        path: ':id',
+        component: NewsItemPageComponent,
     },
 ];
 

@@ -8,8 +8,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NewsCoreModule } from '@news/core/core.module';
 import { AuthModule } from '@app/pages/auth/auth.module';
 import { FiltersPage } from '@news/filters/filters.page';
-import { NewItemPage } from '@news/new-item/new-item.page';
-import { FullNewsPage} from '@news/full-news/full-news.page';
+import { NewsListItemComponent } from '@news/components/list-item/news-list-item.component';
+import { NewsItemPageComponent} from '@news/item/news-item-page.component';
 
 
 @NgModule({
@@ -25,8 +25,8 @@ import { FullNewsPage} from '@news/full-news/full-news.page';
   declarations: [
       NewsListPage,
       FiltersPage,
-      NewItemPage,
-      FullNewsPage,
+      NewsListItemComponent,
+      NewsItemPageComponent,
   ],
   entryComponents: [],
 })

@@ -9,9 +9,9 @@ export class NewsMockProvider {
     getAllNews(): Observable<NTypes.INewsList> {
         return new BehaviorSubject({
             items: [
-                { name: 'News1' },
-                { name: 'News2' },
-                { name: 'News3' },
+                { name: 'News1', id: 1 },
+                { name: 'News2', id: 2 },
+                { name: 'News3', id: 3 },
             ]
         });
     }
