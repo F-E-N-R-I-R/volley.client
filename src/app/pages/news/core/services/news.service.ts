@@ -10,7 +10,7 @@ export class NewsService {
     loading$ = this.store.pipe(select(fromSelectors.getListPending));
     error$ = this.store.pipe(select(fromSelectors.getListError));
     news$ = this.store.pipe(select(fromSelectors.getListItems));
-    // pagination$ = this.store.pipe(select(fromSelectors.getListPagination));
+    pagination$ = this.store.pipe(select(fromSelectors.getListPagination));
 
     constructor(private store: Store<fromReducers.NewState>) {
     }

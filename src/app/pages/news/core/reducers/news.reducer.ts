@@ -4,18 +4,18 @@ export interface NewsState {
     error: any | null;
     loading: boolean;
     items: any[];
-    // pagination: any;
+    pagination: any;
 }
 
 export const initialState: NewsState = {
     error: null,
     items: [],
-    // pagination: {
-    //     current_page: 1,
-    //     per_page: 10,
-    //     total_count: 0,
-    //     total_pages: 1,
-    // },
+    pagination: {
+        current_page: 1,
+        per_page: 10,
+        total_count: 0,
+        total_pages: 1,
+    },
     loading: false,
 };
 
@@ -54,4 +54,4 @@ export function newsListReducer(
 export const getLoading = (state: NewsState) => state.loading;
 export const getError = (state: NewsState) => state.error;
 export const getItems = (state: NewsState) => state.items;
-// export const getPagination = (state: NewsState) => state.pagination;
+export const getPagination = (state: NewsState) => state.pagination;
