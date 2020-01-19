@@ -27,7 +27,7 @@ export class NewsMockProvider {
                     category: NTypes.ECategory.FIVB,
                     date: 'string',
                     created_by: 'string', },
-            ]
+            ],
         });
     }
 }

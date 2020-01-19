@@ -1,12 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import {ModalController, NavParams} from '@ionic/angular';
 import {FormGroup, FormBuilder, FormArray} from '@angular/forms';
+import {EnumValues} from 'enum-values';
+import { NTypes } from '@core/types';
 
 @Component({
     templateUrl: 'filters.modal.html',
     styleUrls: ['filters.modal.scss'],
 })
 export class FiltersModalComponent {
+    public filters = EnumValues.getValues(NTypes.ECategory);
+
     constructor(private navParams: NavParams, private fb: FormBuilder, private modal: ModalController) {
         console.log(navParams.data);
         this.fillCategories(navParams.data.categories);
@@ -30,13 +34,5 @@ export class FiltersModalComponent {
                 })
             )
         );
-    }
-
-    public save() {
-        this.modal.dismiss();
-    }
-
-    public close() {
-        this.modal.dismiss();
     }
 }
