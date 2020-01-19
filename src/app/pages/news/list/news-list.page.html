@@ -13,7 +13,6 @@
 
 <ion-content color="vua-primary">
 	<ion-list>
-<<<<<<< HEAD
 		<ion-item-sliding *ngFor="let newsItem of news$ | async; let i = index">
 			<ion-item color="vua-primary" routerDirection="forward" [routerLink]="newsItem.id">
 				<ion-card color="vua-secondary">
@@ -22,7 +21,7 @@
 							<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
 						</ion-avatar>
 						<ion-label>
-							{{ newsItem.name }}
+							{{ newsItem.title }}
 							<ion-icon name="bookmark" slot="start" color="danger"></ion-icon>
 						</ion-label>
 					</ion-item>
@@ -40,15 +39,16 @@
 					Delete
 				</ion-item-option>
 			</ion-item-options>
+			<ion-item-options side="start" (ionSwipe)="presentModal(newsItem)">
+				<ion-item-option color="primary" expandable>
+					<ion-icon slot="top" name="create"></ion-icon>
+					Edit
+				</ion-item-option>
+			</ion-item-options>
 		</ion-item-sliding>
-=======
-		<ion-item routerLink="new" routerDirection="forward" *ngFor="let newsItem of news$ | async">
-			{{ newsItem.title }}
-		</ion-item>
->>>>>>> add types and mock news
 	</ion-list>
 
-	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)=presentModal()>
 		<ion-fab-button>
 			<ion-icon name="add"></ion-icon>
 		</ion-fab-button>

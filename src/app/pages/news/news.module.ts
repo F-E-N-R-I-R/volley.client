@@ -10,6 +10,7 @@ import { AuthModule } from '@app/pages/auth/auth.module';
 import { FiltersPage } from '@news/filters/filters.page';
 import { NewsListItemComponent } from '@news/components/list-item/news-list-item.component';
 import { NewsItemPageComponent} from '@news/item/news-item-page.component';
+import { NewsEditModal } from '@news/edit/news-edit-modal.component'
 
 
 @NgModule({
@@ -27,7 +28,10 @@ import { NewsItemPageComponent} from '@news/item/news-item-page.component';
       FiltersPage,
       NewsListItemComponent,
       NewsItemPageComponent,
+      NewsEditModal,
   ],
-  entryComponents: [],
+  entryComponents: [
+    NewsEditModal
+  ],
 })
 export class NewsModule {}

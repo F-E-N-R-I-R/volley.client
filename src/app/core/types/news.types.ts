@@ -1,5 +1,6 @@
 export namespace NTypes {
     export interface INews {
+        id: any;
         title: string;
         picture: string;
         description: string;

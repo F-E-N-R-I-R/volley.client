@@ -5,6 +5,7 @@ import { NewsProvider } from '@news/core/providers';
 import { NTypes, } from '@core/types';
 import { map } from 'rxjs/operators';
 import { NewsService } from '@news/core/services';
+import { NewsEditModal } from '@news/edit/news-edit-modal.component'
 
 @Component({
     selector: 'app-news',
@@ -39,5 +40,16 @@ export class NewsListPage {
               event.target.complete();
             },2000);
 }    
+async presentModal(news = null) {
+    const modal = await this.modalController.create({
+      component: NewsEditModal,    
+      componentProps: {
+        news
+      }
+    });
+    await modal.present();
+    const { data } = await modal.onWillDismiss();
+    console.log(data);
+  }
 }
 
