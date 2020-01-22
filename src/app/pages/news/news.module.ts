@@ -7,7 +7,7 @@ import { NewsRoutingModule } from '@news/news-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { NewsCoreModule } from '@news/core/core.module';
 import { AuthModule } from '@app/pages/auth/auth.module';
-import { FiltersPage } from '@news/filters/filters.page';
+import { FiltersModalComponent } from '@news/filters/filters.modal';
 import { NewItemPage } from '@news/new-item/new-item.page';
 
 
@@ -23,9 +23,11 @@ import { NewItemPage } from '@news/new-item/new-item.page';
     ],
   declarations: [
       NewsListPage,
-      FiltersPage,
-      NewItemPage,
+      FiltersModalComponent,
+      NewItemPage
   ],
-  entryComponents: [],
+  entryComponents: [
+      FiltersModalComponent
+  ],
 })
 export class NewsModule {}
