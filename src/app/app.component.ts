@@ -51,15 +51,7 @@ export class AppComponent {
                 this.sb.styleDefault();
             }
 
-            this.authenticationService.authState.subscribe(state => {
-                // TODO REFACTOR
-                if (state) {
-                    this.router.navigate(['news']);
-                } else {
-                    this.router.navigate(['login']);
-                }
-            });
-
+            // TODO REFACTOR
             this.user$.subscribe(user => {
                 this.themeService.changeTheme(user.theme || UTypes.ETheme.WHITE);
                 this.translateService.use(user.language || UTypes.ELanguage.ENGLISH);

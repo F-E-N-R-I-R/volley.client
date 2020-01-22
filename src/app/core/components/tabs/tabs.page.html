@@ -1,5 +1,5 @@
-<ion-tabs *ngIf="authService.isAuthenticated()">
-  <ion-tab-bar slot="bottom" color="vua-primary-i">
+<ion-tabs>
+  <ion-tab-bar slot="bottom" color="vua-primary-i" *ngIf="authService.isAuthenticated()">
     <ion-tab-button tab="news">
       <ion-icon name="film"></ion-icon>
       <ion-label>News</ion-label>
@@ -19,5 +19,8 @@
       <ion-icon name="settings"></ion-icon>
       <ion-label>Settings</ion-label>
     </ion-tab-button>
+  </ion-tab-bar>
+  <ion-tab-bar slot="bottom" color="vua-primary-i" [hidden]="true">
+    <ion-tab-button tab="login"></ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

@@ -35,6 +35,7 @@ export class AuthEffects {
                 this.authenticationService.login();
             }
         ),
+        switchMap(() => this.authProvider.redirectOnLogin())
     );
 
     @Effect()
@@ -59,6 +60,7 @@ export class AuthEffects {
                 this.authenticationService.logout();
             }
         ),
+        switchMap(() => this.authProvider.redirectOnLogout())
     );
 
     @Effect()
