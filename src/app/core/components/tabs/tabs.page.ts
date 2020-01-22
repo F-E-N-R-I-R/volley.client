@@ -9,20 +9,27 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx
     styleUrls: ['tabs.page.scss']
 })
 export class TabsComponent {
-    loaded = false;
-    tabIndex = 0;
+    private tabIndex = 0;
+    private tabs = [
+        'news',
+        'events',
+        'teams',
+        'settings',
+    ];
 
     constructor(private authService: AuthenticationService, private nativePageTransitions: NativePageTransitions) {
     }
 
-    private getAnimationDirection(e: any): string {
+    private getAnimationDirection({ tab }: any): string {
         const currentIndex = this.tabIndex;
+        this.tabIndex = this.tabs.indexOf(tab);
 
-        this.tabIndex = e.index;
         switch (true) {
-            case currentIndex < e.index:
+            case tab === 'login':
+                return 'up';
+            case currentIndex < this.tabIndex:
                 return 'left';
-            case currentIndex > e.index:
+            case currentIndex > this.tabIndex:
                 return 'right';
         }
     }
@@ -36,13 +43,8 @@ export class TabsComponent {
             iosdelay: 20,
             androiddelay: 0,
             fixedPixelsTop: 0,
-            fixedPixelsBottom: 48,
+            fixedPixelsBottom: 0,
         };
-
-        if (!this.loaded) {
-            this.loaded = true;
-            return;
-        }
 
         this.nativePageTransitions.slide(options);
     }
