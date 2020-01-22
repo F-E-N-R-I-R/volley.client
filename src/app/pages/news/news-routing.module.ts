@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NewsListPage } from '@news/list/news-list.page';
-import { NewItemPage } from '@news/new-item/new-item.page';
+import { NewsItemPageComponent} from '@news/item/news-item-page.component';
 
 const routes: Routes = [
     {
@@ -10,8 +10,8 @@ const routes: Routes = [
         component: NewsListPage
     },
     {
-        path: 'new',
-        component: NewItemPage,
+        path: ':id',
+        component: NewsItemPageComponent,
     },
 ];
 

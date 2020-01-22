@@ -1,0 +1,20 @@
+<ion-header>
+	<ion-toolbar color="vua-gray-light">
+		<ion-buttons slot="start">
+			<ion-button color="primary" (click)="modal.dismiss()">
+				<ion-icon slot="icon-only" name="close"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-title>
+			{{ navParams.data.news ? navParams.data.news.title : ("Create" | translate) }}
+		</ion-title>
+		<ion-buttons slot="end">
+			<ion-button color="primary" (click)="modal.dismiss(form.value)">
+				<ion-icon slot="icon-only" name="checkmark"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	{{ form.value | json }}
+</ion-content>

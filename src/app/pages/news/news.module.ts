@@ -8,7 +8,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NewsCoreModule } from '@news/core/core.module';
 import { AuthModule } from '@app/pages/auth/auth.module';
 import { FiltersModalComponent } from '@news/filters/filters.modal';
-import { NewItemPage } from '@news/new-item/new-item.page';
+import { NewsListItemComponent } from '@news/components/list-item/news-list-item.component';
+import { NewsItemPageComponent } from '@news/item/news-item-page.component';
+import { NewsEditModal } from '@news/edit/news-edit-modal.component';
 
 
 @NgModule({
@@ -21,13 +23,17 @@ import { NewItemPage } from '@news/new-item/new-item.page';
         NewsCoreModule,
         AuthModule,
     ],
-  declarations: [
-      NewsListPage,
-      FiltersModalComponent,
-      NewItemPage
-  ],
-  entryComponents: [
-      FiltersModalComponent
-  ],
+    declarations: [
+        NewsListPage,
+        NewsListItemComponent,
+        NewsItemPageComponent,
+        NewsEditModal,
+        FiltersModalComponent,
+    ],
+    entryComponents: [
+        NewsEditModal,
+        FiltersModalComponent
+    ],
 })
-export class NewsModule {}
+export class NewsModule {
+}

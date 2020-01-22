@@ -6,6 +6,7 @@ import { NTypes } from '@core/types';
 import { map } from 'rxjs/operators';
 import { NewsService } from '@news/core/services';
 import { FiltersModalComponent } from '@news/filters/filters.modal';
+import { NewsEditModal } from '@news/edit/news-edit-modal.component';
 
 @Component({
     selector: 'app-news',
@@ -24,8 +25,7 @@ export class NewsListPage {
         },
     };
     private ngUnsubscribe$ = new Subject();
-    // public news$: Observable<NTypes.INews[]> = this.newsProvider.getList().pipe(map(({ items }) => items));
-    public news$: Observable<NTypes.INews[]> = this.newsService.news$;
+    public news$: Observable<NTypes.INews[]> = this.newsProvider.getList().pipe(map(({ items }) => items));
 
     constructor(private modalController: ModalController, private newsProvider: NewsProvider, private newsService: NewsService) {
     }
@@ -45,5 +45,29 @@ export class NewsListPage {
             componentProps: this.filters,
         });
         return await modal.present();
+    }
+
+    public delete(i) {
+        this.news$.pipe(map(data => data.slice(i, 1)));
+    }
+
+    doRefresh(event) {
+        console.log('Begin async operation');
+        setTimeout(() => {
+            console.log('Async operation has ended');
+            event.target.complete();
+        }, 2000);
+    }
+
+    async presentModal(news = null) {
+        const modal = await this.modalController.create({
+            component: NewsEditModal,
+            componentProps: {
+                news
+            }
+        });
+        await modal.present();
+        const { data } = await modal.onWillDismiss();
+        console.log(data);
     }
 }
