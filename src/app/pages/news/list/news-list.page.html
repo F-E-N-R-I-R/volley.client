@@ -4,7 +4,7 @@
 			{{ 'news.title' | translate }}
 		</ion-title>
 		<ion-buttons slot="end">
-			<ion-button routerLink="filters" color="primary">
+			<ion-button color="primary" (click)="showFilters()">
 				<ion-icon slot="icon-only" name="funnel"></ion-icon>
 			</ion-button>
 		</ion-buttons>
@@ -63,4 +63,3 @@
 		</ion-refresher-content>
 	</ion-refresher>
 </ion-content>
-

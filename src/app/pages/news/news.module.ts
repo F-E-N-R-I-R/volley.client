@@ -7,10 +7,10 @@ import { NewsRoutingModule } from '@news/news-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { NewsCoreModule } from '@news/core/core.module';
 import { AuthModule } from '@app/pages/auth/auth.module';
-import { FiltersPage } from '@news/filters/filters.page';
+import { FiltersModalComponent } from '@news/filters/filters.modal';
 import { NewsListItemComponent } from '@news/components/list-item/news-list-item.component';
-import { NewsItemPageComponent} from '@news/item/news-item-page.component';
-import { NewsEditModal } from '@news/edit/news-edit-modal.component'
+import { NewsItemPageComponent } from '@news/item/news-item-page.component';
+import { NewsEditModal } from '@news/edit/news-edit-modal.component';
 
 
 @NgModule({
@@ -23,15 +23,17 @@ import { NewsEditModal } from '@news/edit/news-edit-modal.component'
         NewsCoreModule,
         AuthModule,
     ],
-  declarations: [
-      NewsListPage,
-      FiltersPage,
-      NewsListItemComponent,
-      NewsItemPageComponent,
-      NewsEditModal,
-  ],
-  entryComponents: [
-    NewsEditModal
-  ],
+    declarations: [
+        NewsListPage,
+        NewsListItemComponent,
+        NewsItemPageComponent,
+        NewsEditModal,
+        FiltersModalComponent,
+    ],
+    entryComponents: [
+        NewsEditModal,
+        FiltersModalComponent
+    ],
 })
-export class NewsModule {}
+export class NewsModule {
+}
