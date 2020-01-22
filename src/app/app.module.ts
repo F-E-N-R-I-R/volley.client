@@ -26,6 +26,7 @@ import { TabsComponent } from '@core/components';
 import { AuthGuard } from '@core/guards';
 import { AuthenticationService, ThemeService, ToastService, ImageService } from '@core/services';
 import { HttpLoaderFactory } from '@core/factories';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
 
 const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer, clearStorageReducer];
 
@@ -65,6 +66,7 @@ const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer, cle
         ThemeService,
         ToastService,
         ImageService,
+        NativePageTransitions,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ],
     bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-<ion-tabs>
+<ion-tabs (ionTabsWillChange)="transition($event)">
   <ion-tab-bar slot="bottom" color="vua-primary-i" *ngIf="authService.isAuthenticated()">
     <ion-tab-button tab="news">
       <ion-icon name="film"></ion-icon>
