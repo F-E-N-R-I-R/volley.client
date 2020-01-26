@@ -12,7 +12,6 @@ export class FiltersModalComponent {
     public filters = EnumValues.getValues(NTypes.ECategory);
 
     constructor(private navParams: NavParams, private fb: FormBuilder, private modal: ModalController) {
-        console.log(navParams.data);
         this.fillCategories(navParams.data.categories);
     }
     public form: FormGroup = this.fb.group({

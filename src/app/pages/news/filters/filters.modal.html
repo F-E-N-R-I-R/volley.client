@@ -6,7 +6,7 @@
 			</ion-button>
 		</ion-buttons>
 		<ion-title>
-			Filters
+			{{ 'news.filters.title' | translate }}
 		</ion-title>
 		<ion-buttons slot="end">
 			<ion-button (click)="modal.dismiss(form.value)">
@@ -18,10 +18,9 @@
 
 <ion-content color="vua-primary">
 	<ion-list>
-		<ion-item color="vua-secondary" *ngFor="let filter of filters">
-			<ion-label>{{ filter }}</ion-label>
-			<ion-toggle name="{{ filter }}" color="secondary" checked></ion-toggle>
+		<ion-item color="vua-secondary" *ngFor="let filtersGroup of form.controls.categories.controls">
+			<ion-label>{{ ('news.filters.' +  filtersGroup.controls.name.value) | translate }} </ion-label>
+			<ion-toggle [formControl]="filtersGroup.controls.value" color="secondary"></ion-toggle>
 		</ion-item>
 	</ion-list>
-	{{ form.value | json }}
 </ion-content>
