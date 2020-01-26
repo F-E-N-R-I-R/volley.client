@@ -1,0 +1,24 @@
+img {
+	float: left;
+	heigth: 40px;
+	width: 40px;
+	 margin: auto;
+	 margin-right: 2px;
+}
+ion-card {
+	width: 100%;
+	height: 150px;
+	margin: auto;
+	padding: none;
+}
+
+ion-button {
+	float: right;
+	width: 43px;
+    height: auto;
+    margin: inherit;
+}
+ion-card-content {
+  word-wrap:break-word;
+  overflow: hidden;
+}
