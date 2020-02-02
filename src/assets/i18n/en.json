@@ -9,7 +9,15 @@
         "title": "Events"
     },
     "news": {
-        "title": "News"
+        "title": "News",
+        "filters": {
+            "fvho": "FVHO",
+            "fivb": "FIVB",
+            "fvu": "FVU",
+            "places": "Places",
+            "teams": "Teams",
+            "events": "Events"
+        }
     },
     "teams": {
         "title": "Teams"

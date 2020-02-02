@@ -6,7 +6,7 @@ import { NTypes } from '@core/types';
 import { filter, first, map, takeUntil } from 'rxjs/operators';
 import {FiltersService, NewsService} from '@news/core/services';
 import { FiltersModalComponent } from '@news/filters/filters.modal';
-import { NewsEditModal } from '@news/edit/news-edit-modal.component';
+import { NewsEditModalComponent } from '@news/edit/news-edit-modal.component';
 
 @Component({
     selector: 'app-news',
@@ -62,7 +62,7 @@ export class NewsListPage {
 
     async presentModal(news = null) {
         const modal = await this.modalController.create({
-            component: NewsEditModal,
+            component: NewsEditModalComponent,
             componentProps: {
                 news
             }

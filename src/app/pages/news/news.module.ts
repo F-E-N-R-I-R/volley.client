@@ -10,7 +10,7 @@ import { AuthModule } from '@app/pages/auth/auth.module';
 import { FiltersModalComponent } from '@news/filters/filters.modal';
 import { NewsListItemComponent } from '@news/components/list-item/news-list-item.component';
 import { NewsItemPageComponent } from '@news/item/news-item-page.component';
-import { NewsEditModal } from '@news/edit/news-edit-modal.component';
+import { NewsEditModalComponent} from '@news/edit/news-edit-modal.component';
 
 
 @NgModule({
@@ -25,15 +25,16 @@ import { NewsEditModal } from '@news/edit/news-edit-modal.component';
         ReactiveFormsModule,
     ],
     declarations: [
+        NewsEditModalComponent,
         NewsListPage,
         NewsListItemComponent,
         NewsItemPageComponent,
-        NewsEditModal,
         FiltersModalComponent,
     ],
     entryComponents: [
-        NewsEditModal,
-        FiltersModalComponent
+        NewsItemPageComponent,
+        FiltersModalComponent,
+        NewsEditModalComponent
     ],
 })
 export class NewsModule {
