@@ -28,6 +28,7 @@ export class SettingsFormService {
         sports_category: [''],
         teams: this.fb.array([]),
         places: this.fb.array([]),
+        events: this.fb.array([]),
 
         // Notifications
         notifications: this.fb.group({
@@ -44,6 +45,7 @@ export class SettingsFormService {
     public setValue(user) {
         this.fillTeams(user.teams);
         this.fillPlaces(user.places);
+        this.fillEvents(user.events);
         this.form.setValue(user);
     }
 
@@ -76,6 +78,23 @@ export class SettingsFormService {
                 this.fb.group({
                     name: [place.name],
                     image: [place.image],
+                })
+            )
+        );
+    }
+
+    private fillEvents(events) {
+        const eventsArray = this.form.get('events') as FormArray;
+
+        while (eventsArray.length > 0) {
+            eventsArray.removeAt(0);
+        }
+
+        events.forEach(
+            event => eventsArray.push(
+                this.fb.group({
+                    name: [event.name],
+                    image: [event.image],
                 })
             )
         );

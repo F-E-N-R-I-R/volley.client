@@ -99,6 +99,14 @@
 		</ion-list>
 
 		<ion-list class="inline-settings">
+			<ion-item routerLink="events" routerDirection="forward" color="vua-secondary">
+				<sq-icon name="flag"></sq-icon>
+				<ion-label>
+					{{ 'settings.tabs.events.title' | translate }}
+				</ion-label>
+				<ion-text [innerHTML]="form.controls.events.value | multiPreview">
+				</ion-text>
+			</ion-item>
 			<ion-item routerLink="teams" routerDirection="forward" color="vua-secondary">
 				<sq-icon name="people" color="vua-orange"></sq-icon>
 				<ion-label>

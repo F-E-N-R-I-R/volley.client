@@ -98,6 +98,9 @@
             },
             "places": {
                 "title": "Places"
+            },
+            "events": {
+                "title": "Events"
             }
         },
         "toasts": {

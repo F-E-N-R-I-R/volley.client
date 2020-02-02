@@ -9,6 +9,17 @@ ion-item-sliding {
 			height: 5rem;
 		}
 
+		.item-content {
+			margin: 15px;
+			white-space: normal;
+			word-break: break-all;
+			text-indent: 40px;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+		}
+
 		img {
 			position: absolute;
 			width: 5rem;

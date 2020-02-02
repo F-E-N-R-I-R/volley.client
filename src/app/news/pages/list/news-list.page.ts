@@ -53,9 +53,7 @@ export class NewsListPage {
     }
 
     doRefresh(event) {
-        console.log('Begin async operation');
         setTimeout(() => {
-            console.log('Async operation has ended');
             event.target.complete();
         }, 2000);
     }
@@ -69,6 +67,5 @@ export class NewsListPage {
         });
         await modal.present();
         const { data } = await modal.onWillDismiss();
-        console.log(data);
     }
 }

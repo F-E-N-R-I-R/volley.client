@@ -99,6 +99,9 @@
             },
             "places": {
                 "title": "Місця"
+            },
+            "events": {
+                "title": "Подii"
             }
         },
         "toasts": {
