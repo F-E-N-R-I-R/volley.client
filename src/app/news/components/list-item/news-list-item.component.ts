@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NTypes } from '@core/types';
 import { ModalController } from '@ionic/angular';
-import { NewsEditModalComponent } from '@news/edit/news-edit-modal.component';
+import { NewsEditModalComponent } from '@news/pages/edit/news-edit-modal.component';
 
 @Component({
     selector: 'app-news-list-item',

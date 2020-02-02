@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NewsEditModalComponent} from '@news/edit/news-edit-modal.component';
+import {NewsEditModalComponent} from '@news/pages/edit/news-edit-modal.component';
 import {ModalController} from '@ionic/angular';
 
 

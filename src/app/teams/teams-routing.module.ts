@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginPage } from '@auth/login/login.page';
+import { TeamsListPage } from '@teams/pages/list/teams-list.page';
 
 const routes: Routes = [
-    { path: '', component: LoginPage },
+    { path: '', component: TeamsListPage },
 ];
 
 @NgModule({
@@ -12,5 +12,5 @@ const routes: Routes = [
     declarations: [],
     exports: [RouterModule],
 })
-export class AuthRoutingModule {
+export class TeamsRoutingModule {
 }

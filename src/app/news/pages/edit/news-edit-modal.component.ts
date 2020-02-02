@@ -4,9 +4,8 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { EnumValues } from 'enum-values';
 import { NTypes } from '@core/types';
 import { AuthService } from '@auth/core/services';
-import { map, takeUntil } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Observable, Subject } from 'rxjs';
-import ECategory = NTypes.ECategory;
 
 
 @Component({

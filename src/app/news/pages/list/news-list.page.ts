@@ -5,8 +5,8 @@ import { NewsProvider } from '@news/core/providers';
 import { NTypes } from '@core/types';
 import { filter, first, map, takeUntil } from 'rxjs/operators';
 import {FiltersService, NewsService} from '@news/core/services';
-import { FiltersModalComponent } from '@news/filters/filters.modal';
-import { NewsEditModalComponent } from '@news/edit/news-edit-modal.component';
+import { FiltersModalComponent } from '@news/pages/filters/filters.modal';
+import { NewsEditModalComponent } from '@news/pages/edit/news-edit-modal.component';
 
 @Component({
     selector: 'app-news',

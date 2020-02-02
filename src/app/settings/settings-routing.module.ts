@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { SettingsPageComponent } from '@settings/settings.page';
-import { NotificationsPage } from '@settings//notifications/notifications.page';
-import { LanguagePage } from '@settings/language/language.page';
-import { ThemePage } from '@settings/theme/theme.page';
-import { CityPage } from '@settings/city/city.page';
-import { CategoryPage } from '@settings/category/category.page';
-import { MainInfoPage } from '@settings/main-info/main-info.page';
-import { PersonalPage } from '@settings/personal/personal.page';
-import { TeamsPage } from '@settings/teams/teams.page';
-import { PlacesPage } from '@settings/places/places.page';
+import { NotificationsPage } from '@settings/pages/notifications/notifications.page';
+import { LanguagePage } from '@settings/pages/language/language.page';
+import { ThemePage } from '@settings/pages/theme/theme.page';
+import { CityPage } from '@settings/pages/city/city.page';
+import { CategoryPage } from '@settings/pages/category/category.page';
+import { MainInfoPage } from '@settings/pages/main-info/main-info.page';
+import { PersonalPage } from '@settings/pages/personal/personal.page';
+import { TeamsPage } from '@settings/pages/teams/teams.page';
+import { PlacesPage } from '@settings/pages/places/places.page';
 
 
 const routes: Routes = [
