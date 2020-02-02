@@ -12,11 +12,28 @@ export class NewsService {
     error$ = this.store.pipe(select(fromSelectors.getListError));
     news$ = this.store.pipe(select(fromSelectors.getListItems));
     pagination$ = this.store.pipe(select(fromSelectors.getListPagination));
+    newsItem$ = this.store.pipe(select(fromSelectors.getItem));
 
     constructor(private store: Store<fromReducers.NewState>) {
     }
 
     dispatchList(filters: NTypes.IFilters) {
         this.store.dispatch(new fromActions.NewsLoadCollectionAction(filters));
+    }
+
+    dispatchGetItem(item: NTypes.INews) {
+        this.store.dispatch(new fromActions.NewsGetItemAction(item));
+    }
+
+    dispatchCreateItem(item: NTypes.INews) {
+        this.store.dispatch(new fromActions.NewsCreateItemAction(item));
+    }
+
+    dispatchUpdateItem(item: NTypes.INews) {
+        this.store.dispatch(new fromActions.NewsUpdateItemAction(item));
+    }
+
+    dispatchDeleteItem(item: NTypes.INews) {
+        this.store.dispatch(new fromActions.NewsDeleteItemAction(item));
     }
 }

@@ -11,8 +11,9 @@ import { NewsProvider } from '@news/core/providers';
 @NgModule({
     imports: [
         CommonModule,
-        StoreModule.forFeature('new', reducers),
+        StoreModule.forFeature('newsList', reducers),
         StoreModule.forFeature('filters', reducers),
+        StoreModule.forFeature('item', reducers),
         EffectsModule.forFeature(effects),
     ],
     declarations: [],

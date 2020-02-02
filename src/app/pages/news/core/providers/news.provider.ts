@@ -14,4 +14,24 @@ export class NewsProvider {
         console.log(filters);
         return this.newsMockProvider.getAllNews();
     }
+
+    getItem(item): Observable<NTypes.INews> {
+        console.log(item);
+        return this.newsMockProvider.getItemNews();
+    }
+
+    createItem(item): Observable<NTypes.INews> {
+        console.log(item);
+        return this.newsMockProvider.getItemNews();
+    }
+
+    deleteItem(item): Observable<NTypes.INews> {
+        console.log(item);
+        return this.newsMockProvider.getItemNews();
+    }
+
+    updateItem(item): Observable<NTypes.INews> {
+        console.log(item);
+        return this.newsMockProvider.getItemNews();
+    }
 }
