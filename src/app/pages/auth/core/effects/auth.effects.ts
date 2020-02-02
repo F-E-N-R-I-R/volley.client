@@ -6,7 +6,7 @@ import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import * as AuthActions from '@auth/core/actions';
 import { AuthProvider } from '@auth/core/providers/auth.provider';
 import { UTypes } from '@core/types';
-import { AuthenticationService, ThemeService, ToastService } from '@app/core/services';
+import { ThemeService, ToastService } from '@app/core/services';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable()
@@ -32,9 +32,9 @@ export class AuthEffects {
         tap((action: AuthActions.AuthLoginSuccessAction) => {
                 this.themeService.changeTheme(action.payload.theme || UTypes.ETheme.WHITE);
                 this.translateService.use(action.payload.language || UTypes.ELanguage.ENGLISH);
-                this.authenticationService.login();
             }
         ),
+        switchMap(() => this.authProvider.redirectOnLogin())
     );
 
     @Effect()
@@ -55,10 +55,7 @@ export class AuthEffects {
     @Effect({ dispatch: false })
     authLogoutSuccess$ = this.actions$.pipe(
         ofType(AuthActions.LOGOUT_SUCCESS),
-        tap((action: AuthActions.AuthLogoutSuccessAction) => {
-                this.authenticationService.logout();
-            }
-        ),
+        switchMap(() => this.authProvider.redirectOnLogout())
     );
 
     @Effect()
@@ -87,7 +84,6 @@ export class AuthEffects {
 
     constructor(
         private authProvider: AuthProvider,
-        private authenticationService: AuthenticationService,
         private themeService: ThemeService,
         private toastService: ToastService,
         private actions$: Actions,

@@ -1,7 +1,7 @@
 import { createSelector } from '@ngrx/store';
 
 import * as fromFeature from '@news/core/reducers';
-import * as fromUser from '@news/core/reducers/news.reducer';
+import * as fromNews from '@news/core/reducers/news.reducer';
 
 export const getCompleteCoreState = createSelector(
     fromFeature.getNewsState,
@@ -10,20 +10,20 @@ export const getCompleteCoreState = createSelector(
 
 export const getListPagination = createSelector(
     getCompleteCoreState,
-    fromUser.getPagination,
+    fromNews.getPagination,
 );
 
 export const getListItems = createSelector(
     getCompleteCoreState,
-    fromUser.getItems,
+    fromNews.getItems,
 );
 
 export const getListPending = createSelector(
     getCompleteCoreState,
-    fromUser.getLoading,
+    fromNews.getLoading,
 );
 
 export const getListError = createSelector(
     getCompleteCoreState,
-    fromUser.getError,
+    fromNews.getError,
 );

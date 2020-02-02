@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { UTypes } from '@core/types';
 import { AuthService } from '@auth/core/services';
-import { AuthenticationService, ThemeService } from '@core/services';
+import { ThemeService } from '@core/services';
 
 
 @Component({
@@ -24,7 +24,6 @@ export class AppComponent {
         private platform: Platform,
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
-        private authenticationService: AuthenticationService,
         private router: Router,
         private translate: TranslateService,
         private authService: AuthService,
@@ -51,15 +50,7 @@ export class AppComponent {
                 this.sb.styleDefault();
             }
 
-            this.authenticationService.authState.subscribe(state => {
-                // TODO REFACTOR
-                if (state) {
-                    this.router.navigate(['news']);
-                } else {
-                    this.router.navigate(['login']);
-                }
-            });
-
+            // TODO REFACTOR
             this.user$.subscribe(user => {
                 this.themeService.changeTheme(user.theme || UTypes.ETheme.WHITE);
                 this.translateService.use(user.language || UTypes.ELanguage.ENGLISH);
