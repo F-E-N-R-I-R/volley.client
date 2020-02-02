@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NTypes } from '@core/types';
 import { ModalController } from '@ionic/angular';
-import { NewsEditModal } from '@news/edit/news-edit-modal.component';
+import { NewsEditModalComponent } from '@news/edit/news-edit-modal.component';
 
 @Component({
     selector: 'app-news-list-item',
@@ -9,14 +9,15 @@ import { NewsEditModal } from '@news/edit/news-edit-modal.component';
     styleUrls: ['news-list-item.component.scss'],
 })
 export class NewsListItemComponent {
-	@Input() item: NTypes.INews;
-	@Input() description: NTypes.INews;
+    @Input() item: NTypes.INews;
+    @Input() description: NTypes.INews;
 
     constructor(private modalController: ModalController) {
     }
+
     async presentModal(news = null) {
         const modal = await this.modalController.create({
-            component: NewsEditModal,
+            component: NewsEditModalComponent,
             componentProps: {
                 news
             }
