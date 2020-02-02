@@ -13,7 +13,7 @@ export class NewsListEffects {
         ofType(NewsActions.LOAD_COLLECTION),
         switchMap((action: NewsActions.NewsLoadCollectionAction) =>
             this.newsProvider
-                .getList()
+                .getList(action.payload)
                 .pipe(
                     map((data) => new NewsActions.NewsLoadCollectionSuccessAction(data)),
                     catchError((error: Error) =>

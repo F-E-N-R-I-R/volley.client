@@ -1,9 +1,10 @@
 import { Action } from '@ngrx/store';
+import { NTypes } from '@core/types';
 
 export const LOAD_COLLECTION = '[NEWS] Load Collection';
 export class NewsLoadCollectionAction implements Action {
     readonly type = LOAD_COLLECTION;
-    constructor() {}
+    constructor(public payload: NTypes.IFilters) {}
 }
 
 export const LOAD_COLLECTION_SUCCESS = '[NEWS] Load Collection Success';
@@ -18,4 +19,4 @@ export class NewsLoadCollectionFailAction implements Action {
     constructor(public error: Error) {}
 }
 
-export type TUsersActions = NewsLoadCollectionAction | NewsLoadCollectionSuccessAction | NewsLoadCollectionFailAction;
+export type TNewsActions = NewsLoadCollectionAction | NewsLoadCollectionSuccessAction | NewsLoadCollectionFailAction;

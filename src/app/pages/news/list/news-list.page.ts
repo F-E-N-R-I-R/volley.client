@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { combineLatest, from, Observable, Subject } from 'rxjs';
 import { ModalController } from '@ionic/angular';
 import { NewsProvider } from '@news/core/providers';
 import { NTypes } from '@core/types';
-import { map } from 'rxjs/operators';
-import { NewsService } from '@news/core/services';
+import { filter, first, map, takeUntil } from 'rxjs/operators';
+import {FiltersService, NewsService} from '@news/core/services';
 import { FiltersModalComponent } from '@news/filters/filters.modal';
 import { NewsEditModal } from '@news/edit/news-edit-modal.component';
 
@@ -14,24 +14,19 @@ import { NewsEditModal } from '@news/edit/news-edit-modal.component';
     styleUrls: ['news-list.page.scss']
 })
 export class NewsListPage {
-    private filters: any = {
-        categories: {
-            fivb: true,
-            fvu: true,
-            fvho: true,
-            teams: true,
-            places: true,
-            events: true,
-        },
-    };
     private ngUnsubscribe$ = new Subject();
-    public news$: Observable<NTypes.INews[]> = this.newsProvider.getList().pipe(map(({ items }) => items));
+    public news$: Observable<NTypes.INews[]> = this.newsService.news$;
 
-    constructor(private modalController: ModalController, private newsProvider: NewsProvider, private newsService: NewsService) {
+    constructor(private modalController: ModalController,
+                private newsProvider: NewsProvider,
+                private newsService: NewsService,
+                private filtersService: FiltersService) {
     }
 
     public ionViewWillEnter() {
-        this.newsService.dispatchList();
+        this.filtersService.filters$
+            .pipe(takeUntil(this.ngUnsubscribe$))
+            .subscribe(filters => this.newsService.dispatchList(filters));
     }
 
     public ionViewWillLeave() {
@@ -42,8 +37,14 @@ export class NewsListPage {
     public async showFilters() {
         const modal = await this.modalController.create({
             component: FiltersModalComponent,
-            componentProps: this.filters,
         });
+        from(modal.onWillDismiss())
+            .pipe(
+                first(),
+                filter(Boolean),
+            )
+            .subscribe(({ data }) => this.filtersService.dispatchUpdateFilters(data));
+
         return await modal.present();
     }
 

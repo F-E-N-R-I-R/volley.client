@@ -10,7 +10,8 @@ export class NewsProvider {
 
     constructor(private http: HttpClient, private newsMockProvider: NewsMockProvider) {}
 
-    getList(): Observable<NTypes.INewsList> {
+    getList(filters): Observable<NTypes.INewsList> {
+        console.log(filters);
         return this.newsMockProvider.getAllNews();
     }
 }

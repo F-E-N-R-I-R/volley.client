@@ -1,7 +1,7 @@
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NewsListPage } from '@news/list/news-list.page';
 import { NewsRoutingModule } from '@news/news-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
@@ -22,6 +22,7 @@ import { NewsEditModal } from '@news/edit/news-edit-modal.component';
         TranslateModule,
         NewsCoreModule,
         AuthModule,
+        ReactiveFormsModule,
     ],
     declarations: [
         NewsListPage,

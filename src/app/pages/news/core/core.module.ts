@@ -12,6 +12,7 @@ import { NewsProvider } from '@news/core/providers';
     imports: [
         CommonModule,
         StoreModule.forFeature('new', reducers),
+        StoreModule.forFeature('filters', reducers),
         EffectsModule.forFeature(effects),
     ],
     declarations: [],

@@ -21,7 +21,7 @@ export const initialState: NewsState = {
 
 export function newsListReducer(
     state = initialState,
-    action: newsActions.TUsersActions,
+    action: newsActions.TNewsActions,
 ): NewsState {
     switch (action.type) {
         case newsActions.LOAD_COLLECTION: {
