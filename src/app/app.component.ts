@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { UTypes } from '@core/types';
 import { AuthService } from '@auth/core/services';
-import { AuthenticationService, ThemeService } from '@core/services';
+import { ThemeService } from '@core/services';
 
 
 @Component({
@@ -24,7 +24,6 @@ export class AppComponent {
         private platform: Platform,
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
-        private authenticationService: AuthenticationService,
         private router: Router,
         private translate: TranslateService,
         private authService: AuthService,

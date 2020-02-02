@@ -24,7 +24,7 @@ import { clearStorageReducer, reducers } from '@store/reducers';
 import { localStorageSyncReducer } from '@store/app-store.module';
 import { TabsComponent } from '@core/components';
 import { AuthGuard } from '@core/guards';
-import { AuthenticationService, ThemeService, ToastService, ImageService } from '@core/services';
+import { ThemeService, ToastService, ImageService } from '@core/services';
 import { HttpLoaderFactory } from '@core/factories';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
 
@@ -62,7 +62,6 @@ const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer, cle
         StatusBar,
         SplashScreen,
         AuthGuard,
-        AuthenticationService,
         ThemeService,
         ToastService,
         ImageService,

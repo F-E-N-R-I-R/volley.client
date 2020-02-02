@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { AuthenticationService } from '@core/services';
 import { NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
+import { AuthService } from '@auth/core/services';
 
 @Component({
     selector: 'app-tabs',
@@ -17,7 +17,7 @@ export class TabsComponent {
         'settings',
     ];
 
-    constructor(private authService: AuthenticationService, private nativePageTransitions: NativePageTransitions) {
+    constructor(private authService: AuthService, private nativePageTransitions: NativePageTransitions) {
     }
 
     private getAnimationDirection({ tab }: any): string {
