@@ -13,39 +13,8 @@
 
 <ion-content color="vua-primary">
 	<ion-list>
-		<ion-item-sliding *ngFor="let newsItem of news$ | async; let i = index">
-			<ion-item color="vua-primary" routerDirection="forward" [routerLink]="newsItem.id">
-				<ion-card color="vua-secondary">
-					<ion-item color="vua-secondary">
-						<ion-avatar slot="start">
-							<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-						</ion-avatar>
-						<ion-label>
-							{{ newsItem.title }}
-							<ion-icon name="bookmark" slot="start" color="danger"></ion-icon>
-						</ion-label>
-					</ion-item>
-
-					<ion-card-content>
-						<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-						This is content, without any paragraph or header tags,
-						within an ion-card-content element.
-					</ion-card-content>
-				</ion-card>
-			</ion-item>
-			<ion-item-options side="end" (ionSwipe)="delete(newsItem)">
-				<ion-item-option color="danger" expandable>
-					<ion-icon slot="top" name="trash"></ion-icon>
-					Delete
-				</ion-item-option>
-			</ion-item-options>
-			<ion-item-options side="start" (ionSwipe)="presentModal(newsItem)">
-				<ion-item-option color="primary" expandable>
-					<ion-icon slot="top" name="create"></ion-icon>
-					Edit
-				</ion-item-option>
-			</ion-item-options>
-		</ion-item-sliding>
+		<app-news-list-item *ngFor="let newsItem of news$ | async" [item]="newsItem"></app-news-list-item>
+		
 	</ion-list>
 
 	<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)=presentModal()>

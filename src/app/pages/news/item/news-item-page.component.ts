@@ -23,5 +23,4 @@ export class NewsItemPageComponent {
         const {data} = await modal.onWillDismiss();
         console.log(data);
     }
-
 }

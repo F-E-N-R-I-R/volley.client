@@ -5,7 +5,7 @@ import * as fromUser from '@auth/core/reducers/auth.reducer';
 
 export const getCompleteCoreState = createSelector(
     fromFeature.getUsersState,
-    (state: fromFeature.AuthorizationState) => state.auth,
+    (state: fromFeature.AuthorizationState) => state ? state.auth : {},
 );
 
 export const getUser = createSelector(
