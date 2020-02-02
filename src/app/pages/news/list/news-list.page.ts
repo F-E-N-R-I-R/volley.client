@@ -41,7 +41,7 @@ export class NewsListPage {
         from(modal.onWillDismiss())
             .pipe(
                 first(),
-                filter(Boolean),
+                filter(({ data }) => !!data),
             )
             .subscribe(({ data }) => this.filtersService.dispatchUpdateFilters(data));
 
