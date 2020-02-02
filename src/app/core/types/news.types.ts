@@ -9,6 +9,19 @@ export namespace NTypes {
         created_by: string;
     }
 
+    export interface IFilters {
+        categories: ICategories;
+    }
+
+    export interface ICategories {
+        fivb: boolean;
+        fvu: boolean;
+        fvho: boolean;
+        teams: boolean;
+        places: boolean;
+        events: boolean;
+    }
+
     export interface INewsList {
         items: INews[];
     }

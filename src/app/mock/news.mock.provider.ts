@@ -40,4 +40,16 @@ export class NewsMockProvider {
             ]
         });
     }
+
+    getItemNews(): Observable<NTypes.INews> {
+        return new BehaviorSubject({
+            id: 1,
+            title: 'New1',
+            picture: 'string',
+            description: 'string',
+            category: NTypes.ECategory.FVU,
+            date: 'string',
+            created_by: 'string',
+        });
+    }
 }
