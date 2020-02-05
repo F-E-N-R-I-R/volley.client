@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { combineLatest, from, Observable, Subject } from 'rxjs';
+import { from, Observable, Subject } from 'rxjs';
 import { ModalController } from '@ionic/angular';
 import { NewsProvider } from '@news/core/providers';
 import { NTypes } from '@core/types';
-import { filter, first, map, takeUntil } from 'rxjs/operators';
-import {FiltersService, NewsService} from '@news/core/services';
+import { filter, first, takeUntil } from 'rxjs/operators';
+import { FiltersService, NewsService } from '@news/core/services';
 import { FiltersModalComponent } from '@news/pages/filters/filters.modal';
 import { NewsEditModalComponent } from '@news/pages/edit/news-edit-modal.component';
 
@@ -46,10 +46,6 @@ export class NewsListPage {
             .subscribe(({ data }) => this.filtersService.dispatchUpdateFilters(data));
 
         return await modal.present();
-    }
-
-    public delete(i) {
-        this.news$.pipe(map(data => data.slice(i, 1)));
     }
 
     doRefresh(event) {
