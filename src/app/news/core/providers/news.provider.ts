@@ -19,14 +19,14 @@ export class NewsProvider {
     }
 
     createItem(item): Observable<NTypes.INews> {
-        return this.newsMockProvider.getItemNews();
+        return this.newsMockProvider.getItem(item);
     }
 
     deleteItem(item): Observable<NTypes.INews> {
-        return this.newsMockProvider.getItemNews();
+        return this.newsMockProvider.getItem(item);
     }
 
     updateItem(item): Observable<NTypes.INews> {
-        return this.newsMockProvider.getItemNews();
+        return this.newsMockProvider.getItem(item);
     }
 }
