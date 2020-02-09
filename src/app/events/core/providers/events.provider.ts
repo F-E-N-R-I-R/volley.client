@@ -10,7 +10,7 @@ export class EventsProvider {
 
     constructor(private http: HttpClient, private eventsMockProvider: EventsMockProvider) {}
 
-    getList(): Observable<ETypes.IEventsList> {
+    getList(filters: ETypes.IEventsFilters): Observable<ETypes.IEventsList> {
         return this.eventsMockProvider.getAllEvents();
     }
 }

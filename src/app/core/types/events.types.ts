@@ -11,4 +11,9 @@ export namespace ETypes {
         name: string;
         image: string;
     }
+
+    export interface IEventsFilters {
+
+    }
+
 }
