@@ -10,7 +10,7 @@ export class TeamsProvider {
 
     constructor(private http: HttpClient, private teamsMockProvider: TeamsMockProvider) {}
 
-    getList(): Observable<TTypes.ITeamsList> {
+    getList(filters: TTypes.ITeamFilter): Observable<TTypes.ITeamsList> {
         return this.teamsMockProvider.getAllTeams();
     }
 }
