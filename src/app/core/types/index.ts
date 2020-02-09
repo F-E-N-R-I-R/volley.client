@@ -4,3 +4,4 @@ export * from '@core/types/news.types';
 export * from '@core/types/settings.types';
 export * from '@core/types/teams.types';
 export * from '@core/types/users.types';
+export * from '@core/types/activities.types';

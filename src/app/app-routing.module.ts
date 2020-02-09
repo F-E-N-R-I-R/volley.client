@@ -12,11 +12,11 @@ const routes: Routes = [
         path: 'login',
         loadChildren: './auth/auth.module#AuthModule',
     },
-    {
-        path: 'news',
-        canActivate: [AuthGuard],
-        loadChildren: './news/news.module#NewsModule',
-    },
+    // {
+    //     path: 'news',
+    //     canActivate: [AuthGuard],
+    //     loadChildren: './news/news.module#NewsModule',
+    // },
     {
         path: 'events',
         canActivate: [AuthGuard],
@@ -31,6 +31,16 @@ const routes: Routes = [
         path: 'settings',
         canActivate: [AuthGuard],
         loadChildren: './settings/settings.module#SettingsModule',
+    },
+    {
+        path: 'activities',
+        canActivate: [AuthGuard],
+        loadChildren: './activities/activities.module#ActivitiesModule',
+    },
+    {
+        path: 'users',
+        canActivate: [AuthGuard],
+        loadChildren: './users/users.module#UsersModule',
     },
 ];
 

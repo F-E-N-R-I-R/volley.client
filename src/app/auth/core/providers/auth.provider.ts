@@ -20,7 +20,7 @@ export class AuthProvider {
     }
 
     public redirectOnLogin() {
-        return from(this.nav.navigateRoot('/news', { animated: true, animationDirection: 'forward' }));
+        return from(this.nav.navigateRoot('/events', { animated: true, animationDirection: 'forward' }));
     }
 
     public redirectOnLogout() {

@@ -31,6 +31,7 @@
       "@news/*": [ "app/news/*" ],
       "@teams/*": [ "app/teams/*" ],
       "@settings/*": [ "app/settings/*" ],
+      "@activities/*": [ "app/activities/*" ],
       "@users/*": [ "app/users/*" ]
     }
   },
