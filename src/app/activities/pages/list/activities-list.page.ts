@@ -1,26 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { ActivitiesProvider } from '@activities/core/providers';
 import { ATypes } from '@core/types';
-import { map } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
+import { ActivitiesService } from '@activities/core/services';
 
 @Component({
     templateUrl: 'activities-list.page.html',
     styleUrls: ['activities-list.page.scss']
 })
-export class ActivitiesListPage {
+export class ActivitiesListPage implements OnInit, OnDestroy {
     private ngUnsubscribe$ = new Subject();
-    public activities$: Observable<ATypes.IActivity[]> = this.activityProvider.getList().pipe(map(({ items }) => items));
+    public activities$: Observable<ATypes.IActivity[]> = this.activityService.list$;
 
-    constructor(private activityProvider: ActivitiesProvider) {
+    constructor(private activityService: ActivitiesService) {
     }
 
 
-    public ionViewWillEnter() {
+    public ngOnInit() {
+        this.activityService.dispatchGetList({});
     }
 
 
-    public ionViewWillLeave() {
+    public ngOnDestroy() {
         this.ngUnsubscribe$.next();
         this.ngUnsubscribe$.complete();
 
