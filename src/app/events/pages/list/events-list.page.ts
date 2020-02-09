@@ -1,27 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { EventsProvider } from '@events/core/providers';
 import { ETypes } from '@core/types';
-import { map } from 'rxjs/operators';
+import { EventsService } from '@events/core/services';
 
 @Component({
     selector: 'app-events',
     templateUrl: 'events-list.page.html',
     styleUrls: ['events-list.page.scss']
 })
-export class EventsListPage {
+export class EventsListPage implements OnInit, OnDestroy {
     private ngUnsubscribe$ = new Subject();
-    public events$: Observable<ETypes.IEvent[]> = this.eventsProvider.getList().pipe(map(({ items }) => items));
+    public events$: Observable<ETypes.IEvent[]> = this.eventsService.list$;
 
-    constructor(private eventsProvider: EventsProvider) {
+    constructor(private eventsService: EventsService) {
     }
 
 
-    public ionViewWillEnter() {
+    public ngOnInit() {
+        this.eventsService.dispatchGetList({});
     }
 
 
-    public ionViewWillLeave() {
+    public ngOnDestroy() {
         this.ngUnsubscribe$.next();
         this.ngUnsubscribe$.complete();
 
