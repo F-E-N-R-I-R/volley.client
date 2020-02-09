@@ -1,27 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { TeamsProvider } from '@teams/core/providers';
 import { TTypes } from '@core/types';
-import { map } from 'rxjs/operators';
+import { TeamsService } from '@teams/core/services';
 
 @Component({
     selector: 'app-teams',
     templateUrl: 'teams-list.page.html',
     styleUrls: ['teams-list.page.scss']
 })
-export class TeamsListPage {
+export class TeamsListPage implements OnInit, OnDestroy {
     private ngUnsubscribe$ = new Subject();
-    public teams$: Observable<TTypes.ITeam[]> = this.teamsProvider.getList().pipe(map(({ items }) => items));
+    public teams$: Observable<TTypes.ITeam[]> = this.teamsService.teams$;
 
-    constructor(private teamsProvider: TeamsProvider) {
+    constructor(private teamsService: TeamsService) {
+    }
+
+    public ngOnInit() {
+        this.teamsService.dispatchGetList({});
     }
 
 
-    public ionViewWillEnter() {
-    }
-
-
-    public ionViewWillLeave() {
+    public ngOnDestroy() {
         this.ngUnsubscribe$.next();
         this.ngUnsubscribe$.complete();
 
