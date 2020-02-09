@@ -14,4 +14,4 @@ export const reducers: ActionReducerMap<ActivityState> = {
 };
 
 export const getActivitiesState = createFeatureSelector<ActivityState>('activitiesList');
-export const getFiltersState = createFeatureSelector<ActivityState>('filters');
+export const getFiltersState = createFeatureSelector<ActivityState>('activitiesFilters');
