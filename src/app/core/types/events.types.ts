@@ -13,7 +13,7 @@ export namespace ETypes {
     }
 
     export interface IEventsFilters {
-
+        page: number;
     }
 
 }

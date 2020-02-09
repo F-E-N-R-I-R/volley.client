@@ -11,8 +11,7 @@ import { ActivitiesService } from '@activities/core/services';
 @NgModule({
     imports: [
         CommonModule,
-        StoreModule.forFeature('activitiesList', reducers),
-        StoreModule.forFeature('activitiesFilters', reducers),
+        StoreModule.forFeature('activities', reducers),
         EffectsModule.forFeature(effects),
     ],
     declarations: [],

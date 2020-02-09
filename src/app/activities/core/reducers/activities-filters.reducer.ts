@@ -6,16 +6,7 @@ export interface FiltersState {
 }
 
 export const initialState: FiltersState = {
-    filters: {
-        categories: {
-            fivb: true,
-            fvu: true,
-            fvho: true,
-            teams: true,
-            places: true,
-            events: true,
-        },
-    },
+    filters: {},
 };
 
 export function filtersReducer(

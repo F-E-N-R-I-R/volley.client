@@ -1,7 +1,5 @@
 import * as activitiesActions from '@activities/core/actions/activities.actions';
-import { TActivitiesActions } from '@activities/core/actions/activities.actions';
 import { ATypes } from '@core/types';
-import IActivity = ATypes.IActivity;
 
 export interface IActivitiesState {
     error: any | null;

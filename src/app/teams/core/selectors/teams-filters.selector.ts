@@ -4,7 +4,7 @@ import * as fromFeature from '@teams/core/reducers';
 import * as fromFilters from '@teams/core/reducers/teams-filters.reducer';
 
 export const getFiltersCoreState = createSelector(
-    fromFeature.getFiltersState,
+    fromFeature.getTeamsState,
     (state: fromFeature.NewState) => state.filters,
 );
 

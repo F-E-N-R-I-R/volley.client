@@ -11,8 +11,7 @@ import { TeamsService } from '@teams/core/services';
 @NgModule({
     imports: [
         CommonModule,
-        StoreModule.forFeature('teamsList', reducers),
-        StoreModule.forFeature('teamsFilters', reducers),
+        StoreModule.forFeature('teams', reducers),
         EffectsModule.forFeature(effects),
     ],
     declarations: [],

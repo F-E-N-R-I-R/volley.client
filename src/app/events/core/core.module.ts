@@ -11,8 +11,7 @@ import { EventsService } from '@events/core/services';
 @NgModule({
     imports: [
         CommonModule,
-        StoreModule.forFeature('eventsList', reducers),
-        StoreModule.forFeature('eventsFilters', reducers),
+        StoreModule.forFeature('events', reducers),
         EffectsModule.forFeature(effect),
     ],
     declarations: [],

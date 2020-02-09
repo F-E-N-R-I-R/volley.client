@@ -13,5 +13,4 @@ export const reducers: ActionReducerMap<NewState> = {
     filters: filtersReducer,
 };
 
-export const getTeamsState = createFeatureSelector<NewState>('teamsList');
-export const getFiltersState = createFeatureSelector<NewState>('filters');
+export const getTeamsState = createFeatureSelector<NewState>('teams');

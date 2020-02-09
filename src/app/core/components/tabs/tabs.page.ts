@@ -11,7 +11,7 @@ import { AuthService } from '@auth/core/services';
 export class TabsComponent {
     private tabIndex = 0;
     private tabs = [
-        'news',
+        'activities',
         'events',
         'teams',
         'settings',
