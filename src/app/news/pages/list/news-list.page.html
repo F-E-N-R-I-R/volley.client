@@ -1,0 +1,34 @@
+<ion-header>
+	<ion-toolbar color="vua-primary">
+		<ion-title>
+			{{ 'news.title' | translate }}
+		</ion-title>
+		<ion-buttons slot="end">
+			<ion-button color="primary" (click)="showFilters()">
+				<ion-icon slot="icon-only" name="funnel"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-primary">
+	<ion-list>
+		<app-news-list-item *ngFor="let newsItem of news$ | async" [item]="newsItem"></app-news-list-item>
+		
+	</ion-list>
+
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)=presentModal()>
+		<ion-fab-button>
+			<ion-icon name="add"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+
+	<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content
+				pullingIcon="arrow-dropdown"
+				pullingText="Pull to refresh"
+				refreshingSpinner="circles"
+				refreshingText="Refreshing...">
+		</ion-refresher-content>
+	</ion-refresher>
+</ion-content>

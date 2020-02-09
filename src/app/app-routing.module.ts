@@ -10,27 +10,27 @@ const routes: Routes = [
     },
     {
         path: 'login',
-        loadChildren: './pages/auth/auth.module#AuthModule',
+        loadChildren: './auth/auth.module#AuthModule',
     },
     {
         path: 'news',
         canActivate: [AuthGuard],
-        loadChildren: './pages/news/news.module#NewsModule',
+        loadChildren: './news/news.module#NewsModule',
     },
     {
         path: 'events',
         canActivate: [AuthGuard],
-        loadChildren: './pages/events/events.module#EventsModule',
+        loadChildren: './events/events.module#EventsModule',
     },
     {
         path: 'teams',
         canActivate: [AuthGuard],
-        loadChildren: './pages/teams/teams.module#TeamsModule',
+        loadChildren: './teams/teams.module#TeamsModule',
     },
     {
         path: 'settings',
         canActivate: [AuthGuard],
-        loadChildren: './pages/settings/settings.module#SettingsModule',
+        loadChildren: './settings/settings.module#SettingsModule',
     },
 ];
 

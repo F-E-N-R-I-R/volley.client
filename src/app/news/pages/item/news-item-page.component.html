@@ -1,0 +1,28 @@
+<ion-header>
+	<ion-toolbar color="vua-primary">
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="news"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			News
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content color="vua-primary">
+	<ion-item color="vua-secondary"></ion-item>
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+		<ion-fab-button size="small">
+			<ion-icon name="share-alt"></ion-icon>
+		</ion-fab-button>
+		<ion-fab-list side="start">
+			<ion-fab-button>Facebook</ion-fab-button>
+			<ion-fab-button>Twitter</ion-fab-button>
+			<ion-fab-button>Youtube</ion-fab-button>
+		</ion-fab-list>
+	</ion-fab>
+	<ion-buttons side="start">
+			<ion-button color="primary" (click)="presentModal()">
+				<ion-icon slot="icon-only" name="create"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+</ion-content>

@@ -26,12 +26,12 @@
       "@core/*": [ "app/core/*" ],
       "@assets/*": [ "app/assets/*" ],
       "@store/*": [ "app/core/store/*" ],
-      "@auth/*": [ "app/pages/auth/*" ],
-      "@events/*": [ "app/pages/events/*" ],
-      "@news/*": [ "app/pages/news/*" ],
-      "@teams/*": [ "app/pages/teams/*" ],
-      "@settings/*": [ "app/pages/settings/*" ],
-      "@users/*": [ "app/pages/users/*" ]
+      "@auth/*": [ "app/auth/*" ],
+      "@events/*": [ "app/events/*" ],
+      "@news/*": [ "app/news/*" ],
+      "@teams/*": [ "app/teams/*" ],
+      "@settings/*": [ "app/settings/*" ],
+      "@users/*": [ "app/users/*" ]
     }
   },
   "angularCompilerOptions": {

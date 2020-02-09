@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-toolbar color="vua-primary">
+		<ion-buttons slot="start">
+			<ion-button (click)="modal.dismiss()">
+				<ion-icon color="primary" name="close" slot="icon-only"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'news.filters.title' | translate }}
+		</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="onSuccess()">
+				<ion-icon color="primary" name="checkmark" slot="icon-only"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-primary">
+	<ion-list [formGroup]="form">
+		<ion-item color="vua-secondary" *ngFor="let filterGroup of form.controls.categories.controls">
+			<ion-label>{{ ('news.filters.' +  filterGroup.controls.name.value) | translate }}</ion-label>
+			<ion-toggle [formControl]="filterGroup.controls.value" color="secondary"></ion-toggle>
+		</ion-item>
+	</ion-list>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+	<ion-toolbar color="vua-gray-light">
+		<ion-buttons slot="start">
+			<ion-button color="primary" (click)="modal.dismiss()">
+				<ion-icon slot="icon-only" name="close"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-title>
+			{{ navParams.data.news ? navParams.data.news.title : ("Create" | translate) }}
+		</ion-title>
+		<ion-buttons slot="end">
+			<ion-button color="primary" (click)="modal.dismiss(form.value)">
+				<ion-icon slot="icon-only" name="checkmark"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-list [formGroup]="form">
+		<ion-item color="vua-secondary">
+			<ion-input placeholder="Name" type="text" formControlName="title">
+			</ion-input>
+		</ion-item>
+		<ion-item color="vua-secondary">
+			<ion-label position="stacked"></ion-label>
+			<ion-textarea rows="6" placeholder="Enter any notes here..."></ion-textarea>
+		</ion-item>
+		<ion-item color="vua-secondary">
+			<ion-label position="stacked"></ion-label>
+			<ion-select placeholder="Category" interface="action-sheet" formControlName="category">
+				<ion-select-option *ngFor="let category of categories">{{ category }}</ion-select-option>
+			</ion-select>
+		</ion-item>
+		<ion-item *ngIf="form.value.category === ECategory.TEAM" color="vua-secondary">
+			<ion-label position="stacked"></ion-label>
+			<ion-select placeholder="Team" interface="action-sheet" formControlName="team">
+				<ion-select-option *ngFor="let team of teams$ | async">{{ team }}</ion-select-option>
+			</ion-select>
+		</ion-item>
+		<ion-item *ngIf="form.value.category === ECategory.PLACE" color="vua-secondary">
+			<ion-label position="stacked"></ion-label>
+			<ion-select placeholder="Place" interface="action-sheet" formControlName="place">
+				<ion-select-option *ngFor="let place of places$ | async">{{ place }}</ion-select-option>
+			</ion-select>
+		</ion-item>
+			<ion-item *ngIf="form.value.category === ECategory.EVENT" color="vua-secondary">
+			<ion-label position="stacked"></ion-label>
+			<ion-select placeholder="Events" interface="action-sheet" formControlName="events">
+				<ion-select-option *ngFor="let event of events$ | async">{{ event }}</ion-select-option>
+			</ion-select>
+		</ion-item>
+	</ion-list>
+	{{ form.value | json }}
+</ion-content>

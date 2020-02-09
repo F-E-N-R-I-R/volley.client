@@ -1,0 +1,128 @@
+<ion-header>
+	<ion-toolbar color="vua-primary">
+		<ion-buttons slot="start">
+			<ion-button>
+				<ion-icon color="primary" [name]="form.controls.gender.value === 'male' ? 'man' : 'woman'"
+				          slot="icon-only"></ion-icon>
+				<ion-badge color="primary">{{ form.controls.date_of_birth.value | dateToAge }}</ion-badge>
+			</ion-button>
+		</ion-buttons>
+		<ion-title>{{ 'settings.title' | translate }}</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="logout()" color="primary">
+				<ion-icon slot="icon-only" name="exit"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content color="vua-primary">
+	<form [formGroup]="form">
+		<ion-list>
+			<ion-item lines="none" routerLink="main-info" color="vua-secondary">
+				<ion-avatar slot="start" (click)="selectImage($event)">
+					<img [src]="form.get('avatar').value">
+				</ion-avatar>
+				<ion-label>
+					<ion-grid>
+						<ion-row>
+							<ion-text class="text-holder">
+								{{ form.controls.fname.value | titlecase }}
+								{{ form.controls.lname.value | titlecase }}
+							</ion-text>
+						</ion-row>
+
+						<ion-row>
+							<ion-text color="medium" class="text-holder">
+								<small [innerHTML]="form.controls.phone.value | phone: true"
+								       (click)="$event.stopPropagation()"></small>
+							</ion-text>
+						</ion-row>
+					</ion-grid>
+				</ion-label>
+			</ion-item>
+		</ion-list>
+
+		<ion-list class="inline-settings">
+			<ion-item routerLink="city" routerDirection="forward" color="vua-secondary">
+				<sq-icon name="pin" color="vua-grey"></sq-icon>
+				<ion-label>{{ 'settings.tabs.city.title' | translate }}</ion-label>
+				<ion-text color="medium">
+					{{ 'settings.tabs.city.' + EnumValues.getNameFromValue(UTypes.ECity,
+					form.controls.city.value) | translate }}
+				</ion-text>
+			</ion-item>
+			<ion-item routerLink="category" routerDirection="forward" color="vua-secondary">
+				<sq-icon name="ribbon" color="vua-orange"></sq-icon>
+				<ion-label>
+					{{ 'settings.tabs.category.title' | translate }}
+				</ion-label>
+				<ion-text color="medium">
+					{{ 'settings.tabs.category.' + EnumValues.getNameFromValue(UTypes.ECategory, form.controls.sports_category.value) | translate }}
+				</ion-text>
+			</ion-item>
+			<ion-item lines="none" routerLink="personal" routerDirection="forward" color="vua-secondary">
+				<sq-icon name="body" color="vua-green"></sq-icon>
+				<ion-label>
+					{{ 'settings.tabs.personal.title' | translate }}
+				</ion-label>
+				<ion-text></ion-text>
+			</ion-item>
+		</ion-list>
+
+		<ion-list class="inline-settings">
+			<ion-item routerLink="language" routerDirection="forward" color="vua-secondary">
+				<sq-icon name="globe" color="vua-purple"></sq-icon>
+				<ion-label>
+					{{ 'settings.tabs.language.title' | translate }}
+				</ion-label>
+				<ion-text color="medium">
+					{{ 'settings.tabs.language.' + EnumValues.getNameFromValue(UTypes.ELanguage, form.controls.language.value) | translate }}
+				</ion-text>
+			</ion-item>
+			<ion-item routerLink="theme" routerDirection="forward" color="vua-secondary">
+				<sq-icon name="color-palette"></sq-icon>
+				<ion-label>
+					{{ 'settings.tabs.theme.title' | translate }}
+				</ion-label>
+				<ion-text color="medium">
+					{{ 'settings.tabs.theme.' + EnumValues.getNameFromValue(UTypes.ETheme, form.controls.theme.value) | translate }}
+				</ion-text>
+			</ion-item>
+			<ion-item lines="none" routerLink="notifications" routerDirection="forward" color="vua-secondary">
+				<sq-icon name="notifications" color="vua-red"></sq-icon>
+				<ion-label>
+					{{ 'settings.tabs.notifications.title' | translate }}
+				</ion-label>
+				<ion-text></ion-text>
+			</ion-item>
+		</ion-list>
+
+		<ion-list class="inline-settings">
+			<ion-item routerLink="events" routerDirection="forward" color="vua-secondary">
+				<sq-icon name="flag"></sq-icon>
+				<ion-label>
+					{{ 'settings.tabs.events.title' | translate }}
+				</ion-label>
+				<ion-text [innerHTML]="form.controls.events.value | multiPreview">
+				</ion-text>
+			</ion-item>
+			<ion-item routerLink="teams" routerDirection="forward" color="vua-secondary">
+				<sq-icon name="people" color="vua-orange"></sq-icon>
+				<ion-label>
+					{{ 'settings.tabs.teams.title' | translate }}
+				</ion-label>
+				<ion-text [innerHTML]="form.controls.teams.value | multiPreview">
+				</ion-text>
+			</ion-item>
+			<ion-item lines="none" routerLink="places" routerDirection="forward" color="vua-secondary">
+				<sq-icon name="locate" color="vua-grey"></sq-icon>
+				<ion-label>
+					{{ 'settings.tabs.places.title' | translate }}
+				</ion-label>
+				<ion-text [innerHTML]="form.controls.places.value | multiPreview">
+				</ion-text>
+			</ion-item>
+		</ion-list>
+	</form>
+</ion-content>

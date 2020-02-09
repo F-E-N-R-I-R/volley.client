@@ -25,6 +25,7 @@ export namespace UTypes {
         sports_category: ECategory;
         teams: TTypes.ITeam[];
         places: ETypes.IPlace[];
+        events: ETypes.IEvent[];
     }
 
     export interface IUsersList {
