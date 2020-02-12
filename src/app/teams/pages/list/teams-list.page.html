@@ -13,6 +13,17 @@
 
 <ion-content>
 	<ion-list>
-		<ion-item *ngFor="let team of teams$ | async">{{ team.name }}</ion-item>
+		<ion-item lines="none" class="ion-no-padding" [detail]="null" color="vua-secondary" routerDirection="forward" *ngFor="let team of teams$ | async">
+					<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+					<ion-label>
+						{{ team.title }}
+					</ion-label>
+					<ion-text>
+						<ion-icon name="woman" color="danger"></ion-icon>
+						<ion-icon name="man" color="secondary"></ion-icon>
+						<ion-icon src="assets/icon/dollar.svg" color="success"></ion-icon></ion-text>
+						{{ team.indicators }}
+		</ion-item>
+<!--		<ion-item *ngFor="let team of teams$ | async">{{ team.title }}</ion-item>-->
 	</ion-list>
 </ion-content>

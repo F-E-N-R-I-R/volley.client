@@ -11,16 +11,26 @@ export class TeamsMockProvider {
         return new BehaviorSubject({
             items: [
                 {
-                    name: 'Loko',
-                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    title: 'Loko',
+                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    contact: '+38093451233145 (Vasya)',
+                    indicators: [],
                 },
                 {
-                    name: 'Vzlet',
-                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    title: 'Vzlet',
+                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    contact: '+38093451233143 (Viva)',
+                    indicators: [],
+
+
                 },
                 {
-                    name: 'Zenit',
-                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    title: 'Zenit',
+                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    contact: '+38093451233144 (Seryoga)',
+                    indicators: [],
+
+
                 },
             ]
         });
