@@ -1,0 +1,7 @@
+<ion-item lines="none" class="ion-no-padding" [detail]="null" color="vua-secondary" routerDirection="forward" [routerLink]="item.id">
+	<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+	<ion-label>
+		{{ item.title }}
+		<app-indicators [indicators]="item.indicators"></app-indicators>
+	</ion-label>
+</ion-item>

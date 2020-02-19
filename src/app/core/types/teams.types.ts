@@ -4,6 +4,7 @@ export namespace TTypes {
         logo: string;
         contact: string;
         indicators: any[];
+        id: string;
     }
 
     export interface ITeamsList {

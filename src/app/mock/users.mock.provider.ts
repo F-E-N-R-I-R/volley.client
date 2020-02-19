@@ -32,13 +32,17 @@ export class UsersMockProvider {
             sports_category: UTypes.ECategory.MSWC,
             teams: [
                 {
-                    name: 'Vseya mira vzlet',
-                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    title: '',
+                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    contact: 'sfaf',
+                    indicators: [],
 
                 },
                 {
-                    name: 'Liga zolotogo dojdya',
-                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    title: 'Liga zolotogo dojdya',
+                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    contact: 'fasdad',
+                    indicators: [],
                 },
             ],
             places: [

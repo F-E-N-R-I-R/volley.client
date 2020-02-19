@@ -4,9 +4,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ErrorsPreviewDirective } from '@core/directives';
 import { PhonePipe, DateToAgePipe, MultiPreviewPipe } from '@core/pipes';
 import { ErrorListComponent } from '@core/components';
+import { IndicatorsComponent } from '@core/components/indicators/indicators.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
     imports: [
+        IonicModule,
         CommonModule,
         TranslateModule,
     ],
@@ -15,16 +18,19 @@ import { ErrorListComponent } from '@core/components';
         DateToAgePipe,
         PhonePipe,
         ErrorsPreviewDirective,
-        ErrorListComponent
+        ErrorListComponent,
+        IndicatorsComponent,
     ],
     exports: [
         MultiPreviewPipe,
         DateToAgePipe,
         PhonePipe,
         ErrorsPreviewDirective,
+        IndicatorsComponent,
     ],
     entryComponents: [
         ErrorListComponent,
+        IndicatorsComponent,
     ],
 })
 export class AppCoreModule {

@@ -3,6 +3,7 @@ import { Observable, Subject } from 'rxjs';
 import { TTypes } from '@core/types';
 import { TeamsService } from '@teams/core/services';
 
+
 @Component({
     selector: 'app-teams',
     templateUrl: 'teams-list.page.html',
