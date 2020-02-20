@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { ErrorsPreviewDirective } from '@core/directives';
-import { PhonePipe, DateToAgePipe, MultiPreviewPipe } from '@core/pipes';
+import { PhonePipe, DateToAgePipe, MultiPreviewPipe, DateFormatterPipe } from '@core/pipes';
 import { ErrorListComponent } from '@core/components';
 
 @NgModule({
@@ -13,6 +13,7 @@ import { ErrorListComponent } from '@core/components';
     declarations: [
         MultiPreviewPipe,
         DateToAgePipe,
+        DateFormatterPipe,
         PhonePipe,
         ErrorsPreviewDirective,
         ErrorListComponent
@@ -20,6 +21,7 @@ import { ErrorListComponent } from '@core/components';
     exports: [
         MultiPreviewPipe,
         DateToAgePipe,
+        DateFormatterPipe,
         PhonePipe,
         ErrorsPreviewDirective,
     ],

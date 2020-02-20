@@ -12,8 +12,4 @@
 </ion-header>
 
 <ion-content color="vua-primary">
-	<ion-list>
-		<app-events-list-item *ngFor="let event of events$ | async" [item]="event"></app-events-list-item>
-	</ion-list>
-	{{ ['19-02-2020', '20-02-2020', 'iuygulk'] | dateFormatter: '': 'YYYY-MM-DD': 2 }}
 </ion-content>

@@ -54,12 +54,12 @@ export class UsersMockProvider {
             ],
             events: [
                 {
-                    name: 'Training',
-                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    title: 'Training',
+                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                 },
                 {
-                    name: 'Cup VKV',
-                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    title: 'Cup VKV',
+                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                 },
             ],
 
