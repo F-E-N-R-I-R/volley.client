@@ -11,16 +11,181 @@ export class TeamsMockProvider {
         return new BehaviorSubject({
             items: [
                 {
-                    name: 'Loko',
-                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    id: '1',
+                    title: 'Loko',
+                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    contact: '+38093451233145 (Vasya)',
+                    indicators: [
+                        {
+                            name: 'man',
+                            color: 'danger',
+                            value: '',
+                            description: 'BlaBlalalfas',
+                        },
+                        {
+                            name: 'woman',
+                            color: 'primary',
+                            value: '',
+                            description: 'Abla',
+                        },
+                        {
+                            name: null,
+                            src: 'assets/icon/dollar.svg',
+                            color: 'secondary',
+                            value: '43',
+                            description: 'Labalaba',
+                        },
+                        {
+                            name: 'man',
+                            color: 'danger',
+                            value: '',
+                            description: 'BlaBlalalfas',
+                        },
+                        {
+                            name: 'woman',
+                            color: 'primary',
+                            value: '',
+                            description: 'Abla',
+                        },
+                        {
+                            name: null,
+                            src: 'assets/icon/dollar.svg',
+                            color: 'secondary',
+                            value: '43',
+                            description: 'Labalaba',
+                        },
+                        {
+                            name: 'man',
+                            color: 'danger',
+                            value: '',
+                            description: 'BlaBlalalfas',
+                        },
+                        {
+                            name: 'woman',
+                            color: 'primary',
+                            value: '',
+                            description: 'Abla',
+                        },
+                        {
+                            name: null,
+                            src: 'assets/icon/dollar.svg',
+                            color: 'secondary',
+                            value: '43',
+                            description: 'Labalaba',
+                        }, {
+                            name: 'man',
+                            color: 'danger',
+                            value: '',
+                            description: 'BlaBlalalfas',
+                        },
+                        {
+                            name: 'woman',
+                            color: 'primary',
+                            value: '',
+                            description: 'Abla',
+                        },
+                        {
+                            name: null,
+                            src: 'assets/icon/dollar.svg',
+                            color: 'secondary',
+                            value: '43',
+                            description: 'Labalaba',
+                        },
+                        {
+                            name: 'man',
+                            color: 'danger',
+                            value: '',
+                            description: 'BlaBlalalfas',
+                        },
+                        {
+                            name: 'woman',
+                            color: 'primary',
+                            value: '',
+                            description: 'Abla',
+                        },
+                        {
+                            name: null,
+                            src: 'assets/icon/dollar.svg',
+                            color: 'secondary',
+                            value: '43',
+                            description: 'Labalaba',
+                        },
+                        {
+                            name: 'man',
+                            color: 'danger',
+                            value: '',
+                            description: 'BlaBlalalfas',
+                        },
+                        {
+                            name: 'woman',
+                            color: 'primary',
+                            value: '',
+                            description: 'Abla',
+                        },
+                        {
+                            name: null,
+                            src: 'assets/icon/dollar.svg',
+                            color: 'secondary',
+                            value: '43',
+                            description: 'Labalaba',
+                        },
+                    ],
                 },
                 {
-                    name: 'Vzlet',
-                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    id: '2',
+                    title: 'Vzlet',
+                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    contact: '+38093451233143 (Viva)',
+                    indicators: [
+                        {
+                            name: 'man',
+                            color: 'danger',
+                            value: '',
+                            description: 'BlaBlalalfas',
+                        },
+                        {
+                            name: 'woman',
+                            color: 'primary',
+                            value: '',
+                            description: 'Abla',
+                        },
+                        {
+                            name: null,
+                            src: 'assets/icon/dollar.svg',
+                            color: 'secondary',
+                            value: '',
+                            description: 'Labalaba',
+                        }
+                    ],
+
+
                 },
                 {
-                    name: 'Zenit',
-                    image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    id: '3',
+                    title: 'Zenit',
+                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    contact: '+38093451233144 (Seryoga)',
+                    indicators: [ {
+                        name: null,
+                        color: 'danger',
+                        value: '',
+                        description: 'BlaBlalalfas',
+                    },
+                        {
+                            name: 'woman',
+                            color: 'primary',
+                            value: '',
+                            description: 'Abla',
+                        },
+                        {
+                            name: null,
+                            src: 'assets/icon/dollar.svg',
+                            color: 'secondary',
+                            value: '20',
+                            description: 'Labalaba',
+                        }],
+
+
                 },
             ]
         });

@@ -1,7 +1,10 @@
 export namespace TTypes {
     export interface ITeam {
-        name: string;
-        image: string;
+        title: string;
+        logo: string;
+        contact: string;
+        indicators: any[];
+        id: string;
     }
 
     export interface ITeamsList {

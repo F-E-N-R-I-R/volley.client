@@ -37,6 +37,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
         IonicModule.forRoot(),
         AppRoutingModule,
         HttpClientModule,
+        AppCoreModule,
         StoreModule.forRoot(reducers, { metaReducers }),
         EffectsModule.forRoot([]),
         StoreRouterConnectingModule.forRoot(),
@@ -53,7 +54,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
             }
         }),
         MockModule,
-        AppCoreModule,
         BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
