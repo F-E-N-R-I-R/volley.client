@@ -1,7 +1,7 @@
 <ng-container *ngFor="let indicator of indicators">
-	<span *ngIf="indicator.name || indicator.src">
-	<ion-icon [name]="indicator.name" [src]="indicator.src" [color]="indicator.color"></ion-icon>
-	<ion-text *ngIf="description && indicator.description">{{ indicator.description }}</ion-text>
-	<ion-badge *ngIf="value && indicator.value">{{ indicator.value }}</ion-badge>
-</span>
+	<span *ngIf="indicator.name || indicator.src" [class.is-block]="!inline">
+		<ion-icon [name]="indicator.name" [src]="indicator.src" [color]="indicator.color"></ion-icon>
+		<ion-text *ngIf="description && indicator.description">{{ indicator.description }}</ion-text>
+		<ion-badge *ngIf="value && indicator.value">{{ indicator.value }}</ion-badge>
+	</span>
 </ng-container>

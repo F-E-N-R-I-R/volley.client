@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TTypes } from '@core/types';
 
-
 @Component({
     selector: 'app-teams-list-item',
     templateUrl: 'teams-list-item.component.html',

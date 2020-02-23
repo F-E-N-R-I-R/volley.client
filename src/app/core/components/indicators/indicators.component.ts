@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TTypes } from '@core/types';
+import { split } from 'ts-node';
 
 
 @Component({
@@ -14,3 +15,4 @@ export class IndicatorsComponent {
     @Input() value = true;
     @Input() max = null;
 }
+
