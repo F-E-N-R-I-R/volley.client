@@ -54,12 +54,20 @@ export class UsersMockProvider {
             ],
             events: [
                 {
-                    title: 'Training',
+                    id: '1',
+                    title: 'Training HATT',
                     logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    type: 'training',
+                    date: '01/03/2020',
+                    indicators: [],
                 },
                 {
-                    title: 'Cup VKV',
+                    id: '2',
+                    title: 'Chempionat Kharkiv',
                     logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+                    type: 'chemp',
+                    date: '22/02/2020',
+                    indicators: [],
                 },
             ],
 

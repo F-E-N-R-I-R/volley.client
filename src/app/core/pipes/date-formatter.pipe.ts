@@ -5,13 +5,31 @@ import * as moment from 'moment';
     name: 'dateFormatter'
 })
 export class DateFormatterPipe implements PipeTransform {
-    private dateArr: string[];
+    private datesFormatted: any[];
 
-    transform(dates: any[], type?: string, format?: string, maxLengthVal?: number): string {
-        this.dateArr = dates.map(date => moment(date).format(format));
-        console.log(this.dateArr);
-        this.dateArr = this.dateArr.filter(date => moment(date).isValid());
-        console.log(this.dateArr);
-        return `<p>hallo</p>`;
+    transform(dates: any[], type?: string, format?: string, max?: number, separator?: string): string {
+        this.datesFormatted = dates.reduce((acc, item) => {
+            const date = moment(item);
+
+            if (date.isValid() && acc.length < max) {
+                acc.push(date.format(format));
+            }
+
+            return acc;
+        }, []);
+
+        if (!this.datesFormatted.length) {
+            return '';
+        }
+
+        switch (type) {
+            case 'range':
+                return (this.datesFormatted[0] + ' - ' + this.datesFormatted[this.datesFormatted.length - 1]);
+            case 'multiple':
+                return this.datesFormatted.join(separator);
+            case 'single':
+            default:
+                return this.datesFormatted[0];
+        }
     }
 }

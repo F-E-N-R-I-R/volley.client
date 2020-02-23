@@ -15,7 +15,7 @@ export class EventsMockProvider {
                     logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                     type: 'training',
                     date: '01/03/2020',
-                    indicators: []
+                    indicators: [],
                 },
                 {
                     id: '2',
@@ -23,7 +23,7 @@ export class EventsMockProvider {
                     logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                     type: 'chemp',
                     date: '22/02/2020',
-                    indicators: []
+                    indicators: [],
                 },
                 {
                     id: '3',
@@ -31,7 +31,7 @@ export class EventsMockProvider {
                     logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                     type: 'tovaruha',
                     date: '19/02/2020',
-                    indicators: []
+                    indicators: [],
                 },
                 ]
         });
