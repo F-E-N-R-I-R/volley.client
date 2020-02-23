@@ -6,6 +6,9 @@ import { EventsListPage } from '@events/pages/list/events-list.page';
 import { EventsRoutingModule } from '@events/events-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { EventsCoreModule } from '@events/core/core.module';
+import { EventsListItemComponent } from '@events/components/events-list-item/events-list-item.component';
+import { EventsItemPage } from '@events/pages/events-item/events-item.page';
+import { AppCoreModule } from '@core/app.core.module';
 
 
 @NgModule({
@@ -16,7 +19,13 @@ import { EventsCoreModule } from '@events/core/core.module';
         EventsRoutingModule,
         TranslateModule,
         EventsCoreModule,
+        AppCoreModule,
     ],
-  declarations: [EventsListPage]
+    declarations: [
+        EventsListPage,
+        EventsItemPage,
+        EventsListItemComponent,
+    ],
 })
-export class EventsModule {}
+export class EventsModule {
+}

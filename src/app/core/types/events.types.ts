@@ -1,6 +1,11 @@
 export namespace ETypes {
     export interface IEvent {
-        name: string;
+        id: string;
+        title: string;
+        logo: string;
+        type?: string;
+        date?: string;
+        indicators?: any[];
     }
 
     export interface IEventsList {
@@ -13,7 +18,7 @@ export namespace ETypes {
     }
 
     export interface IEventsFilters {
-        page: number;
+        page?: number;
     }
 
 }
