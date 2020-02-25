@@ -4,7 +4,7 @@ export namespace ETypes {
         title: string;
         logo: string;
         type?: string;
-        date?: string;
+        date?: string[];
         indicators?: any[];
     }
 

@@ -20,33 +20,9 @@ ion-item-sliding {
 			-webkit-box-orient: vertical;
 		}
 
-		img {
-			position: absolute;
-			width: 5rem;
-		}
+	}
 
-		[name="bookmark"] {
-			right: 0.5rem;
-			top: -0.1rem;
-			position: absolute;
-			font-size: 2.3rem;
-			position: absolute;
-		}
-
-		.indicators {
-			font-size: 1.6rem;
-		}
+	img {
+		margin: 0;
 	}
-	ion-grid {
-		width: 100%;
-	}
-	ion-row.indicators{
-		float: right;
-		padding-top: 0.3rem;
-	}
-}
-ion-label {
-	margin-left: 5rem;
-	width: 100%;
-	margin-right: 40px;
 }

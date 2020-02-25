@@ -9,6 +9,7 @@ import { EventsCoreModule } from '@events/core/core.module';
 import { EventsListItemComponent } from '@events/components/events-list-item/events-list-item.component';
 import { EventsItemPage } from '@events/pages/events-item/events-item.page';
 import { AppCoreModule } from '@core/app.core.module';
+import { EventsEditModalComponent } from '@events/pages/events-edit/events-edit-modal.component';
 
 
 @NgModule({
@@ -25,7 +26,11 @@ import { AppCoreModule } from '@core/app.core.module';
         EventsListPage,
         EventsItemPage,
         EventsListItemComponent,
+        EventsEditModalComponent,
     ],
+    entryComponents: [
+        EventsEditModalComponent,
+    ]
 })
 export class EventsModule {
 }

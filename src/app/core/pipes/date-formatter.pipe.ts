@@ -7,11 +7,11 @@ import * as moment from 'moment';
 export class DateFormatterPipe implements PipeTransform {
     private datesFormatted: any[];
 
-    transform(dates: any[], type?: string, format?: string, max?: number, separator?: string): string {
+    transform(dates: any[], type?: string, format = 'DD-MM-YYYY', max?: number, separator?: string): string {
         this.datesFormatted = dates.reduce((acc, item) => {
             const date = moment(item);
 
-            if (date.isValid() && acc.length < max) {
+            if (date.isValid() && (acc.length < max || !max)) {
                 acc.push(date.format(format));
             }
 

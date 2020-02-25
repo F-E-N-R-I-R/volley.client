@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { UTypes } from '@core/types';
+import { EventsMockProvider } from '@app/mock/events.mock.provider';
 
 @Injectable()
 export class UsersMockProvider {
@@ -32,6 +33,7 @@ export class UsersMockProvider {
             sports_category: UTypes.ECategory.MSWC,
             teams: [
                 {
+                    id: '1',
                     title: '',
                     logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                     contact: 'sfaf',
@@ -39,6 +41,7 @@ export class UsersMockProvider {
 
                 },
                 {
+                    id: '2',
                     title: 'Liga zolotogo dojdya',
                     logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                     contact: 'fasdad',
@@ -56,24 +59,7 @@ export class UsersMockProvider {
                     image: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                 },
             ],
-            events: [
-                {
-                    id: '1',
-                    title: 'Training HATT',
-                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
-                    type: 'training',
-                    date: '01/03/2020',
-                    indicators: [],
-                },
-                {
-                    id: '2',
-                    title: 'Chempionat Kharkiv',
-                    logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
-                    type: 'chemp',
-                    date: '22/02/2020',
-                    indicators: [],
-                },
-            ],
+            events: this.eventsMockProvider.items,
 
             notifications: {
                 news: true,
@@ -84,7 +70,7 @@ export class UsersMockProvider {
             ...user,
         }));
 
-    constructor() {
+    constructor(private eventsMockProvider: EventsMockProvider) {
     }
 
     getAllUsers(): Observable<UTypes.IUsersList> {

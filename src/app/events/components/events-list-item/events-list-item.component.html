@@ -1,27 +1,34 @@
 <ion-item-sliding>
 	<ion-item lines="none" class="ion-no-padding" [detail]="null" color="vua-secondary" routerDirection="forward"
 	          [routerLink]="item.id">
-		<ion-grid>
-			<ion-row class="item-title">
-				<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-				<ion-icon name="bookmark"  color="primary"></ion-icon>
-				<ion-col size="12">
-					<ion-row class="ion-text-center">
-						<ion-label>
-							{{ item.title }}
-						</ion-label>
-					</ion-row>
-					<ion-row class="indicators">
-						<ion-icon name="woman" color="danger"></ion-icon>
-						<ion-icon name="man" color="secondary"></ion-icon>
-						<ion-icon src="assets/icon/dollar.svg" color="success"></ion-icon>
-					</ion-row>
-				</ion-col>
-			</ion-row>
-			<ion-row class="item-content">
-				{{ item.date }}
-			</ion-row>
-		</ion-grid>
+		<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" slot="start">
+		<ion-label class="ion-no-margin">
+			<ion-grid class="ion-no-padding">
+				<ion-row class="item-title">
+					<ion-col size="12">
+						<ion-row>
+							<ion-col size="12" class="ion-no-padding">
+								<ion-text>
+									{{ item.title }}
+								</ion-text>
+							</ion-col>
+						</ion-row>
+						<ion-row>
+							<ion-col size="12" class="ion-no-padding">
+								<ion-text>
+									{{ item.date | dateFormatter }}
+								</ion-text>
+							</ion-col>
+						</ion-row>
+						<ion-row>
+							<ion-col size="12" class="ion-no-padding">
+								<app-indicators [indicators]="item.indicators"></app-indicators>
+							</ion-col>
+						</ion-row>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-label>
 	</ion-item>
 	<ion-item-options side="end" (ionSwipe)="delete(item)">
 		<ion-item-option color="danger" expandable>

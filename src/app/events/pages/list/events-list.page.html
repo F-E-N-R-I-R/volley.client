@@ -15,4 +15,18 @@
 	<ion-list>
 		<app-events-list-item *ngFor="let event of events$ | async" [item]="event"></app-events-list-item>
 	</ion-list>
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)=presentModal()>
+		<ion-fab-button>
+			<ion-icon name="add"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+
+	<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content
+				pullingIcon="arrow-dropdown"
+				pullingText="Pull to refresh"
+				refreshingSpinner="circles"
+				refreshingText="Refreshing...">
+		</ion-refresher-content>
+	</ion-refresher>
 </ion-content>
