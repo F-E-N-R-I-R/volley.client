@@ -32,6 +32,7 @@ export class UsersMockProvider {
             sports_category: UTypes.ECategory.MSWC,
             teams: [
                 {
+                    id: '1',
                     title: '',
                     logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                     contact: 'sfaf',
@@ -39,6 +40,7 @@ export class UsersMockProvider {
 
                 },
                 {
+                    id: '2',
                     title: 'Liga zolotogo dojdya',
                     logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                     contact: 'fasdad',

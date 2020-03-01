@@ -12,7 +12,23 @@
 </ion-header>
 
 <ion-content color="vua-primary">
+
 	<ion-list>
 		<app-teams-list-item *ngFor="let team of teams$ | async" [item]="team"></app-teams-list-item>
 	</ion-list>
+
+	<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content
+				pullingIcon="arrow-dropdown"
+				pullingText="Pull to refresh"
+				refreshingSpinner="circles"
+				refreshingText="Ну падажи..."
+		>
+		</ion-refresher-content>
+	</ion-refresher>
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)=presentModal()>
+		<ion-fab-button>
+			<ion-icon name="add"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
 </ion-content>

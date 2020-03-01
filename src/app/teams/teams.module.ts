@@ -9,6 +9,8 @@ import { TeamsCoreModule } from '@teams/core/core.module';
 import { AppCoreModule } from '@core/app.core.module';
 import { TeamsListItemComponent } from '@teams/components/teams-list-item/teams-list-item.component';
 import { TeamsItemPage } from '@teams/pages/teams-item/teams-item.page';
+import { TeamsEditModalComponent } from '@teams/pages/teams-edit/teams-edit-modal.component';
+
 
 @NgModule({
     imports: [
@@ -24,6 +26,10 @@ import { TeamsItemPage } from '@teams/pages/teams-item/teams-item.page';
       TeamsListPage,
       TeamsItemPage,
       TeamsListItemComponent,
-  ]
+      TeamsEditModalComponent
+  ],
+    entryComponents: [
+        TeamsEditModalComponent,
+    ],
 })
 export class TeamsModule {}
