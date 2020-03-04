@@ -6,6 +6,7 @@ import { PhonePipe, DateToAgePipe, MultiPreviewPipe, DateFormatterPipe } from '@
 import { ErrorListComponent } from '@core/components';
 import { IndicatorsComponent } from '@core/components/indicators/indicators.component';
 import { IonicModule } from '@ionic/angular';
+import { UserContactCardComponent } from '@core/components/user-contact-card/user-contact-card.component';
 
 @NgModule({
     imports: [
@@ -21,6 +22,7 @@ import { IonicModule } from '@ionic/angular';
         ErrorsPreviewDirective,
         ErrorListComponent,
         IndicatorsComponent,
+        UserContactCardComponent,
     ],
     exports: [
         MultiPreviewPipe,
@@ -29,10 +31,12 @@ import { IonicModule } from '@ionic/angular';
         PhonePipe,
         ErrorsPreviewDirective,
         IndicatorsComponent,
+        UserContactCardComponent,
     ],
     entryComponents: [
         ErrorListComponent,
         IndicatorsComponent,
+        UserContactCardComponent
     ],
 })
 export class AppCoreModule {
