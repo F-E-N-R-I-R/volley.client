@@ -1,31 +1,14 @@
-
-
-app-indicators {
-  position: fixed;
-  margin-top: 1.3rem;
-  margin-left: -2.2rem;
-}
 ion-label {
   height: 100%;
   border-bottom: 2px solid grey;
-  padding: 10px;
   width: 100%;
+  padding-left: 0;
+  ion-row, ion-col {
+    padding-left: 0;
+  }
 }
-img {
-  padding: 5px;
-  max-width: 100%;
-  margin: 0;
-  border-radius: 50%;
-}
-ion-col.indicator {
-  position: absolute;
-  margin-top: -29px;
-  margin-left: 20px;
-}
-ion-col.title {
-  margin: -10px
-}
-ion-col.place {
-  margin: 5px;
-  margin-left: -10px;
+
+ion-avatar {
+  height: auto;
+  width: 4rem;
 }

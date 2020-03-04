@@ -1,6 +1,14 @@
 ion-avatar {
+  width: 2rem;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+:host {
+  &.size-4 {
+    ion-avatar {
+      width: 4rem;
+    }
+  }
+}
