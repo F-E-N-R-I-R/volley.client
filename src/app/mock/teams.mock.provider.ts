@@ -17,74 +17,6 @@ export class TeamsMockProvider {
                     contact: '+38093451233145 (Vasya)',
                     indicators: [
                         {
-                            name: 'man',
-                            color: 'danger',
-                            value: '',
-                            description: 'BlaBlalalfas',
-                        },
-                        {
-                            name: 'woman',
-                            color: 'primary',
-                            value: '',
-                            description: 'Abla',
-                        },
-                        {
-                            name: null,
-                            src: 'assets/icon/dollar.svg',
-                            color: 'secondary',
-                            value: '43',
-                            description: 'Labalaba',
-                        },
-                        {
-                            name: 'man',
-                            color: 'danger',
-                            value: '',
-                            description: 'BlaBlalalfas',
-                        },
-                        {
-                            name: 'woman',
-                            color: 'primary',
-                            value: '',
-                            description: 'Abla',
-                        },
-                        {
-                            name: null,
-                            src: 'assets/icon/dollar.svg',
-                            color: 'secondary',
-                            value: '43',
-                            description: 'Labalaba',
-                        },
-                        {
-                            name: 'man',
-                            color: 'danger',
-                            value: '',
-                            description: 'BlaBlalalfas',
-                        },
-                        {
-                            name: 'woman',
-                            color: 'primary',
-                            value: '',
-                            description: 'Abla',
-                        },
-                        {
-                            name: null,
-                            src: 'assets/icon/dollar.svg',
-                            color: 'secondary',
-                            value: '43',
-                            description: 'Labalaba',
-                        }, {
-                            name: 'man',
-                            color: 'danger',
-                            value: '',
-                            description: 'BlaBlalalfas',
-                        },
-                        {
-                            name: 'woman',
-                            color: 'primary',
-                            value: '',
-                            description: 'Abla',
-                        },
-                        {
                             name: null,
                             src: 'assets/icon/dollar.svg',
                             color: 'secondary',
@@ -165,12 +97,8 @@ export class TeamsMockProvider {
                     title: 'Zenit',
                     logo: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
                     contact: '+38093451233144 (Seryoga)',
-                    indicators: [ {
-                        name: null,
-                        color: 'danger',
-                        value: '',
-                        description: 'BlaBlalalfas',
-                    },
+                    indicators: [ 
+                
                         {
                             name: 'woman',
                             color: 'primary',

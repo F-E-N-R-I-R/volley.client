@@ -1,7 +1,7 @@
 ion-label {
   height: 100%;
   border-bottom: 2px solid grey;
-  width: 100%;
+  width: 75%;
   padding-left: 0;
   ion-row, ion-col {
     padding-left: 0;
@@ -11,4 +11,7 @@ ion-label {
 ion-avatar {
   height: auto;
   width: 4rem;
+}
+ion-grid.sideleft {
+	margin-right: 9rem;
 }
