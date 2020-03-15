@@ -1,0 +1,15 @@
+:host {
+  div {
+    position: relative;
+    height: 10rem;
+    max-height: 100px;
+    overflow: hidden;
+
+    ion-img {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+    }
+  }
+}

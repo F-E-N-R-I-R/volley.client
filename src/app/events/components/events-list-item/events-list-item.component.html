@@ -1,15 +1,13 @@
 <ion-card class="ion-no-padding" color="vua-secondary" routerDirection="forward" [routerLink]="item.id">
-	<div class="div-img">
-		<img class="item-img" src="https://upload.wikimedia.org/wikipedia/commons/a/a8/20130330_-_Vend%C3%A9e_Volley-Ball_Club_Herbretais_-_Foyer_La%C3%AFque_Saint-Quentin_Volley-Ball_-_105.jpg">
-	</div>
-	<ion-card-header class="item-header">
-		<ion-card-subtitle class="item-subtitle">
-			{{ item.date | dateFormatter }}
+	<app-image-over></app-image-over>
+	<ion-card-header>
+		<ion-card-subtitle>
+			{{ item.date | dateFormatter }}s
 			<app-indicators [indicators]="item.indicators"></app-indicators>
 		</ion-card-subtitle>
-		<ion-card-title class="ion-no-padding item-title">{{ item.title }}</ion-card-title>
+		<ion-card-title class="ion-no-padding">{{ item.title }}</ion-card-title>
 	</ion-card-header>
-	<ion-card-content class="item-description ion-no-padding">
+	<ion-card-content class="ion-no-padding">
 		Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the
 		Wisconsin Territory in 1836.
 	</ion-card-content>
