@@ -1,3 +1,5 @@
 <div>
-	<ion-img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/20130330_-_Vend%C3%A9e_Volley-Ball_Club_Herbretais_-_Foyer_La%C3%AFque_Saint-Quentin_Volley-Ball_-_105.jpg"></ion-img>
+	<ion-img [hidden]="!loaded" (ionImgWillLoad)="ionImgWillLoad()" (ionImgDidLoad)="ionImgDidLoad()"
+	         src="https://upload.wikimedia.org/wikipedia/commons/a/a8/20130330_-_Vend%C3%A9e_Volley-Ball_Club_Herbretais_-_Foyer_La%C3%AFque_Saint-Quentin_Volley-Ball_-_105.jpg"></ion-img>
+	<ion-spinner [hidden]="loaded"></ion-spinner>
 </div>

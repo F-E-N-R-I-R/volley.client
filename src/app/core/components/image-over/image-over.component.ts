@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
     styleUrls: ['image-over.component.scss'],
 })
 export class ImageOverComponent {
+    public loaded = true;
+
+    public ionImgDidLoad() {
+        this.loaded = true;
+    }
+
+    public ionImgWillLoad() {
+        this.loaded = false;
+    }
 }
 
