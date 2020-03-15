@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 
 export class UserContactCardComponent {
+    @Input() avatar = true;
     constructor(private router: Router) {
     }
 }

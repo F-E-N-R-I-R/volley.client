@@ -3,6 +3,6 @@
 	<span *ngIf="indicator.name || indicator.src" [class.is-block]="!inline">
 		<ion-icon [name]="indicator.name" [src]="indicator.src" [color]="indicator.color"></ion-icon>
 		<ion-text *ngIf="description && indicator.description">{{ indicator.description }}</ion-text>
-		<ion-badge *ngIf="value && indicator.value">{{ indicator.value }}</ion-badge>
+		<ion-text *ngIf="value && indicator.value" [color]="indicator.color">{{ indicator.value }}</ion-text>
 	</span>
 </ng-container>

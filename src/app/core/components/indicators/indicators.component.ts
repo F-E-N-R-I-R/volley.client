@@ -14,5 +14,6 @@ export class IndicatorsComponent {
     @Input() description = false;
     @Input() value = true;
     @Input() max = null;
+
 }
 

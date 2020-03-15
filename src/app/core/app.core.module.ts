@@ -36,7 +36,7 @@ import { UserContactCardComponent } from '@core/components/user-contact-card/use
     entryComponents: [
         ErrorListComponent,
         IndicatorsComponent,
-        UserContactCardComponent
+        UserContactCardComponent,
     ],
 })
 export class AppCoreModule {

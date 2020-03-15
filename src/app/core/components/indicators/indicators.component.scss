@@ -1,8 +1,10 @@
-ion-badge {
+ion-text {
   --background: transparent;
   padding: 0;
-  vertical-align: top;
   margin-left: -3px;
+  font-size: 14px;
+  vertical-align: text-top;
+  font-weight: 800;
 }
 .is-block {
   display: block;
