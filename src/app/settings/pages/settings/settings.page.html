@@ -19,26 +19,31 @@
 <ion-content color="vua-primary">
 	<form [formGroup]="form">
 		<ion-list>
-			<ion-item lines="none" routerLink="main-info" color="vua-secondary">
-				<ion-avatar slot="start" (click)="selectImage($event)">
-					<img [src]="form.get('avatar').value">
-				</ion-avatar>
-				<ion-label>
-					<ion-grid>
-						<ion-row>
-							<ion-text class="text-holder">
-								{{ form.controls.fname.value | titlecase }}
-								{{ form.controls.lname.value | titlecase }}
-							</ion-text>
-						</ion-row>
+<!--			<ion-item lines="none" routerLink="main-info" color="vua-secondary">-->
+<!--				<ion-avatar slot="start" (click)="selectImage($event)">-->
+<!--					<img [src]="form.get('avatar').value">-->
+<!--				</ion-avatar>-->
+<!--				<ion-label>-->
+<!--					<ion-grid>-->
+<!--						<ion-row>-->
+<!--							<ion-text class="text-holder">-->
+<!--								{{ form.controls.fname.value | titlecase }}-->
+<!--								{{ form.controls.lname.value | titlecase }}-->
+<!--							</ion-text>-->
+<!--						</ion-row>-->
 
-						<ion-row>
-							<ion-text color="medium" class="text-holder">
-								<small [innerHTML]="form.controls.phone.value | phone: true"
-								       (click)="$event.stopPropagation()"></small>
-							</ion-text>
-						</ion-row>
-					</ion-grid>
+<!--						<ion-row>-->
+<!--							<ion-text color="medium" class="text-holder">-->
+<!--								<small [innerHTML]="form.controls.phone.value | phone: true"-->
+<!--								       (click)="$event.stopPropagation()"></small>-->
+<!--							</ion-text>-->
+<!--						</ion-row>-->
+<!--					</ion-grid>-->
+<!--				</ion-label>-->
+<!--			</ion-item>-->
+			<ion-item lines="none" color="vua-secondary" routerLink="main-info">
+				<ion-label>
+					<app-user-contact-card class="size-4"></app-user-contact-card>
 				</ion-label>
 			</ion-item>
 		</ion-list>

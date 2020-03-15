@@ -1,7 +1,55 @@
-<ion-item lines="none" class="ion-no-padding" [detail]="null" color="vua-secondary" routerDirection="forward" [routerLink]="item.id">
-	<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-	<ion-label>
-		{{ item.title }}
-		<app-indicators [indicators]="item.indicators"></app-indicators>
-	</ion-label>
-</ion-item>
+<ion-item-sliding>
+	<ion-item lines="none" [detail]="null" color="vua-secondary" routerDirection="forward" [routerLink]="item.id">
+
+		<div slot="start">
+
+						<ion-avatar>
+							<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+						</ion-avatar>
+		</div>
+
+		<ion-label class="ion-no-margin">
+			<ion-grid>
+				<ion-row>
+					<ion-col class="title">
+					<ion-text>
+						{{ item.title }}
+					</ion-text>
+					</ion-col>
+					<ion-col class="indicators">
+						<app-indicators [indicators]="item.indicators"></app-indicators>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col size="6">
+						<app-user-contact-card [avatar]="false"></app-user-contact-card>
+					</ion-col>
+					<ion-col size="6">
+						<app-team-place-prewie>
+
+						</app-team-place-prewie>
+					</ion-col>
+				</ion-row>
+
+				<!-- <ion-row>
+					<ion-col size="12" class="indicator">
+						<app-indicators [indicators]="item.indicators"></app-indicators>
+					</ion-col>
+				</ion-row> -->
+			</ion-grid>
+		</ion-label>
+	</ion-item>
+
+	<ion-item-options  (ionSwipe)="delete(item)" class="ion-no-padding ion-no-margin">
+		<ion-item-option color="danger" expandable>
+			<ion-icon slot="top" name="trash"></ion-icon>
+			Delete
+		</ion-item-option>
+	</ion-item-options>
+	<ion-item-options side="start" (ionSwipe)="presentModal(newsItem)">
+		<ion-item-option color="primary" expandable>
+			<ion-icon slot="top" name="create"></ion-icon>
+			Edit
+		</ion-item-option>
+	</ion-item-options>
+</ion-item-sliding>

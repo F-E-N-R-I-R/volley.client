@@ -1,14 +1,28 @@
 ion-label {
-  position: absolute;
-  margin-left: 5.1rem;
-  margin-top: -1.2rem;
-}
-ion-item {
-  margin-bottom: 2px;
-}
-app-indicators {
-  position: fixed;
-  margin-top: 1.3rem;
-  margin-left: -2.2rem;
+  height: 100%;
+  border-bottom: 2px solid grey;
+  width: 75%;
+  padding-left: 0;
+  ion-row, ion-col {
+    padding-left: 0;
+  }
 }
 
+ion-avatar {
+  height: auto;
+  width: 4rem;
+}
+ion-col.indicators {
+  max-width: 6rem;
+  app-indicators {
+    float: right;
+  }
+}
+ion-col.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+ion-item {
+  --inner-padding-end: 0;
+}
