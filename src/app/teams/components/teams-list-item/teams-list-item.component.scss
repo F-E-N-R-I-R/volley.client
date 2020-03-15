@@ -12,6 +12,11 @@ ion-avatar {
   height: auto;
   width: 4rem;
 }
-ion-grid.sideleft {
-	margin-right: 9rem;
+ion-col.indicators {
+  max-width: 6rem;
+}
+ion-col.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
