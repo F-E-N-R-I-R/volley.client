@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { ErrorsPreviewDirective } from '@core/directives';
 import { PhonePipe, DateToAgePipe, MultiPreviewPipe, DateFormatterPipe } from '@core/pipes';
-import { ErrorListComponent } from '@core/components';
+import { ErrorListComponent, ItemActionsComponent } from '@core/components';
 import { IndicatorsComponent } from '@core/components/indicators/indicators.component';
 import { IonicModule } from '@ionic/angular';
 import { UserContactCardComponent } from '@core/components/user-contact-card/user-contact-card.component';
@@ -23,6 +23,7 @@ import { UserContactCardComponent } from '@core/components/user-contact-card/use
         ErrorListComponent,
         IndicatorsComponent,
         UserContactCardComponent,
+        ItemActionsComponent,
     ],
     exports: [
         MultiPreviewPipe,
@@ -32,11 +33,13 @@ import { UserContactCardComponent } from '@core/components/user-contact-card/use
         ErrorsPreviewDirective,
         IndicatorsComponent,
         UserContactCardComponent,
+        ItemActionsComponent,
     ],
     entryComponents: [
         ErrorListComponent,
         IndicatorsComponent,
         UserContactCardComponent,
+        ItemActionsComponent,
     ],
 })
 export class AppCoreModule {
