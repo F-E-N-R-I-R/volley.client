@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NativeTransitionOptions } from '@ionic-native/native-page-transitions';
-import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 import { AuthService } from '@auth/core/services';
 
 @Component({

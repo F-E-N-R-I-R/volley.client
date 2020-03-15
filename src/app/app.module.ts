@@ -24,9 +24,9 @@ import { TabsComponent } from '@core/components';
 import { AuthGuard } from '@core/guards';
 import { ThemeService, ToastService, ImageService } from '@core/services';
 import { HttpLoaderFactory } from '@core/factories';
-import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
 import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
 
 
 @NgModule({
