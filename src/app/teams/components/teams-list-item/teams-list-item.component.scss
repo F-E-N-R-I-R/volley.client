@@ -3,6 +3,10 @@ ion-label {
   border-bottom: 1px solid var(--ion-color-vua-primary);
   width: 75%;
   padding-left: 0;
+  ion-grid {
+    padding-left: 0;
+    padding-right: 10px;
+  }
   ion-row, ion-col {
     padding-left: 0;
   }
@@ -17,13 +21,12 @@ ion-col.indicators {
 ion-col.title {
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: bold;
 
 }
 ion-item {
   --inner-padding-end: 0;
 }
-ion-col.contact {
+ion-row.information {
   font-size: 15px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }

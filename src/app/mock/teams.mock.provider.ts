@@ -17,7 +17,8 @@ export class TeamsMockProvider {
                     contact: '+38093451233145 (Vasya)',
                     indicators: [
                         {
-                            name: 'woman',
+                            name: null,
+                            src: 'assets/icon/venus-solid.svg' ,
                             color: 'primary',
                             value: '',
                             description: 'Abla',
@@ -30,13 +31,15 @@ export class TeamsMockProvider {
                             description: 'Labalaba',
                         },
                         {
-                            name: 'man',
+                            name: null,
+                            src: 'assets/icon/mars-solid.svg',
                             color: 'danger',
                             value: '',
                             description: 'BlaBlalalfas',
                         },
                         {
-                            name: 'woman',
+                            name: null,
+                            src: 'assets/icon/venus-solid.svg' ,
                             color: 'primary',
                             value: '',
                             description: 'Abla',
@@ -50,13 +53,15 @@ export class TeamsMockProvider {
                     contact: '+38093451233143 (Viva)',
                     indicators: [
                         {
-                            name: 'man',
+                            name: null,
+                            src: 'assets/icon/mars-solid.svg',
                             color: 'danger',
                             value: '',
                             description: 'BlaBlalalfas',
                         },
                         {
-                            name: 'woman',
+                            name: null,
+                            src: 'assets/icon/venus-solid.svg' ,
                             color: 'primary',
                             value: '',
                             description: 'Abla',
@@ -77,10 +82,18 @@ export class TeamsMockProvider {
                     contact: '+38093451233144 (Seryoga)',
                     indicators: [
                         {
-                            name: 'woman',
+                            name: null,
+                            src: 'assets/icon/venus-solid.svg' ,
                             color: 'primary',
                             value: '',
                             description: 'Abla',
+                        },
+                        {
+                            name: null,
+                            src: 'assets/icon/venus-mars-solid.svg',
+                            color: 'danger',
+                            value: '',
+                            description: 'BlaBlalalfas',
                         },
                         {
                             name: null,
