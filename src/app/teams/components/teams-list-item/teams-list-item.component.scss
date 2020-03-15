@@ -26,3 +26,8 @@ ion-col.title {
 ion-item {
   --inner-padding-end: 0;
 }
+ion-col.contact {
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
